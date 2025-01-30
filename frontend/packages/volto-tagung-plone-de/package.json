@@ -1,0 +1,38 @@
+{
+  "name": "volto-tagung-plone-de",
+  "version": "1.0.0-alpha.0",
+  "description": "Plone Projekt für die deutschsprachige Plone Tagung",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "author": "Plone Foundation",
+  "homepage": "https://github.com/collective/volto-tagung-plone-de#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:collective/volto-tagung-plone-de.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "dry-release": "release-it --dry-run",
+    "release": "release-it",
+    "release-major-alpha": "release-it major --preRelease=alpha",
+    "release-alpha": "release-it --preRelease=alpha"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@plone/scripts": "^3.6.1",
+    "release-it": "^17.1.1"
+  }
+}
