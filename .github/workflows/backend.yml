@@ -22,11 +22,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-        - name: Set Env Vars
+      - name: Set Env Vars
         id: vars
         run: |
           echo "TAG=$(cat version.txt)" >> $GITHUB_OUTPUT
           echo "PLONE_VERSION=$(cat backend/version.txt)" >> $GITHUB_OUTPUT
+
       - name: Test vars
         run: |
           echo "TAG=${{ steps.vars.outputs.TAG }}"
