@@ -4,7 +4,7 @@ version: '3.8'
 services:
 
   frontend:
-    image: ghcr.io/plone/tagungplonede-frontend:${STACK_PARAM:-latest}
+    image: ghcr.io/plone/tagung-plone-de-frontend:${STACK_PARAM:-latest}
     environment:
       RAZZLE_INTERNAL_API_PATH: http://testingtagung-plone-de_backend:8080/Plone
       RAZZLE_API_PATH: https://testingtagung.plone.de
@@ -37,7 +37,7 @@ services:
         - traefik.http.routers.testingtagung_plonede-frontend.middlewares=gzip,testingtagung_plonede-frontend-auth
 
   backend:
-    image: ghcr.io/collective/tagungplonede-backend:${STACK_PARAM:-latest}
+    image: ghcr.io/plone/tagung-plone-de-backend:${STACK_PARAM:-latest}
     environment:
       RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-biBEDQfgjkWs}' port='${DB_PORT:-5432}'"
     networks:

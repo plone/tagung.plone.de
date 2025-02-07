@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME_PREFIX: ghcr.io/collective/tagung-plone-de
+  IMAGE_NAME_PREFIX: ghcr.io/plone/tagung-plone-de
   IMAGE_NAME_SUFFIX: frontend
   NODE_VERSION: 22.x
 
