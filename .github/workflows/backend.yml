@@ -10,7 +10,7 @@ on:
 env:
   IMAGE_NAME_PREFIX: ghcr.io/collective/tagung-plone-de
   IMAGE_NAME_SUFFIX: backend
-  PYTHON_VERSION: "3.11"
+  PYTHON_VERSION: "3.12"
 
 jobs:
 
@@ -22,10 +22,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set Env Vars
+        - name: Set Env Vars
         id: vars
         run: |
+          echo "TAG=$(cat version.txt)" >> $GITHUB_OUTPUT
           echo "PLONE_VERSION=$(cat backend/version.txt)" >> $GITHUB_OUTPUT
+      - name: Test vars
+        run: |
+          echo "TAG=${{ steps.vars.outputs.TAG }}"
+          echo "PLONE_VERSION=${{ steps.vars.outputs.PLONE_VERSION }}"
 
   black:
     runs-on: ubuntu-latest
@@ -95,14 +100,14 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup Plone ${{ needs.meta.outputs.PLONE_VERSION }} with Python ${{ env.PYTHON_VERSION }}
-        uses: plone/setup-plone@v2.0.0
+        uses: plone/setup-plone@v3.0.0
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           plone-version: ${{ needs.meta.outputs.PLONE_VERSION }}
+          additional-packages: mxdev
 
-      - name: Install package
+      - name: Install Project packages
         run: |
-          pip install mxdev
           mxdev -c mx.ini
           pip install -r requirements-mxdev.txt
 
@@ -143,9 +148,6 @@ jobs:
             type=sha
             type=raw,value=latest,enable={{is_default_branch}}
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -157,7 +159,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           platforms: linux/amd64
           context: backend
@@ -167,3 +169,31 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             PLONE_VERSION=${{ needs.meta.outputs.PLONE_VERSION }}
+
+  deploy:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    concurrency: deploy_testing
+    needs:
+      - release
+    runs-on: ubuntu-latest
+    environment:
+      name: testingtagung.plone.de
+      url: https://testingtagung.plone.de
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to testingtagung.plone.de
+        uses: kitconcept/docker-stack-deploy@v1.2.0
+        with:
+          registry: 'ghcr.io'
+          username: ${{ github.actor }}
+          password: ${{ secrets.DEPLOY_GHCR_READ_TOKEN }}
+          remote_host: ${{ vars.DEPLOY_HOST }}
+          remote_port: ${{ vars.DEPLOY_PORT }}
+          remote_user: ${{ vars.DEPLOY_USER }}
+          remote_private_key: ${{ secrets.DEPLOY_SSH }}
+          stack_file: 'devops/stacks/testingtagung.plone.de.yml'
+          stack_name: 'testingtagung-plone-de'
+          env_file: ${{ secrets.ENV_FILE }}
+          deploy_timeout: 480

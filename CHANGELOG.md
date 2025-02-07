@@ -1,5 +1,9 @@
 # Changes
 
-## 1.0.0 (2025-01-30)
+## 0.1.0.dev0 (unreleased)
 
-- Initial version [collective]
+- Move local contentdb folder to /data in /backend/instance.yml [fredvd]
+
+- Add Plone foundation cluster CI/CD and deploy configuration [fredvd]
+
+- Initial version [cookieplone]

@@ -119,9 +119,6 @@ jobs:
             type=sha
             type=raw,value=latest,enable={{is_default_branch}}
 
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -143,3 +140,31 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             VOLTO_VERSION=${{ needs.meta.outputs.VOLTO_VERSION }}
+
+  deploy:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    concurrency: deploy_testing
+    needs:
+      - release
+    runs-on: ubuntu-latest
+    environment:
+      name: testingtagung.plone.de
+      url: https://testingtagung.plone.de
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to testingtagung.plone.de
+        uses: kitconcept/docker-stack-deploy@v1.2.0
+        with:
+          registry: 'ghcr.io'
+          username: ${{ github.actor }}
+          password: ${{ secrets.DEPLOY_GHCR_READ_TOKEN }}
+          remote_host: ${{ vars.DEPLOY_HOST }}
+          remote_port: ${{ vars.DEPLOY_PORT }}
+          remote_user: ${{ vars.DEPLOY_USER }}
+          remote_private_key: ${{ secrets.DEPLOY_SSH }}
+          stack_file: 'devops/stacks/testingtagung.plone.de.yml'
+          stack_name: 'testingtagung-plone-de'
+          env_file: ${{ secrets.ENV_FILE }}
+          deploy_timeout: 480

@@ -1,3 +1,8 @@
 default_context:
     initial_user_password: 'admin'
     zcml_package_includes: 'tagung.plone.de'
+
+    db_storage: direct
+
+    db_filestorage_location: ../data/filestorage/Data.fs
+    db_blobs_location: ../data/blobs
