@@ -1,4 +1,5 @@
 const addons = [
+  '@kitconcept/volto-blocks-grid',
   '@eeacms/volto-accordion-block',
   'volto-countdown-block',
   '@kitconcept/volto-button-block',
@@ -8,6 +9,7 @@ const addons = [
   '@kitconcept/volto-highlight-block',
   '@kitconcept/volto-separator-block',
   '@kitconcept/volto-logos-block',
+  '@plone-collective/volto-tito-block',
   '@kitconcept/volto-light-theme',
   '@kitconcept/volto-slider-block',
   'volto-tagung-plone-de'];
