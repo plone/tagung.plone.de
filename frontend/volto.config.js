@@ -6,6 +6,7 @@ const addons = [
   '@kitconcept/volto-introduction-block',
   '@kitconcept/volto-highlight-block',
   '@kitconcept/volto-separator-block',
+  '@kitconcept/volto-logos-block',
   '@kitconcept/volto-light-theme',
   '@kitconcept/volto-slider-block',
   'volto-tagung-plone-de'];
