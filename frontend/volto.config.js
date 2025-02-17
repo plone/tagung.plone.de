@@ -1,5 +1,6 @@
 const addons = [
   '@eeacms/volto-accordion-block',
+  'volto-countdown-block',
   '@kitconcept/volto-button-block',
   '@kitconcept/volto-dsgvo-banner',
   '@kitconcept/volto-heading-block',
