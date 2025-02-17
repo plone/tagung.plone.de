@@ -1,0 +1,53 @@
+:root {
+  --background: #ffffff;
+  --reverse-color: #ffffff;
+
+  --text-color: #ffffff;
+  --text-size: 18px;
+
+  --primary-color: #ffffff;
+  --primary-foreground-color: #000000;
+
+  --secondary-color: rgb(0, 131, 190);
+  --secondary-foreground-color: #ffffff;
+
+  --accent-color: rgb(0, 131, 190);
+  --accent-foreground-color: #ffffff;
+
+  --background: initial;
+  --text-color: initial;
+  --primary-color: var(--background);
+
+  // Header
+  --header-background: var(--primary-color);
+  --header-foreground: var(--primary-foreground-color);
+
+  //Footer
+  --footer-background: var(--secondary-color);
+  --footer-foreground: var(--secondary-foreground-color);
+
+  // Fat Menu
+  --fatmenu-background: var(--accent-color);
+  --fatmenu-foreground: var(--accent-foreground-color);
+
+  // Breadcrumbs
+  --breadcrumbs-background: var(--accent-color);
+  --breadcrumbs-background: #ffffff;
+  --breadcrumbs-foreground: var(--accent-foreground-color);
+  --breadcrumbs-foreground: #000000;
+
+  // Search bar
+  --search-background: var(--accent-color);
+  --search-foreground: var(--accent-foreground-color);
+
+  // Link color
+  --link-color: #0070a2;
+  // Comment out following line to turn <a> links the same color as the text
+  --link-foreground-color: var(--link-color);
+
+  // It is possible to set an aspect ratio for all images, using the folowing CSS custom property:
+  // --image-aspect-ratio: calc(16 / 9);
+
+  // Custom Color for Highlight-Block
+  --highlight-custom-color-1: #0083be;
+}

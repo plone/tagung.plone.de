@@ -1,0 +1,27 @@
+#footer {
+  margin-top: 20px;
+  background-color: var(--secondary-color) !important;
+  color: var(--reverse-color);
+
+  .footerMain {
+    .footer {
+      padding: 3rem 2rem;
+      background-color: var(--secondary-color) !important;
+      .item {
+        color: var(--reverse-color) !important;
+      }
+    }
+  }
+
+  .signature {
+    max-width: 100%;
+    padding: 1rem 1rem;
+    //background-color: black !important;
+    background-color: var(--secondary-color) !important;
+    background-color: rgba(0, 0, 0, 0.374) !important;
+
+    .item {
+      color: var(--reverse-color);
+    }
+  }
+}
