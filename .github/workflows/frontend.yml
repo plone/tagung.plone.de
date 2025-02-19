@@ -156,9 +156,7 @@ jobs:
     needs:
       - release
     runs-on: ubuntu-latest
-    environment:
-      name: ${{ env.PUBLIC_URL }}
-      url: https://${{ env.PUBLIC_URL }}
+    environment: testingtagung.plone.de
     steps:
       - name: Checkout
         uses: actions/checkout@v4
