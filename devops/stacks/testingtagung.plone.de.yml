@@ -4,15 +4,15 @@ version: '3.8'
 services:
 
   frontend:
-    image: ghcr.io/plone/tagung-plone-de-frontend:${STACK_PARAM:-latest}
+    image: ${FRONTEND_IMAGE}:${STACK_PARAM:-latest}
     environment:
-      RAZZLE_INTERNAL_API_PATH: http://testingtagung-plone-de_backend:8080/Plone
-      RAZZLE_API_PATH: https://testingtagung.plone.de
+      RAZZLE_INTERNAL_API_PATH: http://${STACK_NAME}_backend:8080/Plone
+      RAZZLE_API_PATH: https://${PUBLIC_URL}
     depends_on:
       - backend
     networks:
       - public
-      - nw-testingtagungplonede
+      - nw-${STACK_PREFIX}
     deploy:
       replicas: 2
       update_config:
@@ -24,25 +24,25 @@ services:
         - traefik.docker.network=public
         - traefik.constraint-label=public
         # SERVICE
-        - traefik.http.services.testingtagung_plonede-frontend.loadbalancer.server.port=3000
+        - traefik.http.services.${STACK_PREFIX}-frontend.loadbalancer.server.port=3000
         # MIDDLEWARES
         ### ClassicUI Access Authentication
-        - traefik.http.middlewares.testingtagung_plonede-frontend-auth.basicauth.users=plonetagung:$$2y$$05$$7jfejsi4CsRQpNBiorquEeuNZqDropPM4Wpox.lB0VsgIXjCk/ubC
+        - traefik.http.middlewares.${STACK_PREFIX}-frontend-auth.basicauth.users=${BASIC_AUTH_USER}:${BASIC_AUTH_PASSWORD}
         # HOSTS: Main
-        - traefik.http.routers.testingtagung_plonede-frontend.rule=Host(`testingtagung.plone.de`)
-        - traefik.http.routers.testingtagung_plonede-frontend.entrypoints=https
-        - traefik.http.routers.testingtagung_plonede-frontend.tls=true
-        - traefik.http.routers.testingtagung_plonede-frontend.tls.certresolver=le
-        - traefik.http.routers.testingtagung_plonede-frontend.service=testingtagung_plonede-frontend
-        - traefik.http.routers.testingtagung_plonede-frontend.middlewares=gzip,testingtagung_plonede-frontend-auth
+        - traefik.http.routers.${STACK_PREFIX}-frontend.rule=Host(`${PUBLIC_URL}`)
+        - traefik.http.routers.${STACK_PREFIX}-frontend.entrypoints=https
+        - traefik.http.routers.${STACK_PREFIX}-frontend.tls=true
+        - traefik.http.routers.${STACK_PREFIX}-frontend.tls.certresolver=le
+        - traefik.http.routers.${STACK_PREFIX}-frontend.service=${STACK_PREFIX}-frontend
+        - traefik.http.routers.${STACK_PREFIX}-frontend.middlewares=gzip,${STACK_PREFIX}-frontend-auth
 
   backend:
-    image: ghcr.io/plone/tagung-plone-de-backend:${STACK_PARAM:-latest}
+    image: ${BACKEND_IMAGE}:${STACK_PARAM:-latest}
     environment:
-      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD:-biBEDQfgjkWs}' port='${DB_PORT:-5432}'"
+      RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD}' port='${DB_PORT:-5432}'"
     networks:
       - public
-      - nw-testingtagungplonede
+      - nw-${STACK_PREFIX}
     deploy:
       replicas: 2
       update_config:
@@ -54,33 +54,33 @@ services:
         - traefik.docker.network=public
         - traefik.constraint-label=public
         # SERVICE
-        - traefik.http.services.testingtagung_plonede-backend.loadbalancer.server.port=8080
+        - traefik.http.services.${STACK_PREFIX}-backend.loadbalancer.server.port=8080
         # MIDDLEWARES
         ### ClassicUI Access Authentication
-        - traefik.http.middlewares.testingtagung_plonede-backend-auth.basicauth.users=plonetagung:$$2y$$05$$7jfejsi4CsRQpNBiorquEeuNZqDropPM4Wpox.lB0VsgIXjCk/ubC
+        - traefik.http.middlewares.${STACK_PREFIX}-backend-auth.basicauth.users=${BASIC_AUTH_USER}:${BASIC_AUTH_PASSWORD}
         ### Backend ++api++ VHM
-        - "traefik.http.middlewares.testingtagung_plonede-vhm.replacepathregex.regex=^/\\+\\+api\\+\\+($$|/.*)"
-        - "traefik.http.middlewares.testingtagung_plonede-vhm.replacepathregex.replacement=/VirtualHostBase/https/testingtagung.plone.de/Plone/++api++/VirtualHostRoot/$$1"
+        - "traefik.http.middlewares.${STACK_PREFIX}-vhm.replacepathregex.regex=^/\\+\\+api\\+\\+($$|/.*)"
+        - "traefik.http.middlewares.${STACK_PREFIX}-vhm.replacepathregex.replacement=/VirtualHostBase/https/${PUBLIC_URL}/Plone/++api++/VirtualHostRoot/$$1"
         ### Backend ClassicUI VHM
-        - "traefik.http.middlewares.testingtagung_plonede-vhm-classicui.replacepathregex.regex=^/ClassicUI($$|/.*)"
-        - "traefik.http.middlewares.testingtagung_plonede-vhm-classicui.replacepathregex.replacement=/VirtualHostBase/https/testingtagung.plone.de/Plone/VirtualHostRoot/_vh_ClassicUI/$$1"
+        - "traefik.http.middlewares.${STACK_PREFIX}-vhm-classicui.replacepathregex.regex=^/ClassicUI($$|/.*)"
+        - "traefik.http.middlewares.${STACK_PREFIX}-vhm-classicui.replacepathregex.replacement=/VirtualHostBase/https/${PUBLIC_URL}/Plone/VirtualHostRoot/_vh_ClassicUI/$$1"
         # ROUTES
         ## API
-        - traefik.http.routers.testingtagung_plonede-backend.rule=Host(`testingtagung.plone.de`) && (PathPrefix(`/++api++`))
-        - traefik.http.routers.testingtagung_plonede-backend.entrypoints=https
-        - traefik.http.routers.testingtagung_plonede-backend.tls=true
-        - traefik.http.routers.testingtagung_plonede-backend.service=testingtagung_plonede-backend
-        - traefik.http.routers.testingtagung_plonede-backend.middlewares=gzip,testingtagung_plonede-vhm
+        - traefik.http.routers.${STACK_PREFIX}-backend.rule=Host(`${PUBLIC_URL}`) && (PathPrefix(`/++api++`))
+        - traefik.http.routers.${STACK_PREFIX}-backend.entrypoints=https
+        - traefik.http.routers.${STACK_PREFIX}-backend.tls=true
+        - traefik.http.routers.${STACK_PREFIX}-backend.service=${STACK_PREFIX}-backend
+        - traefik.http.routers.${STACK_PREFIX}-backend.middlewares=gzip,${STACK_PREFIX}-vhm
         ### /ClassicUI - protected with basic auth (prevent SEOs from crawling it)
-        - traefik.http.routers.testingtagung_plonede-classicui.rule=Host(`testingtagung.plone.de`) && (PathPrefix(`/ClassicUI`))
-        - traefik.http.routers.testingtagung_plonede-classicui.entrypoints=https
-        - traefik.http.routers.testingtagung_plonede-classicui.tls=true
-        - traefik.http.routers.testingtagung_plonede-classicui.service=testingtagung_plonede-backend
-        - traefik.http.routers.testingtagung_plonede-classicui.middlewares=gzip,testingtagung_plonede-backend-auth,testingtagung_plonede-vhm-classicui
+        - traefik.http.routers.${STACK_PREFIX}-classicui.rule=Host(`${PUBLIC_URL`) && (PathPrefix(`/ClassicUI`))
+        - traefik.http.routers.${STACK_PREFIX}-classicui.entrypoints=https
+        - traefik.http.routers.${STACK_PREFIX}-classicui.tls=true
+        - traefik.http.routers.${STACK_PREFIX}-classicui.service=${STACK_PREFIX}-backend
+        - traefik.http.routers.${STACK_PREFIX}-classicui.middlewares=gzip,${STACK_PREFIX}-backend-auth,${STACK_PREFIX}-vhm-classicui
 
 networks:
 
-
+# Cannot parameterise network name because it is in the key, not a value
 networks:
   public:
     external: true

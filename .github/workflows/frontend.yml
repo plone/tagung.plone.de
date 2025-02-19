@@ -8,9 +8,16 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME_PREFIX: ghcr.io/plone/tagung-plone-de
-  IMAGE_NAME_SUFFIX: frontend
+  IMAGE_NAME_PREFIX: ghcr.io/plone/tagung.plone.de
   NODE_VERSION: 22.x
+  STACK_PARAM: latest
+  STACK_NAME: testingtagung-plone-de
+  STACK_PREFIX: testingtagung_plonede
+  PUBLIC_URL: testingtagung.plone.de
+  CERTRESOLVER: le-cloudflare
+  STACK_FILE: devops/stacks/testingtagung.plone.de.yml
+  BASICAUTH_USER: plonetagung
+  BASICAUTH_PASSWORD: '$$2y$$05$$7jfejsi4CsRQpNBiorquEeuNZqDropPM4Wpox.lB0VsgIXjCk/ubC'
 
 defaults:
   run:
@@ -150,8 +157,8 @@ jobs:
       - release
     runs-on: ubuntu-latest
     environment:
-      name: testingtagung.plone.de
-      url: https://testingtagung.plone.de
+      name: ${{ env.PUBLIC_URL }}
+      url: https://${{ env.PUBLIC_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -166,7 +173,13 @@ jobs:
           remote_port: ${{ vars.DEPLOY_PORT }}
           remote_user: ${{ vars.DEPLOY_USER }}
           remote_private_key: ${{ secrets.DEPLOY_SSH }}
-          stack_file: 'devops/stacks/testingtagung.plone.de.yml'
-          stack_name: 'testingtagung-plone-de'
-          env_file: ${{ secrets.ENV_FILE }}
+          stack_file: ${{ env.STACK_FILE }}
+          stack_name: ${{ env.STACK_NAME }}
+          env_file: |
+            STACK_NAME=${{ env.STACK_NAME }}
+            STACK_PREFIX=${{ env.STACK_PREFIX }}
+            PUBLIC_URL=${{ env.PUBLIC_URL }}
+            CERTRESOLVER=${{ env.CERTRESOLVER }}
+            BACKEND_IMAGE=${{ env.IMAGE_NAME_PREFIX }}-backend
+            FRONTEND_IMAGE=${{ env.IMAGE_NAME_PREFIX }}-frontend
           deploy_timeout: 480
