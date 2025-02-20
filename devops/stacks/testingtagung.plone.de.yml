@@ -72,7 +72,7 @@ services:
         - traefik.http.routers.${STACK_PREFIX}-backend.service=${STACK_PREFIX}-backend
         - traefik.http.routers.${STACK_PREFIX}-backend.middlewares=gzip,${STACK_PREFIX}-vhm
         ### /ClassicUI - protected with basic auth (prevent SEOs from crawling it)
-        - traefik.http.routers.${STACK_PREFIX}-classicui.rule=Host(`${PUBLIC_URL`) && (PathPrefix(`/ClassicUI`))
+        - traefik.http.routers.${STACK_PREFIX}-classicui.rule=Host(`${PUBLIC_URL}`) && (PathPrefix(`/ClassicUI`))
         - traefik.http.routers.${STACK_PREFIX}-classicui.entrypoints=https
         - traefik.http.routers.${STACK_PREFIX}-classicui.tls=true
         - traefik.http.routers.${STACK_PREFIX}-classicui.service=${STACK_PREFIX}-backend

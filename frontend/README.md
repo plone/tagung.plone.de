@@ -13,7 +13,7 @@ Plone Projekt für die deutschsprachige Plone Tagung.
 
 ## Installation
 
-To install your project, you must choose the method appropriate to your version of Volto.
+To install your project, you should choose the method appropriate to your version of Volto.
 
 
 ### Volto 17 and earlier
