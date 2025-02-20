@@ -1,6 +1,6 @@
 # tagung.plone.de (volto-tagung-plone-de)
 
-Plone Projekt für die deutschsprachige Plone Tagung
+Plone Projekt für die deutschsprachige Plone Tagung.
 
 [![npm](https://img.shields.io/npm/v/volto-tagung-plone-de)](https://www.npmjs.com/package/volto-tagung-plone-de)
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://collective.github.io/volto-tagung-plone-de/)
