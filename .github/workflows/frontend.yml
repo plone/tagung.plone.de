@@ -9,6 +9,7 @@ on:
 
 env:
   IMAGE_NAME_PREFIX: ghcr.io/plone/tagung.plone.de
+  IMAGE_NAME_SUFFIX: frontend
   NODE_VERSION: 22.x
   STACK_PARAM: latest
   STACK_NAME: testingtagung-plone-de
@@ -138,6 +139,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Report build parameters
+        run: |
+            echo 'Building image with...' >> $GITHUB_STEP_SUMMARY
+            echo 'Volto Version: ${{ needs.meta.outputs.VOLTO_VERSION }}' >> $GITHUB_STEP_SUMMARY
+            echo 'Labels:  label ${{ steps.meta.outputs.labels }}' >> $GITHUB_STEP_SUMMARY
+            echo 'Tags:  label ${{ steps.meta.outputs.tags }}' >> $GITHUB_STEP_SUMMARY
+            echo 'Image Prefix/Suffix: ${{ env.IMAGE_NAME_PREFIX }}-${{ env.IMAGE_NAME_SUFFIX }}' >> $GITHUB_STEP_SUMMARY
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
