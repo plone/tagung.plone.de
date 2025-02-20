@@ -12,7 +12,7 @@ services:
       - backend
     networks:
       - public
-      - nw-${STACK_PREFIX}
+      - nw-internal
     deploy:
       replicas: 2
       update_config:
@@ -42,7 +42,7 @@ services:
       RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD}' port='${DB_PORT:-5432}'"
     networks:
       - public
-      - nw-${STACK_PREFIX}
+      - nw-internal
     deploy:
       replicas: 2
       update_config:
@@ -80,10 +80,10 @@ services:
 
 networks:
 
-# Cannot parameterise network name because it is in the key, not a value
+# Network name doesn't need to parameterised, is prefixed by the stack name by Docker Swarm
 networks:
   public:
     external: true
-  nw-testingtagungplonede:
+  nw-internal:
     internal: true
     driver: overlay
