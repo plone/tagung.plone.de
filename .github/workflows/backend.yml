@@ -217,4 +217,4 @@ jobs:
             CERTRESOLVER=${{ env.CERTRESOLVER }}
             BACKEND_IMAGE=${{ env.IMAGE_NAME_PREFIX }}-backend
             FRONTEND_IMAGE=${{ env.IMAGE_NAME_PREFIX }}-frontend
-            deploy_timeout: 480
+          deploy_timeout: 480
