@@ -1,6 +1,6 @@
 # tagung.plone.de
 
-Plone Projekt für die deutschsprachige Plone Tagung
+Plone Projekt für die deutschsprachige Plone Tagung.
 
 ## Features
 

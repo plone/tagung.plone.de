@@ -4,7 +4,7 @@ version: '3.8'
 services:
 
   frontend:
-    image: ${FRONTEND_IMAGE}:${STACK_PARAM:-latest}
+    image:${IMAGE_NAME_PREFIX}-frontend:${STACK_PARAM:-latest}
     environment:
       RAZZLE_INTERNAL_API_PATH: http://${STACK_NAME}_backend:8080/Plone
       RAZZLE_API_PATH: https://${PUBLIC_URL}
@@ -37,7 +37,7 @@ services:
         - traefik.http.routers.${STACK_PREFIX}-frontend.middlewares=gzip,${STACK_PREFIX}-frontend-auth
 
   backend:
-    image: ${BACKEND_IMAGE}:${STACK_PARAM:-latest}
+    image: ${IMAGE_NAME_PREFIX}-backend:${STACK_PARAM:-latest}
     environment:
       RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD}' port='${DB_PORT:-5432}'"
     networks:
