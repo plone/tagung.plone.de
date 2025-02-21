@@ -215,5 +215,6 @@ jobs:
             STACK_PREFIX=${{ env.STACK_PREFIX }}
             PUBLIC_URL=${{ env.PUBLIC_URL }}
             CERTRESOLVER=${{ env.CERTRESOLVER }}
-            IMAGE_NAME_PREFIX=${{ env.IMAGE_NAME_PREFIX }} 
-          deploy_timeout: 480
+            BACKEND_IMAGE=${{ env.IMAGE_NAME_PREFIX }}-backend
+            FRONTEND_IMAGE=${{ env.IMAGE_NAME_PREFIX }}-frontend
+            deploy_timeout: 480
