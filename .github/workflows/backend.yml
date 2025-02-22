@@ -18,7 +18,7 @@ env:
   CERTRESOLVER: le-cloudflare
   STACK_FILE: devops/stacks/testingtagung.plone.de.yml
   BASICAUTH_USER: plonetagung
-  BASICAUTH_PASSWORD: '$$2y$$05$$7jfejsi4CsRQpNBiorquEeuNZqDropPM4Wpox.lB0VsgIXjCk/ubC'
+  BASICAUTH_PASSWORD: $$2y$$05$$lezj1oJIQvwaY8kxjELEQ.ATFfBsURieMMSJgRY/IrCNcwTMbpI6G
 
 jobs:
 
@@ -221,4 +221,6 @@ jobs:
             DB_NAME=${{ vars.DB_NAME }}
             DB_USER=${{ vars.DB_USER }}
             DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+            BASIC_AUTH_USER=${{ vars.BASIC_AUTH_USER }}
+            BASIC_AUTH_PASSWORD=${{ vars.BASIC_AUTH_PASSWORD }}
           deploy_timeout: 480
