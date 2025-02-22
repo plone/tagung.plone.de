@@ -27,6 +27,10 @@
     "release-alpha": "release-it --preRelease=alpha"
   },
   "dependencies": {
+    "@kitconcept/volto-blocks-grid": "^8.0.3",
+    "@plone-collective/volto-tito-block": "^0.1.0",
+    "@plone/components":"^3.0.2",
+    "volto-countdown-block":"^0.1.2",
     "@eeacms/volto-accordion-block": "^11.0.3",
     "@kitconcept/volto-button-block": "^3.0.3",
     "@kitconcept/volto-dsgvo-banner": "^2.3.2",
@@ -35,7 +39,8 @@
     "@kitconcept/volto-introduction-block": "^1.0.0",
     "@kitconcept/volto-separator-block": "^4.1.2",
     "@kitconcept/volto-slider-block": "^6.3.1",
-    "@kitconcept/volto-light-theme": "^5.0.2"
+    "@kitconcept/volto-logos-block": "^1.2.2",
+    "@kitconcept/volto-light-theme": "^6.0.0-alpha.13"
   },
   "peerDependencies": {
     "react": "18.2.0",
