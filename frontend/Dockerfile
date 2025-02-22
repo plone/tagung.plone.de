@@ -33,3 +33,6 @@ RUN <<EOT
     corepack use pnpm@9.1.1
     corepack prepare pnpm@9.1.1 --activate
 EOT
+
+# Set healthcheck to port 3000
+HEALTHCHECK --interval=15s --timeout=10s --start-period=60s CMD [ -n "$LISTEN_PORT" ] || LISTEN_PORT=3000 ; wget -q http://127.0.0.1:"$LISTEN_PORT" -O - || exit 1
