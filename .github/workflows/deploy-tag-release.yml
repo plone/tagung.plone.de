@@ -138,9 +138,9 @@ jobs:
       - release-backend
       - release-frontend
       - config
-      environment:
-        name: ${{ needs.config.outputs.DEPLOY_ENVIRONMENT }}
-        url: https://${{ needs.config.outputs.DEPLOY_ENVIRONMENT }}
+    environment:
+      name: ${{ needs.config.outputs.DEPLOY_ENVIRONMENT }}
+      url: https://${{ needs.config.outputs.DEPLOY_ENVIRONMENT }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
