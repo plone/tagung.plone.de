@@ -35,7 +35,7 @@ jobs:
           echo 'BASE_TAG=sha-$(git rev-parse --short HEAD)' >> $GITHUB_OUTPUT
           echo "PLONE_VERSION=$(cat backend/version.txt)" >> $GITHUB_OUTPUT
           echo "DEPLOY_ENVIRONMENT=${{ env.PUBLIC_URL }}" >> $GITHUB_OUTPUT
-          python3 -c 'import json; data = json.load(open("./mrs.developer.json")); print("VOLTO_VERSION=" + (data["core"].get("tag") or "latest"))' >> $GITHUB_OUTPUT
+          python3 -c 'import json; data = json.load(open("frontend/mrs.developer.json")); print("VOLTO_VERSION=" + (data["core"].get("tag") or "latest"))' >> $GITHUB_OUTPUT
  
       - name: Test vars
         run: |
