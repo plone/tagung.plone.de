@@ -1,6 +1,6 @@
 # Changes
 
-## 0.1.0.dev0 (unreleased)
+## 0.1.0 (2025-02-28)
 
 - Update CI/CD configuration for live website. [fredvd]
 - Rfactor workflow and stack defitions to upcoming cookieplone changes (partly) [fredvd]
