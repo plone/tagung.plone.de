@@ -1,0 +1,173 @@
+name: Release and deploy tag to tagung.plone.de
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - '*'
+
+env:
+  IMAGE_NAME_PREFIX: ghcr.io/plone/tagung.plone.de
+  NODE_VERSION: 22.x
+  PYTHON_VERSION: "3.12"
+  STACK_NAME: tagung-plone-de
+  STACK_PREFIX: tagung_plonede
+  PUBLIC_URL: tagung.plone.de
+  CERTRESOLVER: le-cloudflare
+  STACK_FILE: devops/stacks/tagung.plone.de.yml
+
+jobs:
+  config:
+    runs-on: ubuntu-latest
+    outputs:
+      PLONE_VERSION: ${{ steps.vars.outputs.PLONE_VERSION }}
+      DEPLOY_ENVIRONMENT: ${{ steps.vars.outputs.DEPLOY_ENVIRONMENT }}
+      VOLTO_VERSION: ${{ steps.vars.outputs.VOLTO_VERSION }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set Env Vars
+        id: vars
+        run: |
+          echo "TAG=$(cat version.txt)" >> $GITHUB_OUTPUT
+          echo 'BASE_TAG=sha-$(git rev-parse --short HEAD)' >> $GITHUB_OUTPUT
+          echo "PLONE_VERSION=$(cat backend/version.txt)" >> $GITHUB_OUTPUT
+          echo "DEPLOY_ENVIRONMENT=${{ env.PUBLIC_URL }}" >> $GITHUB_OUTPUT
+          python3 -c 'import json; data = json.load(open("./mrs.developer.json")); print("VOLTO_VERSION=" + (data["core"].get("tag") or "latest"))' >> $GITHUB_OUTPUT
+ 
+      - name: Test vars
+        run: |
+          echo "TAG=${{ steps.vars.outputs.TAG }}"
+          echo 'BASE_TAG=${{ steps.vars.outputs.BASE_TAG }}'
+          echo 'VOLTO_VERSION=${{ steps.vars.outputs.VOLTO_VERSION }}'
+          echo "PLONE_VERSION=${{ steps.vars.outputs.PLONE_VERSION }}"
+          echo "DEPLOY_ENVIRONMENT=${{ steps.vars.outputs.DEPLOY_ENVIRONMENT }}"
+
+
+
+  release-frontend:
+    runs-on: ubuntu-latest
+    needs:
+      - config
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Docker config frontend
+        id: config-frontend
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ${{ env.IMAGE_NAME_PREFIX }}-frontend
+          flavor: |
+            latest=false
+          tags: |
+            type=ref,event=branch
+            type=pep440,pattern={{version}}
+            type=sha
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          platforms: linux/amd64
+          context: frontend
+          file: frontend/Dockerfile
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.config-frontend.outputs.tags }}
+          labels: ${{ steps.config-frontend.outputs.labels }}
+          build-args: |
+            VOLTO_VERSION=${{ needs.config.outputs.VOLTO_VERSION }}
+
+  release-backend:
+    runs-on: ubuntu-latest
+    needs:
+      - config
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Docker config backend
+        id: config-backend
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            ${{ env.IMAGE_NAME_PREFIX }}-backend
+          flavor: |
+            latest=false
+          tags: |
+            type=ref,event=branch
+            type=pep440,pattern={{version}}
+            type=sha
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          platforms: linux/amd64
+          context: backend
+          file: backend/Dockerfile
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.config-backend.outputs.tags }}
+          labels: ${{ steps.config-backend.outputs.labels }}
+          build-args: |
+            PLONE_VERSION=${{ needs.config.outputs.PLONE_VERSION }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs:
+      - release-backend
+      - release-frontend
+      - config
+      environment:
+        name: ${{ needs.config.outputs.DEPLOY_ENVIRONMENT }}
+        url: https://${{ needs.config.outputs.DEPLOY_ENVIRONMENT }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to tagung.plone.de
+        uses: kitconcept/docker-stack-deploy@v1.2.0
+        with:
+          registry: 'ghcr.io'
+          username: ${{ github.actor }}
+          password: ${{ secrets.DEPLOY_GHCR_READ_TOKEN }}
+          remote_host: ${{ vars.DEPLOY_HOST }}
+          remote_port: ${{ vars.DEPLOY_PORT }}
+          remote_user: ${{ vars.DEPLOY_USER }}
+          remote_private_key: ${{ secrets.DEPLOY_SSH }}
+          stack_file: ${{ env.STACK_FILE }}
+          stack_name: ${{ env.STACK_NAME }}
+          env_file: |
+            STACK_NAME=${{ env.STACK_NAME }}
+            STACK_PREFIX=${{ env.STACK_PREFIX }}
+            PUBLIC_URL=${{ env.PUBLIC_URL }}
+            CERTRESOLVER=${{ env.CERTRESOLVER }}
+            BACKEND_IMAGE=${{ env.IMAGE_NAME_PREFIX }}-backend
+            FRONTEND_IMAGE=${{ env.IMAGE_NAME_PREFIX }}-frontend
+            DB_HOST=${{ vars.DB_HOST }}
+            DB_NAME=${{ vars.DB_NAME }}
+            DB_USER=${{ vars.DB_USER }}
+            DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+            BASIC_AUTH_USER=${{ vars.BASIC_AUTH_USER }}
+            BASIC_AUTH_PASSWORD=${{ vars.BASIC_AUTH_PASSWORD }}
+          deploy_timeout: 480

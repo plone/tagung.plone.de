@@ -17,8 +17,6 @@ env:
   PUBLIC_URL: testingtagung.plone.de
   CERTRESOLVER: le-cloudflare
   STACK_FILE: devops/stacks/testingtagung.plone.de.yml
-  BASICAUTH_USER: plonetagung
-  BASICAUTH_PASSWORD: $$2y$$05$$lezj1oJIQvwaY8kxjELEQ.ATFfBsURieMMSJgRY/IrCNcwTMbpI6G
 
 jobs:
 
