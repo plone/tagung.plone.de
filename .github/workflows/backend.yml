@@ -186,6 +186,7 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     concurrency: deploy_testing
     needs:
+      - meta
       - release
     runs-on: ubuntu-latest
     environment:
@@ -195,6 +196,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Test vars
+        run: |
+          echo "DEPLOY_ENVIRONMENT=${{ needs.meta.outputs.DEPLOY_ENVIRONMENT }}"
+          echo "PLONE_VERSION=${{ needs.meta.outputs.PLONE_VERSION }}"
 
       - name: Deploy to testingtagung.plone.de
         uses: kitconcept/docker-stack-deploy@v1.2.0
