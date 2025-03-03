@@ -3,13 +3,19 @@
 ## 0.2 (unreleased)
 
 
-- Nothing changed yet.
+- Override plone.autoinclude to fix backend build issues due to setuptools recent issues with namespace separators. [fredvd]
+
+- Don't put generated mxdev files in .gitignore, let us see and store what the current active and generated KGS is. [fredvd]
+
+- Add collective.exportimport 1.13 to backend. (Closes #7) [fredvd]
+
+- Refactor deprecated blob_location field in instance.yaml for local dev. [fredvd]
 
 
 ## 0.1.0 (2025-02-28)
 
 - Update CI/CD configuration for live website. [fredvd]
-- Rfactor workflow and stack defitions to upcoming cookieplone changes (partly) [fredvd]
+- Refactor workflow and stack defitions to upcoming cookieplone changes (partly) [fredvd]
 
 - Move local contentdb folder to /data in /backend/instance.yml [fredvd]
 
