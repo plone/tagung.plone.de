@@ -3,5 +3,11 @@
 -c constraints-mxdev.txt
 
 ###############################################################################
+# begin requirements from: requirements.txt
+
+collective.exportimport
+# end requirements from: requirements.txt
+###############################################################################
+###############################################################################
 # main package
 -e .[test]
