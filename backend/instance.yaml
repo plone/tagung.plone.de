@@ -5,4 +5,4 @@ default_context:
     db_storage: direct
 
     db_filestorage_location: ../data/filestorage/Data.fs
-    db_blobs_location: ../data/blobs
+    db_blob_location: ../data/blobs

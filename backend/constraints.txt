@@ -1,1 +1,2 @@
 -c https://dist.plone.org/release/6.1.0/constraints.txt
+collective.exportimport==1.13
