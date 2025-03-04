@@ -512,5 +512,6 @@ collective.exportimport==1.13
 ###############################################################################
 # mxdev constraint overrides
 plone.autoinclude==2.0.0
+setuptoools==75.8.2
 
 
