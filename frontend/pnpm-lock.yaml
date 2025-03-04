@@ -1684,6 +1684,9 @@ importers:
       '@kitconcept/volto-slider-block':
         specifier: ^6.3.1
         version: 6.3.1(@plone/volto@18.9.0(@babel/runtime@7.26.7)(@popperjs/core@2.11.8)(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))(embla-carousel@8.5.2)(react@18.2.0)
+      '@plone-collective/volto-authomatic':
+        specifier: 2.0.1
+        version: 2.0.1(@plone/volto@18.9.0(@babel/runtime@7.26.7)(@popperjs/core@2.11.8)(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))
       '@plone-collective/volto-tito-block':
         specifier: ^0.1.0
         version: 0.1.0(@plone/volto@18.9.0(@babel/runtime@7.26.7)(@popperjs/core@2.11.8)(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))
@@ -3650,6 +3653,11 @@ packages:
   '@pkgr/core@0.1.1':
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+
+  '@plone-collective/volto-authomatic@2.0.1':
+    resolution: {integrity: sha512-V92EN+5NcxturfGjFsNo1h/c0GC5UgvjOWIUuhSB99XOj7R4X/gM/GxqVH5fRYkM3tp9h6ux82wBpnMSIOyStQ==}
+    peerDependencies:
+      '@plone/volto': '>=13.8.0'
 
   '@plone-collective/volto-tito-block@0.1.0':
     resolution: {integrity: sha512-MXuIlsX5ZWViB8UVcFVm6rBn1IMyEIYff1ynOY/rHghVuiZ/ZohNmj4GuFIsh2mDRcGD0iDW1Ehhpi2UaQLcdw==}
@@ -17862,6 +17870,10 @@ snapshots:
     optional: true
 
   '@pkgr/core@0.1.1': {}
+
+  '@plone-collective/volto-authomatic@2.0.1(@plone/volto@18.9.0(@babel/runtime@7.26.7)(@popperjs/core@2.11.8)(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))':
+    dependencies:
+      '@plone/volto': 18.9.0(@babel/runtime@7.26.7)(@popperjs/core@2.11.8)(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4)
 
   '@plone-collective/volto-tito-block@0.1.0(@plone/volto@18.9.0(@babel/runtime@7.26.7)(@popperjs/core@2.11.8)(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-with-direction@1.4.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(seamless-immutable@7.1.4))':
     dependencies:
