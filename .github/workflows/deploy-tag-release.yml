@@ -67,8 +67,7 @@ jobs:
             latest=false
           tags: |
             type=ref,event=branch
-            type=pep440,pattern={{version}}
-            type=raw,value=$${{ needs.config.outputs.TAG }}
+            type=pep440,pattern={{version}},value=$${{ needs.config.outputs.TAG }}
             type=sha
 
       - name: Set up Docker Buildx
@@ -110,8 +109,7 @@ jobs:
             latest=false
           tags: |
             type=ref,event=branch
-            type=pep440,pattern={{version}}
-            type=raw,value=$${{ needs.config.outputs.TAG }}
+            type=pep440,pattern={{version}},value=$${{ needs.config.outputs.TAG }}
             type=sha
 
       - name: Set up Docker Buildx
