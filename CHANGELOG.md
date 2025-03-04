@@ -3,7 +3,7 @@
 ## 0.2.4 (unreleased)
 
 
-- Nothing changed yet.
+- Remove basic_auth from live site, try re-release to trigger deploy. [fredvd]
 
 
 ## 0.2.3 (2025-03-04)
