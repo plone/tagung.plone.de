@@ -1,2 +1,4 @@
 -c https://dist.plone.org/release/6.1.0/constraints.txt
 collective.exportimport==1.13
+authomatic==1.3.0
+pas-plugins-authomatic==2.0.0b3
