@@ -3,12 +3,12 @@
 ## 0.2.1 (unreleased)
 
 
-- Nothing changed yet.
+- Fix/test live deployment version passing. [fredvd]
 
 
 ## 0.2.0 (2025-03-04)
 
-- Pin setputools to 75.8.2 to fix namespace sepator issue in backend package policy package setup. [fredvd
+- Pin setputools to 75.8.2 to fix namespace sepator issue in backend package policy package setup. [fredvd]
 
 - Override plone.autoinclude to fix backend build issues due to setuptools recent issues with namespace separators. [fredvd]
 
