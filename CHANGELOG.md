@@ -1,6 +1,6 @@
 # Changes
 
-## 0.2.3 (unreleased)
+## 0.2.3 (2025-03-04)
 
 - Also add volto-authomatic frontend module 2.0.1. [fredvd]
 - Add pas.plugins.authomatic 2.0.0b3. [fredvd]
