@@ -6,6 +6,7 @@
 # begin requirements from: requirements.txt
 
 collective.exportimport
+pas.plugins.authomatic
 # end requirements from: requirements.txt
 ###############################################################################
 ###############################################################################
