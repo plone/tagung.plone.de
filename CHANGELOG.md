@@ -1,5 +1,11 @@
 # Changes
 
+## 0.2.5 (unreleased)
+
+
+- Nothing changed yet.
+
+
 ## 0.2.4 (2025-03-04)
 
 
