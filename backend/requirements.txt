@@ -1,2 +1,3 @@
 -c constraints.txt
 collective.exportimport
+pas.plugins.authomatic
