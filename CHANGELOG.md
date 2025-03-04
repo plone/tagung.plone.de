@@ -3,7 +3,9 @@
 ## 0.2.3 (unreleased)
 
 
-- Nothing changed yet.
+- Add pas.plugins.authomatic 2.0.0b3. [fredvd]
+- Add collective.exportimport to backend policy package dependencies as well. [fredvd]
+
 
 
 ## 0.2.2 (2025-03-04)
@@ -18,7 +20,7 @@
 
 ## 0.2.0 (2025-03-04)
 
-- Pin setputools to 75.8.2 to fix namespace sepator issue in backend package policy package setup. [fredvd]
+- Pin setuptools to 75.8.2 to fix namespace sepator issue in backend package policy package setup. [fredvd]
 
 - Override plone.autoinclude to fix backend build issues due to setuptools recent issues with namespace separators. [fredvd]
 

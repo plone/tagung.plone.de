@@ -5,5 +5,6 @@
     <dependency>profile-plone.volto:default</dependency>
     <dependency>profile-plone.app.caching:default</dependency>
     <dependency>profile-plone.app.caching:with-caching-proxy</dependency>
+    <dependency>profile-pas.plugins.authomatic:default</dependency>
   </dependencies>
 </metadata>
