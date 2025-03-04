@@ -2,7 +2,6 @@
 
 ## 0.2.6 (unreleased)
 
-
 - Nothing changed yet.
 
 
