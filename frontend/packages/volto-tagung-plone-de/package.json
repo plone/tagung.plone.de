@@ -40,6 +40,7 @@
     "@kitconcept/volto-separator-block": "^4.1.2",
     "@kitconcept/volto-slider-block": "^6.3.1",
     "@kitconcept/volto-logos-block": "^1.2.2",
+    "@plone-collective/volto-authomatic": "2.0.1",
     "@kitconcept/volto-light-theme": "^6.0.0-alpha.13"
   },
   "peerDependencies": {

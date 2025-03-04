@@ -12,7 +12,9 @@ const addons = [
   '@plone-collective/volto-tito-block',
   '@kitconcept/volto-light-theme',
   '@kitconcept/volto-slider-block',
-  'volto-tagung-plone-de'];
+  '@plone-collective/volto-authomatic',
+  'volto-tagung-plone-de',
+];
 const theme = '@kitconcept/volto-light-theme';
 
 module.exports = {
