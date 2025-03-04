@@ -1,6 +1,6 @@
 # Changes
 
-## 0.2.2 (unreleased)
+## 0.2.2 (2025-03-04)
 
 - Fix/test live deployment version passing. [fredvd]
 
