@@ -2,12 +2,10 @@
 
 ## 0.2.5 (unreleased)
 
-
-- Nothing changed yet.
+- Update create_site.py script from fresh cookieplone 6.1 so it calls the distribution correctly. [fredvd]
 
 
 ## 0.2.4 (2025-03-04)
-
 
 - Remove basic_auth from live site, try re-release to trigger deploy. [fredvd]
 
@@ -17,6 +15,7 @@
 - Also add volto-authomatic frontend module 2.0.1. [fredvd]
 - Add pas.plugins.authomatic 2.0.0b3. [fredvd]
 - Add collective.exportimport to backend policy package dependencies as well. 
+
 
 ## 0.2.2 (2025-03-04)
 

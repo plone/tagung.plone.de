@@ -47,6 +47,7 @@ site_id = "Plone"
 payload = {
     "title": "tagung.plone.de",
     "profile_id": _DEFAULT_PROFILE,
+    "distribution_name": "volto",
     "setup_content": False,
     "default_language": "de",
     "portal_timezone": "UTC",
@@ -66,6 +67,6 @@ if site_id not in app.objectIds():
     transaction.commit()
 
     if EXAMPLE_CONTENT:
-        portal_setup.runAllImportStepsFromProfile("profile-tagung.plone.de:initial")
+        portal_setup.runAllImportStepsFromProfile("profile-tagung.plone.dee:initial")
         transaction.commit()
     app._p_jar.sync()
