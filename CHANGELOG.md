@@ -1,6 +1,6 @@
 # Changes
 
-## 0.2.5 (unreleased)
+## 0.2.5 (2025-03-05)
 
 - Update create_site.py script from fresh cookieplone 6.1 so it calls the distribution correctly. [fredvd]
 
