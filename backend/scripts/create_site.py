@@ -67,6 +67,6 @@ if site_id not in app.objectIds():
     transaction.commit()
 
     if EXAMPLE_CONTENT:
-        portal_setup.runAllImportStepsFromProfile("profile-tagung.plone.dee:initial")
+        portal_setup.runAllImportStepsFromProfile("profile-tagung.plone.de:initial")
         transaction.commit()
     app._p_jar.sync()
