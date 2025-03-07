@@ -27,7 +27,6 @@
     "release-alpha": "release-it --preRelease=alpha"
   },
   "dependencies": {
-    "@kitconcept/volto-blocks-grid": "^8.0.3",
     "@plone-collective/volto-tito-block": "^0.1.0",
     "@plone/components":"^3.0.2",
     "volto-countdown-block":"^0.1.2",
