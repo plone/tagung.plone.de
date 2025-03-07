@@ -8,12 +8,14 @@ const addons = [
   '@kitconcept/volto-highlight-block',
   '@kitconcept/volto-separator-block',
   '@kitconcept/volto-logos-block',
+  '@kitconcept/volto-slider-block',
   '@plone-collective/volto-tito-block',
   '@kitconcept/volto-light-theme',
   '@kitconcept/volto-slider-block',
   '@plone-collective/volto-authomatic',
   'volto-tagung-plone-de',
 ];
+
 const theme = '@kitconcept/volto-light-theme';
 
 module.exports = {
