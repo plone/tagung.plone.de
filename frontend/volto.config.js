@@ -1,5 +1,4 @@
 const addons = [
-  '@kitconcept/volto-blocks-grid',
   '@eeacms/volto-accordion-block',
   'volto-countdown-block',
   '@kitconcept/volto-button-block',
