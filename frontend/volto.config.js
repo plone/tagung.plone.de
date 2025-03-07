@@ -10,6 +10,7 @@ const addons = [
   '@kitconcept/volto-logos-block',
   '@kitconcept/volto-slider-block',
   '@plone-collective/volto-tito-block',
+  '@eeacms/volto-metadata-block',
   '@kitconcept/volto-light-theme',
   '@kitconcept/volto-slider-block',
   '@plone-collective/volto-authomatic',
