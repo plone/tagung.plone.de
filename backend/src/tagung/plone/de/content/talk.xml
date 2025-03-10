@@ -42,12 +42,14 @@
       <required>False</required>
       <title i18n:translate="">Speaker</title>
     </field>
+
     <field name="company"
            type="zope.schema.TextLine"
     >
       <required>False</required>
       <title i18n:translate="">Company</title>
     </field>
+
     <field name="email"
            type="plone.schema.email.Email"
     >
@@ -55,24 +57,28 @@
       <required>False</required>
       <title i18n:translate="">Email</title>
     </field>
+
     <field name="website"
            type="zope.schema.TextLine"
     >
       <required>False</required>
       <title i18n:translate="">Website</title>
     </field>
+
     <field name="twitter"
            type="zope.schema.TextLine"
     >
       <required>False</required>
       <title i18n:translate="">Twitter name</title>
     </field>
+
     <field name="github"
            type="zope.schema.TextLine"
     >
       <required>False</required>
       <title i18n:translate="">Github username</title>
     </field>
+
     <field name="image"
            type="plone.namedfile.field.NamedBlobImage"
     >
@@ -80,6 +86,7 @@
       <required>False</required>
       <title i18n:translate="">Image</title>
     </field>
+
     <field name="speaker_biography"
            type="plone.app.textfield.RichText"
     >
@@ -87,6 +94,7 @@
       <required>False</required>
       <title i18n:translate="">Speaker Biography (max. 1000 characters)</title>
     </field>
+
     <field name="slides"
            type="zope.schema.URI"
     >
@@ -94,6 +102,7 @@
       <required>False</required>
       <title i18n:translate="">Vortragsfolien</title>
     </field>
+
     <field name="video"
            security:write-permission="cmf.ManagePortal"
            type="zope.schema.URI"
