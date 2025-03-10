@@ -68,7 +68,7 @@ def _sync(domain: str):
 
 def update_locale():
     for domain in domains:
-         logger.info(f"Updating translations for {domain}")
-         locale_folder_setup(domain)
-         _rebuild(domain)
-         _sync(domain)
+        logger.info(f"Updating translations for {domain}")
+        locale_folder_setup(domain)
+        _rebuild(domain)
+        _sync(domain)
