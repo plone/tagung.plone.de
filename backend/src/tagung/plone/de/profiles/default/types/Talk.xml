@@ -11,7 +11,7 @@
   >Talk</property>
   <property name="description"
             i18n:translate=""
-  >Een product of Talk</property>
+  >A talk</property>
 
   <property name="allow_discussion">False</property>
   <property name="factory">Talk</property>

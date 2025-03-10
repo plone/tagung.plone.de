@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-25 17:12+0000\n"
+"POT-Creation-Date: 2025-03-10 20:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,3 +13,127 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: tagung.plone.de\n"
+
+#: tagung/plone/de/content/talk.py:27
+msgid "Audience"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:28
+msgid "Audience of the talk"
+msgstr ""
+
+#: tagung/plone/de/vocabularies/talk.py:12
+msgid "Beginner"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:59
+msgid "Biography of the speaker"
+msgstr ""
+
+#: tagung/plone/de/profiles.zcml:22
+msgid "Create example content to showcase the new website"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:20
+msgid "Description of the talk in max 3000 characters"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:19
+msgid "Details"
+msgstr ""
+
+#: tagung/plone/de/vocabularies/talk.py:13
+msgid "Developer"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:77
+msgid "Display talks without date and time."
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:43
+msgid "E-Mail"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:44
+msgid "Email Address of the speaker"
+msgstr ""
+
+#: tagung/plone/de/vocabularies/talk.py:14
+msgid "Expert"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:76
+msgid "Hide Date and Time"
+msgstr ""
+
+#: tagung/plone/de/vocabularies/talk.py:15
+msgid "Integrator"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:65
+msgid "Link to the slides"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:71
+msgid "Link to the video"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:35
+msgid "Name(s) of the speaker"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:39
+msgid "Organisation"
+msgstr ""
+
+#: tagung/plone/de/profiles.zcml:13
+msgid "Package to configure a new tagung.plone.de site"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:64
+msgid "Slides"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:34
+msgid "Speaker"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:58
+msgid "Speaker Bio"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:53
+msgid "Twitter"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:54
+msgid "Twitter handle of the speaker"
+msgstr ""
+
+#: tagung/plone/de/profiles.zcml:30
+msgid "Uninstall tagung.plone.de setup."
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:70
+msgid "Video"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:48
+msgid "Website"
+msgstr ""
+
+#: tagung/plone/de/content/talk.py:49
+msgid "Website of the speaker"
+msgstr ""
+
+#: tagung/plone/de/profiles.zcml:22
+msgid "tagung.plone.de: Example content"
+msgstr ""
+
+#: tagung/plone/de/profiles.zcml:13
+msgid "tagung.plone.de: Install"
+msgstr ""
+
+#: tagung/plone/de/profiles.zcml:30
+msgid "tagung.plone.de: Uninstall"
+msgstr ""
