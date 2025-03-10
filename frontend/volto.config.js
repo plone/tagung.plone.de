@@ -13,7 +13,6 @@ const addons = [
   '@eeacms/volto-metadata-block',
   '@kitconcept/volto-light-theme',
   '@kitconcept/volto-slider-block',
-  '@plone-collective/volto-authomatic',
   'volto-tagung-plone-de',
 ];
 
