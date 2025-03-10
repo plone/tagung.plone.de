@@ -1,2 +1,9 @@
 @import 'variables';
 @import 'components/footer';
+
+
+// revoke hiding changeNote field from edit & add forms 
+.field-wrapper-changeNote {
+    display: block;
+  }
+
