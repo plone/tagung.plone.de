@@ -13,6 +13,5 @@ def audience_vocabulary(context) -> SimpleVocabulary:
             SimpleTerm(value="developer", title=_("Developer")),
             SimpleTerm(value="expert", title=_("Expert")),
             SimpleTerm(value="integrator", title=_("Integrator")),
-
         ]
     )

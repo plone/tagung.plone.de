@@ -1,6 +1,6 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
-   <utility
+  <utility
       name="tagung.talk.audience"
       component=".talk.audience_vocabulary"
       />

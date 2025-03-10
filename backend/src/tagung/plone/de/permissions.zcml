@@ -5,12 +5,12 @@
     i18n_domain="tagung.plone.de"
     >
 
-   <configure zcml:condition="installed AccessControl.security">
+  <configure zcml:condition="installed AccessControl.security">
 
-        <permission
-            id="tagung.AddTalk"
-            title="tagung: Add Talk"
-            />
+    <permission
+        id="tagung.AddTalk"
+        title="tagung: Add Talk"
+        />
 
-   </configure>
+  </configure>
 </configure>

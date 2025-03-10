@@ -3,11 +3,11 @@
   <permissions>
     <permission acquire="False"
                 name="Tagung: Add Talk"
-      >
-        <role name="Contributor" />
-        <role name="Site Administrator" />
-        <role name="Manager" />
-        <role name="Owner" />
+    >
+      <role name="Contributor" />
+      <role name="Site Administrator" />
+      <role name="Manager" />
+      <role name="Owner" />
     </permission>
   </permissions>
 </rolemap>
