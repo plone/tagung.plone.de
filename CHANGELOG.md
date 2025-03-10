@@ -1,6 +1,6 @@
 # Changes
 
-## 0.2.6 (unreleased)
+## 0.3.0 (2025-03-10)
 
 - Add Talk CT. [fredvd]
 
