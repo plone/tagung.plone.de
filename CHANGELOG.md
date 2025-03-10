@@ -2,6 +2,8 @@
 
 ## 0.2.6 (unreleased)
 
+- Add Talk CT. [fredvd]
+
 - Remove volto-authomatic from frontend, SSO is causing more problems than it will solve at the moment. [fredvd]
 
 - Merge in dev branch with volto-metadata-block. [kittauri]
