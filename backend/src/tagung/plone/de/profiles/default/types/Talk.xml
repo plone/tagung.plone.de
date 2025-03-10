@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        meta_type="Dexterity FTI"
+        name="Talk"
+        i18n:domain=""
+>
+
+  <!-- Basic properties -->
+  <property name="title"
+            i18n:translate=""
+  >Talk</property>
+  <property name="description"
+            i18n:translate=""
+  >Een product of Talk</property>
+
+  <property name="allow_discussion">False</property>
+  <property name="factory">Talk</property>
+  <property name="icon_expr">string:contenttype/Talk</property>
+  <property name="link_target" />
+
+  <!-- Hierarchy control -->
+  <property name="global_allow">True</property>
+  <property name="filter_content_types">False</property>
+  <property name="allowed_content_types">
+    <!--
+    <element value="Document" />
+    <element value="File" />
+  -->
+  </property>
+  <!-- Schema, class and security -->
+  <property name="add_permission">tagung.AddTalk</property>
+  <property name="klass">tagung.plone.de.content.talk.Talk</property>
+  <property name="model_file" />
+  <property name="model_source" />
+  <property name="schema">tagung.plone.de.content.talk.ITalk</property>
+
+  <!-- Enabled behaviors -->
+  <property name="behaviors"
+            purge="false"
+  >
+    <!-- Details about all standard behaviors following can be read at
+         https://docs.plone.org/external/plone.app.dexterity/docs/reference/standard-behaviours.html
+    -->
+    <element value="plone.basic" />
+    <element value="plone.namefromtitle" />
+    <element value="plone.allowdiscussion" />
+    <element value="plone.excludefromnavigation" />
+    <element value="plone.shortname" />
+    <element value="plone.ownership" />
+    <element value="plone.publication" />
+    <element value="plone.categorization" />
+    <element value="plone.locking" />
+    <element value="plone.relateditems" />
+    <element value="plone.versioning" />
+    <!--<element value="volto.blocks" />-->
+    <!--<element value="plone.leadimage"/>-->
+    <!--<element value="plone.richtext"/>-->
+    <!--<element value="plone.tableofcontents"/>-->
+    <!--<element value="plone.translatable" />-->
+    <!--<element value="plone.nextprevioustoggle" />-->
+    <!--<element value="plone.nextpreviousenabled" />-->
+    <!--<element value="plone.navigationroot" />-->
+    <!--<element value="plone.selectablecontrainstypes" />-->
+  </property>
+
+  <!-- View information -->
+  <property name="add_view_expr">string:${folder_url}/++add++Talk</property>
+  <property name="default_view">view</property>
+  <property name="default_view_fallback">False</property>
+  <property name="immediate_view">view</property>
+  <property name="view_methods">
+    <element value="view" />
+  </property>
+
+  <!-- Method aliases -->
+  <alias from="(Default)"
+         to="(dynamic view)"
+  />
+  <alias from="edit"
+         to="@@edit"
+  />
+  <alias from="sharing"
+         to="@@sharing"
+  />
+  <alias from="view"
+         to="(selected layout)"
+  />
+
+  <!-- Actions -->
+  <action action_id="view"
+          category="object"
+          condition_expr=""
+          icon_expr="string:toolbar-action/view"
+          title="View"
+          url_expr="string:${object_url}"
+          visible="True"
+          i18n:attributes="title"
+          i18n:domain="plone"
+  >
+    <permission value="View" />
+  </action>
+  <action action_id="edit"
+          category="object"
+          condition_expr="not:object/@@plone_lock_info/is_locked_for_current_user|python:True"
+          icon_expr="string:toolbar-action/edit"
+          title="Edit"
+          url_expr="string:${object_url}/edit"
+          visible="True"
+          i18n:attributes="title"
+          i18n:domain="plone"
+  >
+    <permission value="Modify portal content" />
+  </action>
+
+</object>

@@ -1,0 +1,74 @@
+<model xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns="http://namespaces.plone.org/supermodel/schema" i18n:domain="ploneconf.site">
+  <schema>
+    <field name="type_of_talk" type="zope.schema.Choice">
+      <title i18n:translate="">Type of talk</title>
+      <values />
+      <form:widget type="z3c.form.browser.radio.RadioFieldWidget"/>
+    </field>
+    <field name="details" type="plone.app.textfield.RichText">
+      <description i18n:translate="">Description of the talk (max. 3000 characters)</description>
+      <max_length>3000</max_length>
+      <title i18n:translate="">Details</title>
+    </field>
+    <field name="audience" type="zope.schema.Set" security:write-permission="cmf.ManagePortal">
+      <required>False</required>
+      <title i18n:translate="">Audience</title>
+      <value_type type="zope.schema.Choice">
+        <values />
+      </value_type>
+      <form:widget type="z3c.form.browser.checkbox.CheckBoxFieldWidget"/>
+    </field>
+    <field name="speaker" type="zope.schema.TextLine">
+      <description i18n:translate="">Name (or names) of the speaker</description>
+      <required>False</required>
+      <title i18n:translate="">Speaker</title>
+    </field>
+    <field name="company" type="zope.schema.TextLine">
+      <required>False</required>
+      <title i18n:translate="">Company</title>
+    </field>
+    <field name="email" type="plone.schema.email.Email">
+      <description i18n:translate="">Email adress of the speaker</description>
+      <required>False</required>
+      <title i18n:translate="">Email</title>
+    </field>
+    <field name="website" type="zope.schema.TextLine">
+      <required>False</required>
+      <title i18n:translate="">Website</title>
+    </field>
+    <field name="twitter" type="zope.schema.TextLine">
+      <required>False</required>
+      <title i18n:translate="">Twitter name</title>
+    </field>
+    <field name="github" type="zope.schema.TextLine">
+      <required>False</required>
+      <title i18n:translate="">Github username</title>
+    </field>
+    <field name="image" type="plone.namedfile.field.NamedBlobImage">
+      <description i18n:translate="">Portrait of the speaker</description>
+      <required>False</required>
+      <title i18n:translate="">Image</title>
+    </field>
+    <field name="speaker_biography" type="plone.app.textfield.RichText">
+      <max_length>1000</max_length>
+      <required>False</required>
+      <title i18n:translate="">Speaker Biography (max. 1000 characters)</title>
+    </field>
+    <field name="slides" type="zope.schema.URI">
+      <description i18n:translate="">URL of the Website that holds the slides</description>
+      <required>False</required>
+      <title i18n:translate="">Vortragsfolien</title>
+    </field>
+    <field name="video" type="zope.schema.URI" security:write-permission="cmf.ManagePortal">
+      <description i18n:translate="">URL of the Website that holds the video of the talk</description>
+      <required>False</required>
+      <title i18n:translate="">Video</title>
+    </field>
+    <field name="hide_date" type="zope.schema.Bool" security:write-permission="cmf.ManagePortal">
+      <default>True</default>
+      <description i18n:translate="">Display talks without date and time.</description>
+      <required>False</required>
+      <title i18n:translate="">Hide date and time</title>
+    </field>
+  </schema>
+</model>
