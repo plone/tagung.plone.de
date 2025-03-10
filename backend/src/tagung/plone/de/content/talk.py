@@ -1,12 +1,8 @@
 from plone.app.textfield import RichText
-from plone.app.z3cform.widget import LinkFieldWidget
-from plone.autoform import directives as form
 from plone.dexterity.content import Container
-from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from tagung.plone.de import _
 from zope import schema
-from zope.interface import Interface
 
 
 # from plone.supermodel import xmlSchema
