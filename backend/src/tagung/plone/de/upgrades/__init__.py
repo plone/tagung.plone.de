@@ -1,4 +1,4 @@
 import logging
 
 
-logger = logging.getLogger("dbec.contenttypes")
+logger = logging.getLogger("tagung.plone.de")

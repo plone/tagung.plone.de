@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    >
+
+  <gs:registerProfile
+      name="1002"
+      title="load Talk FTI settings to enable behaviors"
+      description="Configuration for version 1002"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+      directory="1002"
+      />
+
+  <gs:upgradeSteps
+      profile="tagung.plone.de:default"
+      source="1001"
+      destination="1002"
+      >
+
+    <gs:upgradeStep
+        title="load Talk FTI settings to enable behaviors"
+        description=""
+        handler=".v1002.upgrade"
+        />
+
+    <gs:upgradeDepends
+        title="load Talk FTI settings to enable behaviors (GS profile)"
+        description=""
+        import_profile="tagung.plone.de.upgrades:1002"
+        />
+
+  </gs:upgradeSteps>
+
+</configure>

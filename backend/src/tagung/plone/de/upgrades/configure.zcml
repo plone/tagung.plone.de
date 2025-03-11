@@ -17,4 +17,6 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
+  <include file="1002.zcml" />
+
 </configure>
