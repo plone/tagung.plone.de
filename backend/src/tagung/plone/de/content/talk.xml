@@ -53,7 +53,7 @@
     <field name="email"
            type="plone.schema.email.Email"
     >
-      <description i18n:translate="">Email adress of the speaker</description>
+      <description i18n:translate="">Email address of the speaker</description>
       <required>False</required>
       <title i18n:translate="">Email</title>
     </field>

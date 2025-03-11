@@ -4,3 +4,4 @@ node_modules
 /public
 *.mo
 /data
+/.python-version

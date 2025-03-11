@@ -54,7 +54,8 @@
     <element value="plone.versioning" />
     <element value="plone.leadimage" />
     <!--<element value="volto.blocks" />-->
-    <!--<element value="plone.richtext"/>-->
+    <element value="plone.leadimage" />
+    <element value="plone.richtext" />
     <!--<element value="plone.tableofcontents"/>-->
     <!--<element value="plone.translatable" />-->
     <!--<element value="plone.nextprevioustoggle" />-->

@@ -1,8 +1,18 @@
 <configure xmlns="http://namespaces.zope.org/zope">
 
   <utility
+      name="tagung.talk.room"
+      component=".talk.RoomVocabulary"
+      />
+
+  <utility
+      name="tagung.talk.type_of_talk"
+      component=".talk.TalkTypeVocabulary"
+      />
+
+  <utility
       name="tagung.talk.audience"
-      component=".talk.audience_vocabulary"
+      component=".talk.AudienceVocabulary"
       />
 
 </configure>

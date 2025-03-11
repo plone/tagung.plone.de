@@ -1,17 +1,28 @@
-from tagung.plone.de import _
+from plone import api
+from plone.app.vocabularies.terms import safe_simplevocabulary_from_values
 from zope.interface import provider
 from zope.schema.interfaces import IVocabularyFactory
-from zope.schema.vocabulary import SimpleTerm
-from zope.schema.vocabulary import SimpleVocabulary
+
+
+# from tagung.plone.de import _
 
 
 @provider(IVocabularyFactory)
-def audience_vocabulary(context) -> SimpleVocabulary:
-    return SimpleVocabulary(
-        [
-            SimpleTerm(value="beginner", title=_("Beginner")),
-            SimpleTerm(value="developer", title=_("Developer")),
-            SimpleTerm(value="expert", title=_("Expert")),
-            SimpleTerm(value="integrator", title=_("Integrator")),
-        ]
-    )
+def RoomVocabulary(context):
+    name = "ploneconf.room"
+    values = api.portal.get_registry_record(name)
+    return safe_simplevocabulary_from_values(values)
+
+
+@provider(IVocabularyFactory)
+def TalkTypeVocabulary(context):
+    name = "ploneconf.type_of_talk"
+    values = api.portal.get_registry_record(name)
+    return safe_simplevocabulary_from_values(values)
+
+
+@provider(IVocabularyFactory)
+def AudienceVocabulary(context):
+    name = "ploneconf.audience"
+    values = api.portal.get_registry_record(name)
+    return safe_simplevocabulary_from_values(values)
