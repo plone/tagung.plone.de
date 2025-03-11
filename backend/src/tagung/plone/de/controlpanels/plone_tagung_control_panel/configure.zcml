@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="tagung.plone.de"
+    >
+
+  <browser:page
+      name="plone_tagung_control_panel-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.PloneTagungControlPanelView"
+      permission="cmf.ManagePortal"
+      layer="tagung.plone.de.interfaces.ITagungPloneDeLayer"
+      />
+
+  <include package="plone.restapi" />
+  <adapter
+      factory=".controlpanel.PloneTagungControlPanelConfigletPanel"
+      name="plone_tagung_control_panel"
+      />
+
+
+</configure>

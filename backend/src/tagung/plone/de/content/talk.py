@@ -22,7 +22,9 @@ class ITalk(model.Schema):
 
     details = RichText(
         title=_("Details"),
-        description=_("Description of the talk (max. 3000 characters)"),
+        description=_(
+            "Description of the talk (max. 3000 characters). Zum formatieren einen Text selektieren."
+        ),
         max_length=3000,
         required=True,
     )
@@ -32,7 +34,7 @@ class ITalk(model.Schema):
     audience = schema.Set(
         title=_("Audience"),
         value_type=schema.Choice(
-            vocabulary="ploneconf.audience",
+            vocabulary="tagung.talk.audience",
         ),
         required=False,
     )
@@ -40,7 +42,7 @@ class ITalk(model.Schema):
     directives.write_permission(room="cmf.ReviewPortalContent")
     room = schema.Choice(
         title=_("Room"),
-        vocabulary="ploneconf.room",
+        vocabulary="tagung.talk.room",
         required=False,
     )
 
@@ -66,8 +68,8 @@ class ITalk(model.Schema):
         required=False,
     )
 
-    twitter = schema.TextLine(
-        title=_("Twitter name"),
+    mastodon = schema.TextLine(
+        title=_("Mastodon URL"),
         required=False,
     )
 

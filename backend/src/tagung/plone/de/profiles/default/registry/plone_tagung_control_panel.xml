@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+          i18n:domain="tagung.plone.de"
+>
+
+  <!-- -*- extra stuff goes here -*- -->
+
+  <records interface="tagung.plone.de.controlpanels.plone_tagung_control_panel.controlpanel.IPloneTagungControlPanel"
+           prefix="plonetagung"
+  />
+
+
+</registry>

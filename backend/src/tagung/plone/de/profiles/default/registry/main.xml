@@ -5,4 +5,51 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.audience"
+  >
+    <value key="title">Audience</value>
+    <value key="description">A custom speaker index</value>
+    <value key="enabled">True</value>
+    <value key="sortable">False</value>
+    <value key="operations">
+      <element>plone.app.querystring.operation.string.is</element>
+      <element>plone.app.querystring.operation.string.contains</element>
+    </value>
+    <value key="group">Metadata</value>
+  </records>
+
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.type_of_talk"
+  >
+    <value key="title">Type of Talk</value>
+    <value key="description">A custom index</value>
+    <value key="enabled">True</value>
+    <value key="sortable">True</value>
+    <value key="operations">
+      <element>plone.app.querystring.operation.selection.is</element>
+      <element>plone.app.querystring.operation.selection.any</element>
+      <element>plone.app.querystring.operation.selection.all</element>
+    </value>
+    <value key="group">Metadata</value>
+  </records>
+
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="plone.app.querystring.field.speaker"
+  >
+    <value key="title">Speaker</value>
+    <value key="description">A custom index</value>
+    <value key="enabled">True</value>
+    <value key="sortable">False</value>
+    <value key="operations">
+      <element>plone.app.querystring.operation.string.is</element>
+      <element>plone.app.querystring.operation.string.contains</element>
+    </value>
+    <value key="group">Metadata</value>
+  </records>
+
+  <record name="plone.enable_self_reg">
+    <value>True</value>
+  </record>
+
 </registry>

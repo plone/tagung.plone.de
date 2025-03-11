@@ -3,4 +3,18 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
+  <configlet action_id="plone_tagung_control_panel-controlpanel"
+             appId="plone_tagung_control_panel-controlpanel"
+             attributes="title"
+             category="Products"
+             condition_expr=""
+             icon_expr=""
+             title="Plone Tagung Control Panel"
+             url_expr="string:${portal_url}/@@plone_tagung_control_panel-controlpanel"
+             visible="True"
+  >
+    <permission>Manage Portal</permission>
+  </configlet>
+
+
 </object>

@@ -9,20 +9,20 @@ from zope.schema.interfaces import IVocabularyFactory
 
 @provider(IVocabularyFactory)
 def RoomVocabulary(context):
-    name = "ploneconf.room"
+    name = "plonetagung.room"
     values = api.portal.get_registry_record(name)
     return safe_simplevocabulary_from_values(values)
 
 
 @provider(IVocabularyFactory)
 def TalkTypeVocabulary(context):
-    name = "ploneconf.type_of_talk"
+    name = "plonetagung.type_of_talk"
     values = api.portal.get_registry_record(name)
     return safe_simplevocabulary_from_values(values)
 
 
 @provider(IVocabularyFactory)
 def AudienceVocabulary(context):
-    name = "ploneconf.audience"
+    name = "plonetagung.audience"
     values = api.portal.get_registry_record(name)
     return safe_simplevocabulary_from_values(values)

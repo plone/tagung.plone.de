@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layers>
-  <layer interface="tagung.plone.de.interfaces.IBrowserLayer"
+  <layer interface="tagung.plone.de.interfaces.ITagungPloneDeLayer"
          name="tagung.plone.de"
   />
 </layers>

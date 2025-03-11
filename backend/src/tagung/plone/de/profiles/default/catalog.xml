@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object name="portal_catalog">
-  <!-- Index
   <index meta_type="FieldIndex"
-         name="industry"
+         name="type_of_talk"
   >
-    <indexed_attr value="industry" />
+    <indexed_attr value="type_of_talk" />
   </index>
--->
-  <!-- Metadata
-  <column value="industry" />
--->
+  <index meta_type="FieldIndex"
+         name="speaker"
+  >
+    <indexed_attr value="speaker" />
+  </index>
+  <index meta_type="KeywordIndex"
+         name="audience"
+  >
+    <indexed_attr value="audience" />
+  </index>
+  <index meta_type="FieldIndex"
+         name="room"
+  >
+    <indexed_attr value="room" />
+  </index>
+  <index meta_type="BooleanIndex"
+         name="featured"
+  >
+    <indexed_attr value="featured" />
+  </index>
+
+  <column value="audience" />
+  <column value="type_of_talk" />
+  <column value="speaker" />
+  <column value="room" />
+  <column value="featured" />
 </object>
