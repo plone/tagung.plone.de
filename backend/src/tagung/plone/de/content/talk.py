@@ -17,13 +17,13 @@ class ITalk(model.Schema):
         title=_("Type of talk"),
         vocabulary="tagung.talk.type_of_talk",
         required=True,
-        max_length=3000,
+        # max_length=3000,
     )
 
     details = RichText(
         title=_("Details"),
         description=_(
-            "Description of the talk (max. 3000 characters). Zum formatieren einen Text selektieren."
+            "Description of the talk (max. 3000 characters). To format select some text."
         ),
         max_length=3000,
         required=True,

@@ -2,7 +2,7 @@ from AccessControl.SecurityManagement import newSecurityManager
 from Products.CMFPlone.factory import _DEFAULT_PROFILE
 from Products.CMFPlone.factory import addPloneSite
 from Products.GenericSetup.tool import SetupTool
-from tagung.plone.de.interfaces import IBrowserLayer
+from tagung.plone.de.interfaces import ITagungPloneDeLayer
 from Testing.makerequest import makerequest
 from zope.interface import directlyProvidedBy
 from zope.interface import directlyProvides
@@ -35,7 +35,7 @@ app = makerequest(globals()["app"])
 
 request = app.REQUEST
 
-ifaces = [IBrowserLayer] + list(directlyProvidedBy(request))
+ifaces = [ITagungPloneDeLayer] + list(directlyProvidedBy(request))
 
 directlyProvides(request, *ifaces)
 

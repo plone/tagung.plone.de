@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-03-10 20:03+0000\n"
+"POT-Creation-Date: 2025-03-12 10:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,116 +14,116 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: tagung/plone/de/content/talk.py:27
+#: tagung/plone/de/content/talk.py:35
 msgid "Audience"
 msgstr "Zielgruppe"
 
-#: tagung/plone/de/content/talk.py:28
-msgid "Audience of the talk"
-msgstr ""
+#: tagung/plone/de/controlpanels/plone_tagung_control_panel/controlpanel.py:37
+msgid "Available Rooms for the conference"
+msgstr "Verfügbare Räume für die Tagung"
 
-#: tagung/plone/de/vocabularies/talk.py:12
-msgid "Beginner"
-msgstr "Anfänger"
+#: tagung/plone/de/controlpanels/plone_tagung_control_panel/controlpanel.py:45
+msgid "Available audiences for talks"
+msgstr "Verfügbare Zielgruppen für Vorträge"
 
-#: tagung/plone/de/content/talk.py:59
-msgid "Biography of the speaker"
-msgstr "Biographie"
+#: tagung/plone/de/controlpanels/plone_tagung_control_panel/controlpanel.py:21
+msgid "Available types for talks"
+msgstr "Verfügbare Vortragsarten"
+
+#: tagung/plone/de/content/talk.py:56
+msgid "Company"
+msgstr "Unternehmen/Organisation"
 
 #: tagung/plone/de/profiles.zcml:22
 msgid "Create example content to showcase the new website"
 msgstr ""
 
-#: tagung/plone/de/content/talk.py:20
-msgid "Description of the talk in max 3000 characters"
-msgstr "Beschreibung der Talk"
+#: tagung/plone/de/content/talk.py:25
+msgid "Description of the talk (max. 3000 characters). To format select some text."
+msgstr "Beschreibung des Vortrags (max 3000 Zeichen. Zum formatieren von Text, einen Text markieren.)"
 
-#: tagung/plone/de/content/talk.py:19
+#: tagung/plone/de/content/talk.py:24
 msgid "Details"
 msgstr "Details"
 
-#: tagung/plone/de/vocabularies/talk.py:13
-msgid "Developer"
-msgstr "Entwickler"
-
-#: tagung/plone/de/content/talk.py:77
+#: tagung/plone/de/content/talk.py:110
 msgid "Display talks without date and time."
-msgstr ""
+msgstr "Verberge Zeitangaben bei Vorträgen."
 
-#: tagung/plone/de/content/talk.py:43
-msgid "E-Mail"
+#: tagung/plone/de/content/talk.py:61
+msgid "Email"
 msgstr "E-Mail"
 
-#: tagung/plone/de/content/talk.py:44
-msgid "Email Address of the speaker"
+#: tagung/plone/de/content/talk.py:62
+msgid "Email address of the speaker"
+msgstr "E-Mail-Adresse des Vortragenden"
+
+#: tagung/plone/de/controlpanels/plone_tagung_control_panel/controlpanel.py:15
+msgid "First day of the conference"
+msgstr "Erster Tag der Tagung"
+
+#: tagung/plone/de/content/talk.py:77
+msgid "Github username"
+msgstr "GitHub Nutzername"
+
+#: tagung/plone/de/content/talk.py:109
+msgid "Hide date and time"
+msgstr "Verberge Zeitangaben"
+
+#: tagung/plone/de/content/talk.py:72
+msgid "Mastodon URL"
 msgstr ""
 
-#: tagung/plone/de/vocabularies/talk.py:14
-msgid "Expert"
-msgstr "Expert"
-
-#: tagung/plone/de/content/talk.py:76
-msgid "Hide Date and Time"
-msgstr ""
-
-#: tagung/plone/de/vocabularies/talk.py:15
-msgid "Integrator"
-msgstr "Integrator"
-
-#: tagung/plone/de/content/talk.py:65
-msgid "Link to the slides"
-msgstr "Verknüpfung (URL) zu den Folios"
-
-#: tagung/plone/de/content/talk.py:71
-msgid "Link to the video"
-msgstr "Verknüpfung (URL) zu den Video"
-
-#: tagung/plone/de/content/talk.py:35
-msgid "Name(s) of the speaker"
-msgstr ""
-
-#: tagung/plone/de/content/talk.py:39
-msgid "Organisation"
-msgstr ""
+#: tagung/plone/de/content/talk.py:51
+msgid "Name (or names) of the speaker"
+msgstr "Name der Vortragenden"
 
 #: tagung/plone/de/profiles.zcml:13
 msgid "Package to configure a new tagung.plone.de site"
 msgstr ""
 
-#: tagung/plone/de/content/talk.py:64
-msgid "Slides"
-msgstr "Folios"
+#: tagung/plone/de/controlpanels/plone_tagung_control_panel/controlpanel.py:63
+msgid "Plone Tagung Control Panel"
+msgstr ""
 
-#: tagung/plone/de/content/talk.py:34
+#: tagung/plone/de/content/talk.py:44
+msgid "Room"
+msgstr "Raum"
+
+#: tagung/plone/de/content/talk.py:50
 msgid "Speaker"
-msgstr ""
+msgstr "Vortragende"
 
-#: tagung/plone/de/content/talk.py:58
-msgid "Speaker Bio"
-msgstr ""
+#: tagung/plone/de/content/talk.py:88
+msgid "Speaker Biography (max. 1000 characters)"
+msgstr "Biographie "
 
-#: tagung/plone/de/content/talk.py:53
-msgid "Twitter"
-msgstr ""
+#: tagung/plone/de/content/talk.py:17
+msgid "Type of talk"
+msgstr "Vortragsart"
 
-#: tagung/plone/de/content/talk.py:54
-msgid "Twitter handle of the speaker"
-msgstr ""
+#: tagung/plone/de/content/talk.py:96
+msgid "URL of the Website that holds the slides"
+msgstr "URL der Vortragsfolien"
+
+#: tagung/plone/de/content/talk.py:103
+msgid "URL of the Website that holds the video of the talk"
+msgstr "URL des Vortragsvideos"
 
 #: tagung/plone/de/profiles.zcml:30
 msgid "Uninstall tagung.plone.de setup."
 msgstr ""
 
-#: tagung/plone/de/content/talk.py:70
+#: tagung/plone/de/content/talk.py:102
 msgid "Video"
 msgstr ""
 
-#: tagung/plone/de/content/talk.py:48
-msgid "Website"
+#: tagung/plone/de/content/talk.py:95
+msgid "Vortragsfolien"
 msgstr ""
 
-#: tagung/plone/de/content/talk.py:49
-msgid "Website of the speaker"
+#: tagung/plone/de/content/talk.py:67
+msgid "Website"
 msgstr ""
 
 #: tagung/plone/de/profiles.zcml:22
