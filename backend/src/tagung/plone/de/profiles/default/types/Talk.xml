@@ -56,6 +56,7 @@
     <!--<element value="volto.blocks" />-->
     <element value="plone.leadimage" />
     <element value="plone.richtext" />
+    <!-- <element value="plone.eventbasic"/> -->
     <!--<element value="plone.tableofcontents"/>-->
     <!--<element value="plone.translatable" />-->
     <!--<element value="plone.nextprevioustoggle" />-->

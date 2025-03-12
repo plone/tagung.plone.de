@@ -1,3 +1,4 @@
+from plone.app.event.base import default_timezone
 from plone.app.textfield import RichText
 from plone.autoform import directives
 from plone.dexterity.content import Container
@@ -7,6 +8,12 @@ from tagung.plone.de import _
 from z3c.form.browser.checkbox import CheckBoxFieldWidget
 from z3c.form.browser.radio import RadioFieldWidget
 from zope import schema
+from zope.interface import Invalid
+from zope.interface import invariant
+
+
+class StartBeforeEnd(Invalid):
+    __doc__ = _("error_invalid_date", default="Invalid start or end date")
 
 
 class ITalk(model.Schema):
@@ -111,6 +118,57 @@ class ITalk(model.Schema):
         required=False,
         default=True,
     )
+
+    directives.widget(
+        "start",
+        default_timezone=default_timezone,
+        klass="event_start",
+    )
+    directives.write_permission(start="cmf.ReviewPortalContent")
+    start = schema.Datetime(
+        title=_(
+            "Start",
+        ),
+        description=_(
+            "Vortragsbeginn",
+        ),
+        # defaultFactory=get_default_start,
+        required=False,
+        readonly=False,
+    )
+
+    directives.widget(
+        "end",
+        default_timezone=default_timezone,
+        klass="event_end",
+        pattern_options={
+            "behavior": "styled",
+            "after": "input.event_end",
+            "offset-days": "0.125",
+        },
+    )
+    directives.write_permission(end="cmf.ReviewPortalContent")
+    end = schema.Datetime(
+        title=_(
+            "Start",
+        ),
+        description=_(
+            "Vortragsbeginn",
+        ),
+        # defaultFactory=get_default_start,
+        required=False,
+        readonly=False,
+    )
+
+    @invariant
+    def validate_start_end(data):
+        if data.start and data.end and data.start > data.end and not data.open_end:
+            raise StartBeforeEnd(
+                _(
+                    "error_end_must_be_after_start_date",
+                    default="End date must be after start date.",
+                )
+            )
 
 
 class Talk(Container):
