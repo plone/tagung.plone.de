@@ -14,6 +14,6 @@ class TestSetupUninstall:
 
     def test_browserlayer_not_registered(self, browser_layers):
         """Test that IBrowserLayer is not registered."""
-        from tagung.plone.de.interfaces import IBrowserLayer
+        from tagung.plone.de.interfaces import ITagungPloneDeLayer
 
-        assert IBrowserLayer not in browser_layers
+        assert ITagungPloneDeLayer not in browser_layers

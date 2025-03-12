@@ -8,6 +8,6 @@ class TestSetupInstall:
 
     def test_browserlayer(self, browser_layers):
         """Test that IBrowserLayer is registered."""
-        from tagung.plone.de.interfaces import IBrowserLayer
+        from tagung.plone.de.interfaces import ITagungPloneDeLayer
 
-        assert IBrowserLayer in browser_layers
+        assert ITagungPloneDeLayer in browser_layers
