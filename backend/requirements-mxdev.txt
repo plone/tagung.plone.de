@@ -3,6 +3,11 @@
 -c constraints-mxdev.txt
 
 ###############################################################################
+# mxdev development sources
+-e ./sources/plone.restapi[test]
+
+
+###############################################################################
 # begin requirements from: requirements.txt
 
 collective.exportimport
