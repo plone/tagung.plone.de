@@ -9,5 +9,5 @@
 
 // fix missing container width in sitemap
 #page-sitemap > * {
-    @include default-container-width();
+  @include default-container-width();
 }
