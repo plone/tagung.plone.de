@@ -6,3 +6,8 @@
 .field-wrapper-changeNote {
   display: block;
 }
+
+// fix missing container width in sitemap
+#page-sitemap > * {
+    @include default-container-width();
+}
