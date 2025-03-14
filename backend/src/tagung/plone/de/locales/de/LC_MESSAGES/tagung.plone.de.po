@@ -16,7 +16,7 @@ msgstr ""
 
 #: tagung/plone/de/content/talk.py:35
 msgid "Audience"
-msgstr "Zielgruppe"
+msgstr "Zielgruppen"
 
 #: tagung/plone/de/controlpanels/plone_tagung_control_panel/controlpanel.py:37
 msgid "Available Rooms for the conference"

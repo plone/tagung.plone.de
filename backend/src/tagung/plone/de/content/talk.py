@@ -2,6 +2,7 @@ from plone.app.event.base import default_timezone
 from plone.app.textfield import RichText
 from plone.autoform import directives
 from plone.dexterity.content import Container
+from plone.namedfile.field import NamedBlobImage
 from plone.schema.email import Email
 from plone.supermodel import model
 from tagung.plone.de import _
@@ -85,11 +86,11 @@ class ITalk(model.Schema):
         required=False,
     )
 
-    # image = NamedBlobImage(
-    #     title=_(u'Image'),
-    #     description=_(u'Portrait of the speaker'),
-    #     required=False,
-    #     )
+    image = NamedBlobImage(
+        title=_("Image"),
+        description=_("Portrait of the speaker"),
+        required=False,
+    )
 
     speaker_biography = RichText(
         title=_("Speaker Biography (max. 1000 characters)"),
@@ -150,10 +151,10 @@ class ITalk(model.Schema):
     directives.write_permission(end="cmf.ReviewPortalContent")
     end = schema.Datetime(
         title=_(
-            "Start",
+            "End",
         ),
         description=_(
-            "Vortragsbeginn",
+            "Vortragsende",
         ),
         # defaultFactory=get_default_start,
         required=False,
