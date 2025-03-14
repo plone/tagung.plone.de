@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    >
+
+  <gs:registerProfile
+      name="1004"
+      title="load FTI"
+      description="Configuration for version 1004"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+      directory="1004"
+      />
+
+  <gs:upgradeSteps
+      profile="tagung.plone.de:default"
+      source="1003"
+      destination="1004"
+      >
+
+    <gs:upgradeStep
+        title="load FTI"
+        description=""
+        handler=".v1004.upgrade"
+        />
+
+    <gs:upgradeDepends
+        title="load FTI (GS profile)"
+        description=""
+        import_profile="tagung.plone.de.upgrades:1004"
+        />
+
+  </gs:upgradeSteps>
+
+</configure>
