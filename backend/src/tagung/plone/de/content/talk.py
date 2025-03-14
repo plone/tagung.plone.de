@@ -41,6 +41,7 @@ class ITalk(model.Schema):
     directives.write_permission(audience="cmf.ReviewPortalContent")
     audience = schema.Set(
         title=_("Audience"),
+        description=_("Please select one or more audiences."),
         value_type=schema.Choice(
             vocabulary="tagung.talk.audience",
         ),
@@ -87,7 +88,7 @@ class ITalk(model.Schema):
     )
 
     image = NamedBlobImage(
-        title=_("Image"),
+        title=_("Portrait"),
         description=_("Portrait of the speaker"),
         required=False,
     )
@@ -98,7 +99,7 @@ class ITalk(model.Schema):
         required=False,
     )
 
-    # directives.write_permission(slides='cmf.ReviewPortalContent')
+    directives.write_permission(slides="cmf.ReviewPortalContent")
     slides = schema.URI(
         title=_("Vortragsfolien"),
         description=_("URL of the Website that holds the slides"),

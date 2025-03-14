@@ -76,7 +76,7 @@ msgstr ""
 
 #: tagung/plone/de/content/talk.py:51
 msgid "Name (or names) of the speaker"
-msgstr "Name der Vortragenden"
+msgstr "Name oder Namen der Vortragenden"
 
 #: tagung/plone/de/profiles.zcml:13
 msgid "Package to configure a new tagung.plone.de site"
@@ -124,7 +124,7 @@ msgstr ""
 
 #: tagung/plone/de/content/talk.py:67
 msgid "Website"
-msgstr ""
+msgstr "Webseite"
 
 #: tagung/plone/de/profiles.zcml:22
 msgid "tagung.plone.de: Example content"
