@@ -1,7 +1,13 @@
 @import 'variables';
 @import 'components/footer';
+@import 'components/talkview';
 
 // revoke hiding changeNote field from edit & add forms
 .field-wrapper-changeNote {
   display: block;
+}
+
+// fix missing container width in sitemap
+#page-sitemap > * {
+  @include default-container-width();
 }
