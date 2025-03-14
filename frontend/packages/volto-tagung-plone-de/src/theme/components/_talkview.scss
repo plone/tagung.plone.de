@@ -1,0 +1,117 @@
+.talk-view {
+  .talk-wrapper {
+    padding-top: 40px;
+
+    .talk-header {
+      .talk-header-info {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: var(--accent-color);
+        color: var(--reverse-color);
+        font-weight: 800;
+        gap: 20px;
+        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .talk-audience {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-right: 40px;
+        margin-left: 40px;
+
+        .talk-audience-items {
+          padding: 6px;
+          border-width: 2px;
+          border-style: solid;
+          border-radius: 10px;
+          margin-right: 5px;
+          margin-bottom: 5px;
+          color: #5d7a8e;
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .talk-content {
+      .talk-details {
+        margin: 40px;
+        font-size: 1em;
+      }
+
+      .talk-speaker {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        gap: 80px;
+
+        .talk-speaker-info {
+          min-width: 300px;
+          flex: 2 1;
+          flex-wrap: wrap;
+
+          .talk-speaker-biography {
+            padding-left: 40px;
+          }
+        }
+
+        .talk-side-wrapper {
+          flex: 1 1;
+
+          .talk-avatar-wrapper {
+            padding-bottom: 20px;
+            justify-self: center;
+            .talk-avatar {
+              width: 200px;
+              height: 200px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+
+          .talk-speaker-links {
+            padding: 0;
+            margin: 0;
+            justify-self: center;
+            list-style: none;
+
+            li {
+              margin-bottom: 10px;
+              font-weight: 600;
+
+              a {
+                color: var(--link-color);
+                text-decoration: none;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .talk-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 40px;
+
+        .talk-btn {
+          padding: 0.3rem;
+          border: 2px solid var(--link-color);
+          border-radius: 4px;
+          margin: 5px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
