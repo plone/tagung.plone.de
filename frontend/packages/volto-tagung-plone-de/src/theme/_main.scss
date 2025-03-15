@@ -12,51 +12,52 @@
   @include default-container-width();
 }
 
-// override _header.scss 
+// override _header.scss
 
 // increase logo size
 .header-wrapper .header .logo-nav-wrapper .logo {
-    max-width: 262px;
-    max-height: 120px;
+  max-width: 262px;
+  max-height: 120px;
 }
 
 // reduce padding in dropdown navigation on desktop
 .navigation ul.desktop-menu .submenu {
-    padding: 20px 102px 30px;
+  padding: 20px 102px 30px;
 }
 .navigation ul.desktop-menu .submenu ul {
-    padding: 20px 0 0;
+  padding: 20px 0 0;
 }
 
 // Set volto-slate default table styles
-table.slate-table{
-    min-width: 680px;
+table.slate-table {
+  min-width: 680px;
 }
 
-table.slate-table td, table.slate-table th {
-    padding: .5rem;
-    background-color: #eee;
-    border: .25rem solid #fff;
-    vertical-align: middle;
-    padding: 10px;
+table.slate-table td,
+table.slate-table th {
+  padding: 0.5rem;
+  padding: 10px;
+  border: 0.25rem solid #fff;
+  background-color: #eee;
+  vertical-align: middle;
 }
 
 table.slate-table th {
-    border-bottom: none;
-    background-color: #ccc;
+  border-bottom: none;
+  background-color: #ccc;
 }
 
-table.slate-table th p{
-    font-size: 0.9em;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 0.03em;
+table.slate-table th p {
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: bold;
+  letter-spacing: 0.03em;
 }
 
-table.slate-table td p{
-    font-size: 0.8em;
+table.slate-table td p {
+  font-size: 0.8em;
 }
 
-table.slate-table th p{
-    font-size: 0.9em;
+table.slate-table th p {
+  font-size: 0.9em;
 }
