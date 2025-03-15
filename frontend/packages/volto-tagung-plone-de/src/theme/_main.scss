@@ -11,3 +11,19 @@
 #page-sitemap > * {
   @include default-container-width();
 }
+
+// override _header.scss 
+
+// increase logo size
+.header-wrapper .header .logo-nav-wrapper .logo {
+    max-width: 262px; */
+    max-height: 120px;
+}
+
+// reduce padding in dropdown navigation on desktop
+.navigation ul.desktop-menu .submenu {
+    padding: 20px 102px 30px;
+}
+.navigation ul.desktop-menu .submenu ul {
+    padding: 20px 0 0;
+}
