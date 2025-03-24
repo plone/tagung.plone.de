@@ -52,17 +52,13 @@ export default function TalkView(props) {
           )}
           {content.audience && (
             <div className="talk-audience">
-              {content.audience.length > 0 ? (
-                content.audience?.map((item, index) => {
-                  return (
-                    <div className="talk-audience-items" key={index}>
-                      {item.title}
-                    </div>
-                  );
-                })
-              ) : (
-                <div className="talk-audience-items">Allgemein</div>
-              )}
+              {content.audience?.map((item, index) => {
+                return (
+                  <div className="talk-audience-items" key={index}>
+                    {item.title}
+                  </div>
+                );
+              })}
             </div>
           )}
         </Container>
