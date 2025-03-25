@@ -6,8 +6,42 @@ import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/defau
 export default function TalkView(props) {
   const { content } = props;
 
-  let start = new Date(content.start);
-  let end = new Date(content.end);
+  const options_start = {
+    hourCycle: 'h23',
+    hour: 'numeric',
+    minute: 'numeric',
+  };
+  const options_end = {
+    hourCycle: 'h23',
+    hour: 'numeric',
+    minute: 'numeric',
+    timeZoneName: 'short',
+  };
+
+  const options_date = {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+  };
+
+  function createUTCDate(dateString) {
+    if (!dateString) {
+      return null;
+    }
+    return new Date(dateString + 'Z');
+  }
+
+  const start = createUTCDate(content.start);
+  const formatted_start = new Intl.DateTimeFormat(
+    undefined,
+    options_start,
+  ).format(start);
+  const date = new Intl.DateTimeFormat(undefined, options_date).format(start);
+
+  const end = createUTCDate(content.end);
+  const formatted_end = new Intl.DateTimeFormat(undefined, options_end).format(
+    end,
+  );
 
   return (
     <Container className="talk-view default">
@@ -20,29 +54,13 @@ export default function TalkView(props) {
             {content.room && (
               <div className="talk-room">Raum: {content.room.title}</div>
             )}
-            {!content.hide_date && (
+            {!content.hide_date && content.start && content.end && (
               <div className="talk-time">
-                <time className="talk-day">
-                  {`${start.toLocaleDateString('de-DE', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: '2-digit',
-                  })}`}
-                </time>
+                <time dateTime={date}>{date}</time>
                 {' | '}
-                <time className="talk-start" dateTime={start}>
-                  {`${start.toLocaleTimeString('de-DE', {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                  })}`}
-                </time>
-                {'-'}
-                <time className="talk-end" dateTime={'end'}>
-                  {`${end.toLocaleTimeString('de-DE', {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                  })}`}
-                </time>
+                <time dateTime={formatted_start}>{formatted_start}</time>
+                {' - '}
+                <time dateTime={formatted_end}>{formatted_end}</time>
               </div>
             )}
           </Container>
@@ -137,9 +155,9 @@ export default function TalkView(props) {
                   </ul>
                 </div>
               </Container>
+              <hr></hr>
             </div>
           )}
-          <hr></hr>
           <Container className="talk-links">
             {content.slides && (
               <div className="talk-btn">
