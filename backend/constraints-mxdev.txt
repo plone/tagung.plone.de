@@ -513,8 +513,8 @@ pas-plugins-authomatic==2.0.0b3
 
 ###############################################################################
 # mxdev constraint overrides
-plone.autoinclude==2.0.0
+plone.autoinclude==2.0.3
 setuptoools==75.8.2
-plone.restapi>=9.13.0
+plone.restapi==9.13.3
 
 
