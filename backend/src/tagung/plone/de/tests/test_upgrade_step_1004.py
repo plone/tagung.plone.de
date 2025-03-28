@@ -1,10 +1,11 @@
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
-
-# from tagung.plone.de.testing import TAGUNG_PLONE_DE_FUNCTIONAL_TESTING
 from tagung.plone.de.testing import TAGUNG_PLONE_DE_INTEGRATION_TESTING
 
 import unittest
+
+
+# from tagung.plone.de.testing import TAGUNG_PLONE_DE_FUNCTIONAL_TESTING
 
 
 class UpgradeStepIntegrationTest(unittest.TestCase):
