@@ -3,6 +3,11 @@
   background-color: var(--secondary-color) !important;
   color: var(--reverse-color);
 
+  .footerDecoration {
+    background-color: white;
+    color: var(--primary-foreground-color);
+  }
+
   .footerMain {
     .footer {
       padding: 3rem 2rem;

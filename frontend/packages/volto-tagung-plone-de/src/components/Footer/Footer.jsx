@@ -1,12 +1,14 @@
 import React from 'react';
-
 import { UniversalLink } from '@plone/volto/components';
 import { Container } from '@plone/components';
+import Sponsors from '../Sponsors/Sponsors';
 
 export default function Footer() {
   return (
     <footer id="footer">
-      <div className="footerDecoration"></div>
+      <div className="footerDecoration">
+        <Sponsors></Sponsors>
+      </div>
       <div className="footerMain">
         <Container className="footer">
           <UniversalLink className="item" href="/datenschutz">
