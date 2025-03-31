@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layers>
+  <layer interface="tagung.plone.de.interfaces.IBrowserLayer"
+         name="tagung.plone.de"
+         remove="true"
+  />
+</layers>

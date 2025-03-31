@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    >
+
+  <gs:registerProfile
+      name="1005"
+      title="Remove old BrowserLayer registration"
+      description="Configuration for version 1005"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+      directory="1005"
+      />
+
+  <gs:upgradeSteps
+      profile="tagung.plone.de:default"
+      source="1004"
+      destination="1005"
+      >
+
+    <gs:upgradeStep
+        title="Remove old BrowserLayer registration"
+        description=""
+        handler=".v1005.upgrade"
+        />
+
+    <gs:upgradeDepends
+        title="Remove old BrowserLayer registration (GS profile)"
+        description=""
+        import_profile="tagung.plone.de.upgrades:1005"
+        />
+
+  </gs:upgradeSteps>
+
+</configure>
