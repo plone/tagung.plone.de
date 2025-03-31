@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    >
+
+  <gs:registerProfile
+      name="1006"
+      title="load new Sponsor CT settings"
+      description="Configuration for version 1006"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+      directory="1006"
+      />
+
+  <gs:upgradeSteps
+      profile="tagung.plone.de:default"
+      source="1005"
+      destination="1006"
+      >
+
+    <gs:upgradeStep
+        title="load new Sponsor CT settings"
+        description=""
+        handler=".v1006.upgrade"
+        />
+
+    <gs:upgradeDepends
+        title="load new Sponsor CT settings (GS profile)"
+        description=""
+        import_profile="tagung.plone.de.upgrades:1006"
+        />
+
+  </gs:upgradeSteps>
+
+</configure>
