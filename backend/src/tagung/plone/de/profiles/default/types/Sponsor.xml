@@ -28,7 +28,7 @@
   -->
   </property>
   <!-- Schema, class and security -->
-  <property name="add_permission">tagung.plone.de.AddSponsor</property>
+  <property name="add_permission">tagung.AddSponsor</property>
   <property name="klass">tagung.plone.de.content.sponsor.Sponsor</property>
   <property name="model_file" />
   <property name="model_source" />
