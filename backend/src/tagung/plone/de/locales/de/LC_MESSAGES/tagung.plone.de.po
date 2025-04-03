@@ -36,7 +36,7 @@ msgstr "Verfügbare Vortragsarten"
 
 #: tagung/plone/de/vocabularies/levels.py:28
 msgid "Bronze"
-msgstr ""
+msgstr "Bronze"
 
 #: tagung/plone/de/content/talk.py:65
 msgid "Company"
@@ -80,7 +80,7 @@ msgstr "GitHub Nutzername"
 
 #: tagung/plone/de/vocabularies/levels.py:26
 msgid "Gold"
-msgstr ""
+msgstr "Gold"
 
 #: tagung/plone/de/content/talk.py:118
 msgid "Hide date and time"
@@ -108,7 +108,7 @@ msgstr "Name oder Namen der Vortragenden"
 
 #: tagung/plone/de/vocabularies/levels.py:29
 msgid "Organizer"
-msgstr ""
+msgstr "Organisator"
 
 #: tagung/plone/de/profiles.zcml:13
 msgid "Package to configure a new tagung.plone.de site"
@@ -116,7 +116,7 @@ msgstr ""
 
 #: tagung/plone/de/vocabularies/levels.py:25
 msgid "Platinum"
-msgstr ""
+msgstr "Platinum"
 
 #: tagung/plone/de/content/talk.py:44
 msgid "Please select one or more audiences."
@@ -140,7 +140,7 @@ msgstr "Raum"
 
 #: tagung/plone/de/vocabularies/levels.py:27
 msgid "Silver"
-msgstr ""
+msgstr "Silber"
 
 #: tagung/plone/de/content/talk.py:59
 msgid "Speaker"
