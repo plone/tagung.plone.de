@@ -21,7 +21,7 @@ class ISponsor(model.Schema):
         description=_(
             "",
         ),
-        vocabulary="tagung.plone.de.Levels",
+        vocabulary="tagung.sponsor.Levels",
         default="Organizer",
         # defaultFactory=get_default_level,
         required=True,

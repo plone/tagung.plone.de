@@ -15,4 +15,9 @@
       component=".talk.AudienceVocabulary"
       />
 
+  <utility
+      name="tagung.sponsor.Levels"
+      component=".levels.LevelsFactory"
+      />
+
 </configure>
