@@ -18,6 +18,11 @@
             title="Tagung: Add Talk"
             />
 
+        <permission
+            id="tagung.AddSponsor"
+            title="Tagung: Add Sponsor"
+            />
+
       </configure>
     </configure>
   </configure>
