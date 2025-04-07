@@ -7,11 +7,11 @@ import { useLocation } from 'react-router';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { getQueryStringResults } from '@plone/volto/actions';
 
-const levels = ['Platinum', 'Gold', 'Silber', 'Bronze', 'Organisator'];
+const levels = ['Platinum', 'Gold', 'Silver', 'Bronze', 'Organizer'];
 
 const groupedSponsorsByLevel = (array = []) =>
   array.reduce((obj, item) => {
-    let token = item.level?.token || 'Unterstützer';
+    let token = item.level?.token;
     obj[token] ? obj[token].push(item) : (obj[token] = [item]);
     return obj;
   }, {});
@@ -59,7 +59,7 @@ const Sponsors = () => {
             {
               i: 'portal_type',
               o: 'plone.app.querystring.operation.selection.any',
-              v: ['sponsor'],
+              v: ['Sponsor'],
             },
             {
               i: 'path',

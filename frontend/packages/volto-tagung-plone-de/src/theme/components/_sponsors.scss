@@ -49,39 +49,39 @@
           margin: 0 auto;
           content: '';
         }
+      }
 
-        &.unterstützer {
-          img {
-            width: 160px;
-            max-width: 160px;
-          }
+      &.organizer {
+        img {
+          width: 160px;
+          max-width: 160px;
         }
+      }
 
-        &.bronze {
-          img {
-            width: 200px;
-            max-width: 200px;
-          }
+      &.bronze {
+        img {
+          width: 200px;
+          max-width: 200px;
         }
+      }
 
-        &.silber {
-          img {
-            width: 240px;
-            max-width: 240px;
-          }
+      &.silver {
+        img {
+          width: 240px;
+          max-width: 240px;
         }
-        s &.gold {
-          img {
-            width: 280px;
-            max-width: 280px;
-          }
+      }
+      s &.gold {
+        img {
+          width: 280px;
+          max-width: 280px;
         }
+      }
 
-        &.platinum {
-          img {
-            width: 320px;
-            max-width: 320px;
-          }
+      &.platinum {
+        img {
+          width: 320px;
+          max-width: 320px;
         }
       }
     }

@@ -62,3 +62,29 @@ table.slate-table td p {
 table.slate-table th p {
   font-size: 0.9em;
 }
+
+// Fix Sponsor CSS
+.sponsors-wrapper {
+  @include default-container-width();
+  .sponsorheader h2 {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: left;
+  }
+  .sponsors-content {
+    .sponsorlevel {
+      h3 {
+        font-size: 18px;
+        font-weight: 300;
+        text-align: left;
+
+        &::after {
+          display: none;
+          width: var(--default-container-width);
+          padding-top: 0;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

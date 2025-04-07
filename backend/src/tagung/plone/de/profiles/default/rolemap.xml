@@ -9,5 +9,15 @@
       <role name="Manager" />
       <role name="Owner" />
     </permission>
+
+    <permission acquire="False"
+                name="Tagung: Add Sponsor"
+    >
+      <role name="Manager" />
+      <role name="Site Administrator" />
+      <role name="Owner" />
+      <role name="Contributor" />
+    </permission>
+
   </permissions>
 </rolemap>
