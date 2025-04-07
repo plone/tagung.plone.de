@@ -5,5 +5,12 @@
     "url": "git@github.com:plone/volto.git",
     "https": "https://github.com/plone/volto.git",
     "tag": "18.9.0"
+  },
+  "volto-tito-block": {
+    "output": "./packages/",
+    "package": "@plone-collective/volto-tito-block",
+    "url": "git@github.com:collective/volto-tito-block.git",
+    "https": "https://github.com/collective/volto-tito-block.git",
+    "branch": "upgrade-to-v2-widget"
   }
 }
