@@ -7,6 +7,7 @@
 
 collective.exportimport
 pas.plugins.authomatic
+collective.autoscaling
 # end requirements from: requirements.txt
 ###############################################################################
 ###############################################################################
