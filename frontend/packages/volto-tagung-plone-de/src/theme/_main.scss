@@ -25,6 +25,7 @@
 .navigation ul.desktop-menu .submenu {
   padding: 20px 102px 30px;
 }
+
 .navigation ul.desktop-menu .submenu ul {
   padding: 20px 0 0;
 }
@@ -63,6 +64,28 @@ table.slate-table th p {
   font-size: 0.9em;
 }
 
+#page-document .block.gridBlock .four .teaser .teaser-item .image-wrapper,
+#page-edit
+  .block-editor-gridBlock
+  .block.gridBlock
+  .four
+  .teaser
+  .teaser-item
+  .image-wrapper,
+#page-add
+  .block-editor-gridBlock
+  .block.gridBlock
+  .four
+  .teaser
+  .teaser-item
+  .image-wrapper {
+  margin-bottom: 0 !important;
+}
+
+.block.gridBlock .block.teaser .teaser-item .content {
+  margin-top: 1rem;
+}
+
 .block.gridBlock .ui.stackable {
   max-width: var(--layout-container-width);
 }
@@ -74,6 +97,7 @@ table.slate-table th p {
 .block.gridBlock .block.image figure::after {
   height: 2.6rem !important;
 }
+
 .block.gridBlock .block.image figure:not(:has(figcaption)) {
   &::after {
     height: 0;
@@ -84,11 +108,13 @@ table.slate-table th p {
 // Fix Sponsor CSS
 .sponsors-wrapper {
   @include default-container-width();
+
   .sponsorheader h2 {
     font-size: 30px;
     font-weight: 300;
     text-align: left;
   }
+
   .sponsors-content {
     .sponsorlevel {
       h3 {
