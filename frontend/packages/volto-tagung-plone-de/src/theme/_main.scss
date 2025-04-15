@@ -63,6 +63,24 @@ table.slate-table th p {
   font-size: 0.9em;
 }
 
+.block.gridBlock .ui.stackable {
+  max-width: var(--layout-container-width);
+}
+
+.block.gridBlock .block.image figcaption {
+  bottom: 0.4rem;
+}
+
+.block.gridBlock .block.image figure::after {
+  height: 2.6rem !important;
+}
+.block.gridBlock .block.image figure:not(:has(figcaption)) {
+  &::after {
+    height: 0;
+    content: unset;
+  }
+}
+
 // Fix Sponsor CSS
 .sponsors-wrapper {
   @include default-container-width();
