@@ -96,6 +96,8 @@ table.slate-table th p {
 
 .block.gridBlock .block.image figure::after {
   height: 2.6rem !important;
+  background: #00294e;
+  opacity: 0.4;
 }
 
 .block.gridBlock .block.image figure:not(:has(figcaption)) {
