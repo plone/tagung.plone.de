@@ -3,7 +3,7 @@
 ## 0.3.1 (unreleased)
 
 
-- Nothing changed yet.
+- Update DB settings for migration. [fredvd]
 
 
 ## 0.3.0 (2025-03-10)
