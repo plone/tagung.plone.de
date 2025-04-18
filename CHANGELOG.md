@@ -1,6 +1,6 @@
 # Changes
 
-## 0.3.1 (unreleased)
+## 0.3.1 (2025-04-18)
 
 
 - Update DB settings for migration. [fredvd]
