@@ -1,7 +1,7 @@
 import { Container, Link } from '@plone/components';
 import { Image } from '@plone/volto/components';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 export default function TalkView(props) {
   const { content } = props;
@@ -47,6 +47,15 @@ export default function TalkView(props) {
     <Container className="talk-view default">
       <Container className="talk-wrapper">
         <Container className="talk-header">
+          <Container className="talk-header-draft-info">
+            {content?.review_state === 'private' && (
+              <div className="talk-wf-draft-message">
+                Der Vortrag befindet im Status Entwurf, bitte reiche ihn über
+                das Menü links <strong>zur Veröffentlichung ein</strong>, wenn
+                Du die Eingaben abgeschlossenen hast!
+              </div>
+            )}
+          </Container>
           <Container className="talk-header-info">
             {content.type_of_talk && (
               <div className="type-of-talk">{content?.type_of_talk.title}</div>
