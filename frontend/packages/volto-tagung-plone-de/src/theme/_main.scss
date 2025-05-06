@@ -107,6 +107,10 @@ table.slate-table th p {
   }
 }
 
+.block h2.headline {
+  margin-bottom: 2rem;
+}
+
 // Fix Sponsor CSS
 .sponsors-wrapper {
   @include default-container-width();
