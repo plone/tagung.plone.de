@@ -148,7 +148,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to tagung.plone.de
-        uses: kitconcept/docker-stack-deploy@v1.2.0
+        uses: kitconcept/docker-stack-deploy@debug
         with:
           registry: 'ghcr.io'
           username: ${{ github.actor }}
@@ -160,6 +160,7 @@ jobs:
           stack_file: ${{ env.STACK_FILE }}
           stack_name: ${{ env.STACK_NAME }}
           stack_param: ${{ needs.config.outputs.TAG }}
+          debug: 1
           env_file: |
             STACK_NAME=${{ env.STACK_NAME }}
             STACK_PREFIX=${{ env.STACK_PREFIX }}
