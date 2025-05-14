@@ -2,7 +2,7 @@
 # begin constraints from: constraints.txt
 
 ###############################################################################
-# begin constraints from: https://dist.plone.org/release/6.1.0/constraints.txt
+# begin constraints from: https://dist.plone.org/release/6.1.1/constraints.txt
 
 ###############################################################################
 # begin constraints from: constraints-all.txt
@@ -12,22 +12,20 @@
 # begin constraints from: constraints.txt
 
 ###############################################################################
-# begin constraints from: https://zopefoundation.github.io/Zope/releases/5.12/constraints.txt
+# begin constraints from: https://zopefoundation.github.io/Zope/releases/5.13/constraints.txt
 
-Zope==5.12
+Zope==5.13
 AccessControl==7.2
 Acquisition==6.1
-AuthEncoding==5.0
+AuthEncoding==6.0
 BTrees==6.1
 Babel==2.16.0
-Chameleon==4.4.4; python_version == '3.8'
-Chameleon==4.4.4; python_version > '3.8'
+Chameleon==4.4.4
 DateTime==5.5
 DocumentTemplate==4.6
 ExtensionClass==6.0
-Jinja2==3.1.4
-MarkupSafe==2.1.5; python_version == '3.8'
-MarkupSafe==3.0.2; python_version > '3.8'
+Jinja2==3.1.5
+MarkupSafe==3.0.2
 Missing==5.0
 MultiMapping==5.0
 Paste==3.10.1
@@ -35,28 +33,25 @@ PasteDeploy==3.1.0
 Persistence==5.1
 Products.BTreeFolder2==5.1
 Products.ZCatalog==7.1
-Pygments==2.18.0
+Pygments==2.19.1
 Record==4.1
-RestrictedPython==7.4
-Sphinx==7.1.2; python_version == '3.8'
+RestrictedPython==8.0
 Sphinx==7.4.7; python_version == '3.9'
 Sphinx==8.1.3; python_version > '3.9'
 WSGIProxy2==0.5.1
 WebOb==1.8.9
-# WebTest==3.0.1 -> mxdev disabled (override)
-ZConfig==4.1
+WebTest==3.0.3
+ZConfig==4.2
 ZODB==6.0
 Zope2==4.0
-alabaster==0.7.13; python_version == '3.8'
 alabaster==0.7.14; python_version == '3.9'
 alabaster==1.0.0; python_version > '3.9'
 beautifulsoup4==4.12.3
-# certifi==2024.8.30 -> mxdev disabled (override)
+certifi==2024.12.14
 cffi==1.17.1
-charset-normalizer==3.4.0
+charset-normalizer==3.4.1
 collective.recipe.template==2.2
 colorama==0.4.6
-docutils==0.20.1; python_version == '3.8'
 docutils==0.20.1; python_version == '3.9'
 docutils==0.21.2; python_version > '3.9'
 five.localsitemanager==4.0
@@ -64,46 +59,39 @@ furo==2024.8.6
 idna==3.10
 imagesize==1.4.1
 importlib-metadata==8.5.0
-importlib-resources==6.4.0; python_version == '3.8'
-legacy-cgi==2.6.1
+legacy-cgi==2.6.2
 mr.developer==2.0.2
-multipart==0.2.5
-# packaging==24.1 -> mxdev disabled (override)
+multipart==1.2.1
+# packaging==24.2 -> mxdev disabled (override)
 persistent==6.1
 plone.recipe.command==1.1
 pycparser==2.22
 python-gettext==5.0
 pytz==2024.2
 requests==2.32.3
-roman==4.2
-six==1.16.0
+roman==5.0
+six==1.17.0
 snowballstemmer==2.2.0
 soupsieve==2.6
 sphinx-basic-ng==1.0.0b2
-sphinxcontrib-applehelp==1.0.4; python_version == '3.8'
-sphinxcontrib-applehelp==2.0.0; python_version > '3.8'
-sphinxcontrib-devhelp==1.0.2; python_version == '3.8'
-sphinxcontrib-devhelp==2.0.0; python_version > '3.8'
-sphinxcontrib-htmlhelp==2.0.1; python_version == '3.8'
-sphinxcontrib-htmlhelp==2.1.0; python_version > '3.8'
+sphinxcontrib-applehelp==2.0.0
+sphinxcontrib-devhelp==2.0.0
+sphinxcontrib-htmlhelp==2.1.0
 sphinxcontrib-jsmath==1.0.1
-sphinxcontrib-qthelp==1.0.3; python_version == '3.8'
-sphinxcontrib-qthelp==2.0.0; python_version > '3.8'
-sphinxcontrib-serializinghtml==1.1.5; python_version == '3.8'
-sphinxcontrib-serializinghtml==2.0.0; python_version > '3.8'
+sphinxcontrib-qthelp==2.0.0
+sphinxcontrib-serializinghtml==2.0.0
 tempstorage==6.0
-tomli==2.0.2
+tomli==2.2.1
 transaction==5.0
-urllib3==2.2.3
-# waitress==3.0.0; python_version == '3.8' -> mxdev disabled (override)
-# waitress==3.0.1; python_version > '3.8' -> mxdev disabled (override)
+urllib3==2.3.0
+waitress==3.0.2
 z3c.checkversions==2.1
 z3c.pt==4.4
 zExceptions==5.0
 zc.lockfile==3.0.post1
 zc.recipe.egg==2.0.7
 zc.recipe.testrunner==3.1
-zipp==3.20.2
+zipp==3.21.0
 zodbpickle==4.1.1
 zope.annotation==5.0
 zope.browser==3.0
@@ -112,13 +100,13 @@ zope.browserpage==5.0
 zope.browserresource==5.1
 zope.cachedescriptors==5.0
 zope.component==6.0
-# zope.configuration==5.0.1 -> mxdev disabled (override)
+zope.configuration==6.0
 zope.container==6.1
 zope.contentprovider==6.0
 zope.contenttype==5.1
 zope.datetime==5.0.0
 zope.deferredimport==5.0
-zope.deprecation==5.0
+zope.deprecation==5.1
 zope.dottedname==6.0
 zope.event==5.0
 zope.exceptions==5.2
@@ -134,7 +122,7 @@ zope.pagetemplate==5.1
 zope.processlifetime==3.0
 zope.proxy==6.1
 zope.ptresource==5.0
-zope.publisher==7.1
+zope.publisher==7.3
 zope.schema==7.0.1
 zope.security==7.3
 zope.sequencesort==5.0
@@ -145,68 +133,64 @@ zope.tal==5.0.1
 zope.tales==6.0
 zope.testbrowser==7.0
 zope.testing==5.0.1
-zope.testrunner==6.6
+zope.testrunner==7.2
 zope.traversing==5.0
 zope.viewlet==5.0
 
-# end constraints from: https://zopefoundation.github.io/Zope/releases/5.12/constraints.txt
+# end constraints from: https://zopefoundation.github.io/Zope/releases/5.13/constraints.txt
 ###############################################################################
 
 # packaging==24.2 -> mxdev disabled (override)
-pip==24.3.1
-setuptools==75.6.0
+pip==25.0.1
+setuptools==75.8.2
 wheel==0.45.1
-zc.buildout==4.0
+zc.buildout==4.1.4
 nt-svcutils==2.13.0
-# certifi==2024.12.14 -> mxdev disabled (override)
-# zope.configuration==6.0 -> mxdev disabled (override)
-# waitress==3.0.2 -> mxdev disabled (override)
-# webtest==3.0.3 -> mxdev disabled (override)
 borg.localrole==3.1.11
-diazo==2.0.2
-five.intid==2.0.0
-Plone==6.1.0
+diazo==2.0.3
+five.intid==2.0.1
+Plone==6.1.1
 plone.alterego==2.0.1
-plone.api==2.2.5
-plone.app.caching==4.0.0
+plone.api==2.5.0
+plone.app.caching==4.1.0
 plone.app.content==4.1.9
 plone.app.contentlisting==3.0.5
-plone.app.contentmenu==3.0.6
+plone.app.contentmenu==3.0.7
 plone.app.contentrules==5.0.6
-plone.app.contenttypes==4.0.4
+plone.app.contenttypes==4.0.5
 plone.app.customerize==2.0.2
-plone.app.dexterity==4.0.3
+plone.app.dexterity==4.0.4
 plone.app.discussion==5.0.0
 plone.app.event==5.2.1
 plone.app.i18n==4.0.1
 plone.app.intid==2.0.0
 plone.app.iterate==6.1.0
-plone.app.layout==5.0.1
+plone.app.layout==5.0.2
 plone.app.linkintegrity==4.0.6
-plone.app.locales==6.0.29
+plone.app.locales==6.0.30
 plone.app.lockingbehavior==2.0.2
-plone.app.multilingual==8.2.1
+plone.app.multilingual==8.2.3
 plone.app.portlets==6.0.1
 plone.app.querystring==2.1.3
 plone.app.redirector==3.0.4
 plone.app.registry==2.0.6
-plone.app.relationfield==4.0.1
-plone.app.robotframework==2.1.4
+plone.app.relationfield==4.0.2
+plone.app.robotframework==2.1.5
 plone.app.testing==7.1.1
 plone.app.textfield==3.0.0
-plone.app.theming==5.0.11
-plone.app.upgrade==3.1.9
-plone.app.users==3.0.10
+plone.app.theming==5.0.12
+plone.app.upgrade==3.2.0
+plone.app.users==3.1.1
 plone.app.uuid==2.2.3
 plone.app.versioningbehavior==2.0.4
 plone.app.viewletmanager==4.0.4
 plone.app.vocabularies==6.0.2
 plone.app.widgets==5.0.2
 plone.app.workflow==5.0.4
-plone.app.z3cform==4.7.2
+plone.app.z3cform==4.7.4
 plone.autoform==2.0.3
-# plone.autoinclude==1.0.1 -> mxdev disabled (override)
-plone.base==2.0.2
+# plone.autoinclude==2.0.3 -> mxdev disabled (override)
+plone.base==2.0.3
 plone.batching==2.0.6
 plone.behavior==2.0.1
 plone.browserlayer==3.0.2
@@ -215,52 +199,52 @@ plone.caching==2.0.1
 plone.classicui==1.0.0
 plone.contentrules==3.0.1
 plone.dexterity==3.0.7
-plone.distribution==3.1.0
+plone.distribution==3.1.1
 plone.event==2.0.2
-plone.exportimport==1.0.0
+plone.exportimport==1.1.0
 plone.folder==4.0.1
 plone.formwidget.namedfile==3.1.1
 plone.formwidget.recurrence==3.0.5
-plone.i18n==5.0.2
+plone.i18n==5.1.0
 plone.indexer==2.0.1
 plone.intelligenttext==4.0.1
 plone.keyring==4.0.2
 plone.locking==3.0.2
 plone.memoize==3.0.3
-plone.namedfile==7.0.0
+plone.namedfile==7.0.1
 plone.outputfilters==5.0.4
 plone.portlet.collection==4.0.4
 plone.portlet.static==4.0.4
 plone.portlets==3.0.2
 plone.protect==5.0.3
-plone.recipe.zope2instance==7.1.2
+plone.recipe.zope2instance==8.0.0
 plone.registry==2.0.1
 plone.resource==3.0.2
 plone.resourceeditor==4.0.1
 plone.rest==5.0.0
-# plone.restapi==9.11.0 -> mxdev disabled (override)
+# plone.restapi==9.13.3 -> mxdev disabled (override)
 plone.rfc822==3.0.1
-plone.scale==4.1.3
-plone.schema==2.0.1
-plone.schemaeditor==4.0.9
+plone.scale==4.1.4
+plone.schema==2.0.2
+plone.schemaeditor==4.0.11
 plone.session==4.0.4
-plone.staticresources==2.2.0
+plone.staticresources==2.2.5
 plone.stringinterp==2.0.2
 plone.subrequest==2.0.5
 plone.supermodel==2.0.4
-plone.testing==9.0.3
+plone.testing==9.0.5
 plone.theme==4.0.3
 plone.tiles==2.3.1
 plone.transformchain==3.0.1
 plone.uuid==2.0.1
-plone.volto==5.0.2
+plone.volto==5.0.4
 plone.z3cform==2.0.4
-plonetheme.barceloneta==3.2.2
+plonetheme.barceloneta==3.2.3
 Products.CMFDiffTool==4.0.4
 Products.CMFDynamicViewFTI==7.0.2
-Products.CMFEditions==4.0.4
+Products.CMFEditions==4.0.5
 Products.CMFPlacefulWorkflow==3.0.5
-Products.CMFPlone==6.1.0
+Products.CMFPlone==6.1.1
 Products.ExtendedPathIndex==4.0.1
 Products.isurlinportal==3.0.0
 Products.MimetypesRegistry==3.0.1
@@ -269,19 +253,19 @@ Products.PortalTransforms==4.1.1
 Products.statusmessages==5.0.6
 pytest-plone==0.5.0
 collective.MockMailHost==3.0.0
-collective.monkeypatcher==1.2.2
-collective.recipe.omelette==1.1.0
+collective.monkeypatcher==2.0.0
+collective.recipe.omelette==2.0.0
 collective.recipe.vscode==0.1.9
 collective.xmltestreport==2.0.2
 icalendar==6.1.1
 Products.DateRecurringIndex==3.0.1
 robotsuite==2.3.2
 five.customerize==3.0.0
-Products.CMFCore==3.6
+Products.CMFCore==3.7
 Products.CMFUid==4.2
 Products.DCWorkflow==3.0
 Products.ExternalMethod==6.0
-Products.GenericSetup==4.0
+Products.GenericSetup==5.0.0
 Products.MailHost==6.0
 Products.PluggableAuthService==3.0
 Products.PluginRegistry==2.0
@@ -301,7 +285,7 @@ z3c.zcmlhook==2.0
 zc.relation==2.0
 zdaemon==5.1
 ZEO==6.0.0
-zest.releaser==9.2.0
+zest.releaser==9.5.0
 zestreleaser.towncrier==1.3.0
 ZODB3==3.11.0
 zodbupdate==2.0
@@ -379,7 +363,7 @@ rfc3986==2.0.0
 rich==13.9.4
 robotframework==6.0.2
 robotframework-assertion-engine==3.0.3
-robotframework-browser==18.9.1
+robotframework-browser==19.3.1
 robotframework-debuglibrary==2.5.0
 robotframework-lsp==1.10.1
 robotframework-pythonlibcore==4.4.1
@@ -399,7 +383,7 @@ toml==0.10.2
 towncrier==24.8.0
 trio==0.27.0
 trio-websocket==0.11.1
-trove-classifiers==2025.1.15.22
+trove-classifiers==2025.2.18.16
 twine==5.1.1
 types-PyYAML==6.0.12.10
 types-toml==0.10.8.5
@@ -444,8 +428,8 @@ mxdev==4.0.3
 oauthlib==3.2.2
 pdbpp==0.10.3
 pep517==0.13.1
-plone.recipe.zeoserver==3.0.3
-plone.releaser==2.3.3
+plone.recipe.zeoserver==3.0.4
+plone.releaser==2.4.1
 plone.reload==4.0.0
 plone.versioncheck==1.8.2
 progress==1.6
@@ -475,7 +459,7 @@ plone.app.blocks==7.0.1
 plone.app.debugtoolbar==1.4.0
 plone.app.drafts==2.0.0
 plone.app.jquerytools==1.9.5
-plone.app.mosaic==3.2.0
+plone.app.mosaic==3.2.1
 plone.app.standardtiles==3.2.1
 plone.app.tiles==4.0.1
 plone.formwidget.autocomplete==1.4.1
@@ -494,20 +478,17 @@ z3c.jbot==2.0
 
 ###############################################################################
 # mxdev constraint overrides
-certifi==2024.12.14
 packaging==24.2
-zope.configuration==6.0
-waitress==3.0.2
-webtest==3.0.2
 
 
 
-# end constraints from: https://dist.plone.org/release/6.1.0/constraints.txt
+# end constraints from: https://dist.plone.org/release/6.1.1/constraints.txt
 ###############################################################################
 
 collective.exportimport==1.13
 authomatic==1.3.0
 pas-plugins-authomatic==2.0.0b3
+collective.mastodon==1.0.0a2
 # end constraints from: constraints.txt
 ###############################################################################
 

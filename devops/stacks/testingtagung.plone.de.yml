@@ -43,6 +43,7 @@ services:
     image: ${BACKEND_IMAGE}:${STACK_PARAM:-latest}
     environment:
       RELSTORAGE_DSN: "dbname='${DB_NAME:-plone}' user='${DB_USER:-plone}' host='${DB_HOST:-db}' password='${DB_PASSWORD}' port='${DB_PORT:-5432}'"
+      MASTODON_APPS: "${MASTODON_APPS}"
     networks:
       - public
       - nw-internal

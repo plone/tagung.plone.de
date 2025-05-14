@@ -2,8 +2,13 @@
 
 ## 0.3.2 (unreleased)
 
-
-- Nothing changed yet.
+- Update Plone backend to 6.1.1 [fredvd]
+- Update Volto to 18.20.0. [fredvd]
+- Add codeowners. [fredvd]
+- Add mastodon config to stack [fredvd]
+- add collective.mastodon [MrTango]
+- Reduce headline margin-bottom [MrTango]
+- Add ports to CI/CD. [fredvd]
 
 
 ## 0.3.1 (2025-04-18)
