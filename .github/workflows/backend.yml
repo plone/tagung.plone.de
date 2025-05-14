@@ -190,7 +190,7 @@ jobs:
           echo "PLONE_VERSION=${{ needs.meta.outputs.PLONE_VERSION }}"
 
       - name: Deploy to testingtagung.plone.de
-        uses: kitconcept/docker-stack-deploy@debug
+        uses: kitconcept/docker-stack-deploy@v1.2.0
         with:
           registry: 'ghcr.io'
           username: ${{ github.actor }}
@@ -201,7 +201,6 @@ jobs:
           remote_private_key: ${{ secrets.DEPLOY_SSH }}
           stack_file: ${{ env.STACK_FILE }}
           stack_name: ${{ env.STACK_NAME }}
-          debug: 1
           env_file: |
             STACK_NAME=${{ env.STACK_NAME }}
             STACK_PREFIX=${{ env.STACK_PREFIX }}
