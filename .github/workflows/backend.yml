@@ -215,5 +215,5 @@ jobs:
             DB_PASSWORD=${{ secrets.DB_PASSWORD }}
             BASIC_AUTH_USER=${{ vars.BASIC_AUTH_USER }}
             BASIC_AUTH_PASSWORD=${{ vars.BASIC_AUTH_PASSWORD }}
-            MASTODON_APPS="${{ secrets.MASTODON_APPS }}"
+            MASTODON_APPS='${{ secrets.MASTODON_APPS }}'
           deploy_timeout: 480

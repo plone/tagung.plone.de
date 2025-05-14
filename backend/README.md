@@ -4,7 +4,7 @@ Plone Projekt für die deutschsprachige Plone Tagung.
 
 ## Features
 
-* Configure the website
+* Configure the website for tagung.
 
 ## Installation
 
