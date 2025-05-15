@@ -3,7 +3,8 @@
 ## 0.4.1 (unreleased)
 
 
-- Nothing changed yet.
+- Rerelease under 1.x because of rogue tags that where not updated in version.txt or this CHANGELOG [fredvd]
+
 
 
 ## 0.4.0 (2025-05-15)
