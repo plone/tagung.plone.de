@@ -1,5 +1,11 @@
 # Changes
 
+## 0.4.1 (unreleased)
+
+
+- Nothing changed yet.
+
+
 ## 0.4.0 (2025-05-15)
 
 - Provide empty mastodon list env variable if no config is present. [fredvd]
