@@ -1,6 +1,6 @@
 # Changes
 
-## 0.3.2 (unreleased)
+## 0.4.0 (2025-05-15)
 
 - Provide empty mastodon list env variable if no config is present. [fredvd]
 - Update Plone backend to 6.1.1 [fredvd]
