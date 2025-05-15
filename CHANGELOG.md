@@ -2,6 +2,7 @@
 
 ## 0.3.2 (unreleased)
 
+- Provide empty mastodon list env variable if no config is present. [fredvd]
 - Update Plone backend to 6.1.1 [fredvd]
 - Update Volto to 18.20.0. [fredvd]
 - Add codeowners. [fredvd]
