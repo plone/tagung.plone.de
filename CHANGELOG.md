@@ -1,6 +1,6 @@
 # Changes
 
-## 0.4.1 (unreleased)
+## 1.0.0 (2025-05-15)
 
 
 - Rerelease under 1.x because of rogue tags that where not updated in version.txt or this CHANGELOG [fredvd]
