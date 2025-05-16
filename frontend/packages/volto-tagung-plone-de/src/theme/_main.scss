@@ -21,6 +21,15 @@
   max-height: 120px;
 }
 
+h1.documentFirstHeading {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contenttype-news-item #page-document .dates {
+  margin-bottom: 1rem;
+}
+
 // reduce padding in dropdown navigation on desktop
 .navigation ul.desktop-menu .submenu {
   padding: 20px 102px 30px;
@@ -109,6 +118,21 @@ table.slate-table th p {
 
 .block h2.headline {
   margin-bottom: 2rem;
+}
+
+.ui.container.tags {
+  margin-top: 1rem;
+}
+
+.block.__button .button.container {
+  padding-top: 0;
+}
+
+.blocks-group-wrapper
+  > .block.teaser.is--last--of--block-type.next--is--__button
+  .teaser-item.default {
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 // Fix Sponsor CSS
