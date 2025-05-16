@@ -1,9 +1,28 @@
 # Changes
 
-## 0.3.2 (unreleased)
+## 1.0.1 (unreleased)
 
 
 - Nothing changed yet.
+
+
+## 1.0.0 (2025-05-15)
+
+
+- Rerelease under 1.x because of rogue tags that where not updated in version.txt or this CHANGELOG [fredvd]
+
+
+
+## 0.4.0 (2025-05-15)
+
+- Provide empty mastodon list env variable if no config is present. [fredvd]
+- Update Plone backend to 6.1.1 [fredvd]
+- Update Volto to 18.20.0. [fredvd]
+- Add codeowners. [fredvd]
+- Add mastodon config to stack [fredvd]
+- add collective.mastodon [MrTango]
+- Reduce headline margin-bottom [MrTango]
+- Add ports to CI/CD. [fredvd]
 
 
 ## 0.3.1 (2025-04-18)
