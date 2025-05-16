@@ -1,9 +1,9 @@
 # Changes
 
-## 1.0.1 (unreleased)
+## 1.0.1 (2025-05-15)
 
 
-- Nothing changed yet.
+- improve theme margin [MrTango]
 
 
 ## 1.0.0 (2025-05-15)
@@ -53,7 +53,7 @@
 
 - Also add volto-authomatic frontend module 2.0.1. [fredvd]
 - Add pas.plugins.authomatic 2.0.0b3. [fredvd]
-- Add collective.exportimport to backend policy package dependencies as well. 
+- Add collective.exportimport to backend policy package dependencies as well.
 
 
 ## 0.2.2 (2025-03-04)
