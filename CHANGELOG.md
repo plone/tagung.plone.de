@@ -1,5 +1,10 @@
 # Changes
 
+## 1.1.1 (2025-05-28)
+
+- wrap talk audiences when to many [MrTango]
+
+
 ## 1.1.0 (2025-05-28)
 
 - bump Volto to 18.22.0 [MrTango]
