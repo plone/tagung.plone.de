@@ -1,5 +1,13 @@
 # Changes
 
+## 1.1.0 (2025-05-28)
+
+- bump Volto to 18.22.0 [MrTango]
+- bump volto-light-theme version to 6.0.1 [MrTango]
+- implement Summary template for Talk CT [MrTango]
+- improve Talk View [MrTango]
+
+
 ## 1.0.1 (2025-05-15)
 
 
