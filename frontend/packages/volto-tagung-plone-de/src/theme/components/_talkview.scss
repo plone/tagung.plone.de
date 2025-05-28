@@ -1,6 +1,10 @@
 .talk-view {
   .talk-wrapper {
-    padding-top: 40px;
+    padding: 2rem 0.5rem;
+    .documentFirstHeading {
+      padding-top: 0;
+      margin-bottom: 0.2rem;
+    }
 
     .talk-header {
       .talk-header-info {
@@ -14,36 +18,13 @@
         font-size: 1.1rem;
         font-weight: bold;
         gap: 20px;
-        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      .talk-audience {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        margin-right: 40px;
-        margin-left: 40px;
-
-        .talk-audience-items {
-          padding: 6px;
-          border-width: 2px;
-          border-style: solid;
-          border-radius: 10px;
-          margin-right: 5px;
-          margin-bottom: 5px;
-          color: #5d7a8e;
-          font-size: 0.8rem;
-          font-weight: 600;
-        }
       }
     }
 
     .talk-content {
       .talk-details {
-        margin: 40px;
-        font-size: 1em;
+        padding: 1rem 0;
       }
-
       .talk-speaker {
         display: flex;
         flex-wrap: wrap;

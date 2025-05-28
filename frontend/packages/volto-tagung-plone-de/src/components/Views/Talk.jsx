@@ -1,47 +1,22 @@
+import {
+  formatDateRange,
+  parseDateFromCatalog,
+} from '@kitconcept/volto-light-theme/helpers/dates';
 import { Container, Link } from '@plone/components';
 import { Image } from '@plone/volto/components';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
+import FormattedDate from '@plone/volto/components/theme/FormattedDate/FormattedDate';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 export default function TalkView(props) {
   const { content } = props;
-
-  const options_start = {
-    hourCycle: 'h23',
-    hour: 'numeric',
-    minute: 'numeric',
-  };
-  const options_end = {
-    hourCycle: 'h23',
-    hour: 'numeric',
-    minute: 'numeric',
-    timeZoneName: 'short',
-  };
-
-  const options_date = {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-  };
-
-  function createUTCDate(dateString) {
-    if (!dateString) {
-      return null;
-    }
-    return new Date(dateString + 'Z');
-  }
-
-  const start = createUTCDate(content.start);
-  const formatted_start = new Intl.DateTimeFormat(
-    undefined,
-    options_start,
-  ).format(start);
-  const date = new Intl.DateTimeFormat(undefined, options_date).format(start);
-
-  const end = createUTCDate(content.end);
-  const formatted_end = new Intl.DateTimeFormat(undefined, options_end).format(
-    end,
-  );
+  const start = content.start ? (
+    <FormattedDate key="day" includeTime date={content.start} />
+  ) : null;
+  const headline = [start, content.head_title, content.type_of_talk]
+    .filter((x) => x)
+    .flatMap((x) => [' | ', x])
+    .slice(1);
 
   return (
     <Container className="talk-view default">
@@ -57,40 +32,30 @@ export default function TalkView(props) {
             )}
           </Container>
           <Container className="talk-header-info">
-            {content.type_of_talk && (
-              <div className="type-of-talk">{content?.type_of_talk.title}</div>
-            )}
             {content.room && (
               <div className="talk-room">Raum: {content.room.title}</div>
             )}
-            {!content.hide_date && content.start && content.end && (
-              <div className="talk-time">
-                <time dateTime={date}>{date}</time>
-                {' | '}
-                <time dateTime={formatted_start}>{formatted_start}</time>
-                {' - '}
-                <time dateTime={formatted_end}>{formatted_end}</time>
-              </div>
+            {content.type_of_talk && (
+              <div className="type-of-talk">{content?.type_of_talk.title}</div>
+            )}
+            {!content.hide_date && start && (
+              <div className="talk-time">{start}</div>
             )}
           </Container>
           <h1 className="documentFirstHeading">{content.title}</h1>
-          {content.description && (
-            <h2 className="documentDescription">{content.description}</h2>
-          )}
           {content.audience && (
-            <div className="talk-audience">
+            <ul className="audiences">
               {content.audience?.map((item, index) => {
-                return (
-                  <div className="talk-audience-items" key={index}>
-                    {item.title}
-                  </div>
-                );
+                return <li key={index}>{item.title}</li>;
               })}
-            </div>
+            </ul>
+          )}
+          {content.description && (
+            <p className="documentDescription">{content.description}</p>
           )}
         </Container>
         <Container className="talk-content">
-          <Container className="talk-details">
+          <div className="talk-details">
             {content.details && (
               <div
                 dangerouslySetInnerHTML={{
@@ -98,7 +63,7 @@ export default function TalkView(props) {
                 }}
               />
             )}
-          </Container>
+          </div>
           {content.speaker && (
             <div>
               <hr></hr>

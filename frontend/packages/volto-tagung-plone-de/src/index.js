@@ -1,4 +1,5 @@
 import { TalkView } from './components';
+import TalkSummary from './components/Blocks/Summary/TalkSummary';
 
 const applyConfig = (config) => {
   config.settings.isMultilingual = false;
@@ -13,6 +14,18 @@ const applyConfig = (config) => {
       Talk: TalkView,
     },
   };
+
+  config.registerComponent({
+    name: 'Summary',
+    component: TalkSummary,
+    dependencies: ['Talk'],
+  });
+
+  // config.blocks.blocksConfig.listing.variations.push({
+  //   id: 'talk-grid',
+  //   title: 'Talk Grid',
+  //   template: GridTemplate,
+  // });
 
   return config;
 };
