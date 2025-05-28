@@ -194,6 +194,7 @@ table.slate-table th p {
   // --audience-color: #ddd;
   // --audience-foreground-color: #414141;
   display: flex;
+  flex-wrap: wrap;
   padding-left: 0;
   margin: 0.5rem 0;
   gap: 0.5rem;
