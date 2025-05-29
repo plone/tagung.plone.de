@@ -1,7 +1,7 @@
 import { Container, Link } from '@plone/components';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 import FormattedDate from '@plone/volto/components/theme/FormattedDate/FormattedDate';
-import { Image } from '@plone/volto/components/theme/Image/Image';
+import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers/Url/Url';
 
 export default function TalkView(props) {
