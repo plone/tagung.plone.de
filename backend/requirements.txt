@@ -3,3 +3,4 @@ collective.exportimport
 pas.plugins.authomatic
 collective.autoscaling
 collective.mastodon
+kitconcept.voltolighttheme
