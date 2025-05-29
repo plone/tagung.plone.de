@@ -1,7 +1,3 @@
-import {
-  formatDateRange,
-  parseDateFromCatalog,
-} from '@kitconcept/volto-light-theme/helpers/dates';
 import { Container, Link } from '@plone/components';
 import { Image } from '@plone/volto/components';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
