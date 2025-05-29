@@ -1,5 +1,11 @@
 # Changes
 
+
+## 1.1.2 (2025-05-29)
+
+- optimize talk audiences tags [MrTango]
+
+
 ## 1.1.1 (2025-05-28)
 
 - wrap talk audiences when to many [MrTango]
