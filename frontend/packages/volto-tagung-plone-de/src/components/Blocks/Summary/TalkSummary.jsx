@@ -1,8 +1,3 @@
-import {
-  formatDateRange,
-  parseDateFromCatalog,
-} from '@kitconcept/volto-light-theme/helpers/dates';
-import { Container } from '@plone/components';
 import FormattedDate from '@plone/volto/components/theme/FormattedDate/FormattedDate';
 
 const TalkSummary = (props) => {
