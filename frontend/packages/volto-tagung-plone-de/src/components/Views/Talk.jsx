@@ -9,10 +9,10 @@ export default function TalkView(props) {
   const start = content.start ? (
     <FormattedDate key="day" includeTime date={content.start} />
   ) : null;
-  const headline = [start, content.head_title, content.type_of_talk]
-    .filter((x) => x)
-    .flatMap((x) => [' | ', x])
-    .slice(1);
+  // const headline = [start, content.head_title, content.type_of_talk]
+  //   .filter((x) => x)
+  //   .flatMap((x) => [' | ', x])
+  //   .slice(1);
 
   return (
     <Container className="talk-view default">
