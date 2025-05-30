@@ -6,3 +6,4 @@ node_modules
 /data
 /.python-version
 /frontend/packages/volto-tito-block/
+/backend/.python-version
