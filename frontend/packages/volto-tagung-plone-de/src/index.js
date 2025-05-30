@@ -1,4 +1,5 @@
 import { TalkView } from './components';
+import GridTemplate from './components/Blocks/Listing/TalkTimetable';
 import TalkSummary from './components/Blocks/Summary/TalkSummary';
 
 const applyConfig = (config) => {
@@ -21,11 +22,11 @@ const applyConfig = (config) => {
     dependencies: ['Talk'],
   });
 
-  // config.blocks.blocksConfig.listing.variations.push({
-  //   id: 'talk-grid',
-  //   title: 'Talk Grid',
-  //   template: GridTemplate,
-  // });
+  config.blocks.blocksConfig.listing.variations.push({
+    id: 'talk-timetable',
+    title: 'Talk Timetable',
+    template: GridTemplate,
+  });
 
   return config;
 };
