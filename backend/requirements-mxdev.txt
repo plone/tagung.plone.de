@@ -15,6 +15,3 @@ kitconcept.voltolighttheme
 ###############################################################################
 # main package
 -e .[test]
-
-version-overrides =
-    plone.volto = 5.1.0
