@@ -1,5 +1,9 @@
 # Changes
 
+## 1.1.3.dev0 (unreleased)
+
+- Use github.ref_name in the tag deploy GHA because MrTango doesn't update the main version.txt when pushing releases deployment then keeps using the same version on the container cluster and we cannot roll back any borked release.  [fredvd]
+
 
 ## 1.1.2 (2025-05-29)
 
@@ -26,7 +30,6 @@
 
 
 ## 1.0.0 (2025-05-15)
-
 
 - Rerelease under 1.x because of rogue tags that where not updated in version.txt or this CHANGELOG [fredvd]
 
