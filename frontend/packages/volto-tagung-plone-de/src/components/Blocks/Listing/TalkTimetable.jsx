@@ -48,7 +48,7 @@ const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
             );
           };
           return (
-            <div className="listing-item" key={item['@id']}>
+            <div className="timetable-item" key={item['@id']}>
               <ConditionalLink item={item} condition={!isEditMode}>
                 <ItemBodyTemplate item={item} />
               </ConditionalLink>

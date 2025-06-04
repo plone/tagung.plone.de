@@ -15,7 +15,7 @@ const TalkSummary = (props) => {
   return (
     <>
       {headline.length ? <div className="headline">{headline}</div> : null}
-      {audience ? <ul class="audiences">{audience}</ul> : null}
+      {audience ? <ul className="audiences">{audience}</ul> : null}
       <HeadingTag className="title">
         {item.title ? item.title : item.id}
       </HeadingTag>
