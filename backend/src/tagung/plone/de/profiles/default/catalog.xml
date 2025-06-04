@@ -20,6 +20,11 @@
   >
     <indexed_attr value="room" />
   </index>
+  <index meta_type="FieldIndex"
+         name="talk_timetable"
+  >
+    <indexed_attr value="talk_timetable" />
+  </index>
   <index meta_type="BooleanIndex"
          name="featured"
   >

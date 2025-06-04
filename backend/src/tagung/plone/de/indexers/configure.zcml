@@ -4,4 +4,6 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
+  <include file="talk_timetable.zcml" />
+
 </configure>

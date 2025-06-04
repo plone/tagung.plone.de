@@ -6,6 +6,7 @@ from plone.namedfile.field import NamedBlobImage
 from plone.schema.email import Email
 from plone.supermodel import model
 from tagung.plone.de import _
+from tagung.plone.de.content.time_box import ITimeBoxBase
 from z3c.form.browser.checkbox import CheckBoxFieldWidget
 from z3c.form.browser.radio import RadioFieldWidget
 from zope import schema
@@ -17,7 +18,7 @@ class StartBeforeEnd(Invalid):
     __doc__ = _("error_invalid_date", default="Invalid start or end date")
 
 
-class ITalk(model.Schema):
+class ITalk(model.Schema, ITimeBoxBase):
     """Talk content type schema"""
 
     directives.widget(type_of_talk=RadioFieldWidget)

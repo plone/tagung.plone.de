@@ -4,6 +4,7 @@ from plone.dexterity.content import Item
 from plone.supermodel import model
 from zope import schema
 from zope.interface import Invalid, implementer, invariant
+from zope.interface import Interface
 
 from tagung.plone.de import _
 
@@ -12,7 +13,11 @@ class StartBeforeEnd(Invalid):
     __doc__ = _("error_invalid_date", default="Invalid start or end date")
 
 
-class ITimeBox(model.Schema):
+class ITimeBoxBase(Interface):
+    """Marker for Time Box and Talk"""
+
+
+class ITimeBox(model.Schema, ITimeBoxBase):
     """Marker interface and Dexterity Python Schema for TimeBox"""
 
     directives.widget(

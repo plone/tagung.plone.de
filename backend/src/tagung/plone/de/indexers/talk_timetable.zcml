@@ -1,0 +1,13 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <adapter
+      factory=".talk_timetable.dummy"
+      name="talk_timetable"
+      />
+
+  <adapter
+      factory=".talk_timetable.talk_timetable"
+      name="talk_timetable"
+      />
+
+</configure>
