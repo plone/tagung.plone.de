@@ -12,6 +12,8 @@
         i18n_domain="plone"
         >
 
+      <!-- -*- extra stuff goes here -*- -->
+
       <configure zcml:condition="installed AccessControl.security">
         <permission
             id="tagung.AddTalk"
@@ -21,6 +23,11 @@
         <permission
             id="tagung.AddSponsor"
             title="Tagung: Add Sponsor"
+            />
+
+        <permission
+            id="tagung.plone.de.AddTimeBox"
+            title="Tagung: Add Time Box"
             />
 
       </configure>

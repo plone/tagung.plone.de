@@ -2,13 +2,13 @@
 <object meta_type="Plone Types Tool"
         name="portal_types"
 >
-
   <object meta_type="Dexterity FTI"
           name="Talk"
   />
-
   <object meta_type="Dexterity FTI"
           name="Sponsor"
   />
-
+  <object meta_type="Dexterity FTI"
+          name="Time Box"
+  />
 </object>

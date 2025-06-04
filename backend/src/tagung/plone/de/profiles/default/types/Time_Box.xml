@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        meta_type="Dexterity FTI"
+        name="Time Box"
+        i18n:domain="tagung.plone.de"
+>
+
+  <!-- Basic properties -->
+  <property name="title"
+            i18n:translate=""
+  >Time Box</property>
+  <property name="description"
+            i18n:translate=""
+  >A Time Box for a Time Table</property>
+
+  <property name="allow_discussion">False</property>
+  <property name="factory">Time Box</property>
+  <property name="icon_expr">string:calendar-range</property>
+  <property name="link_target" />
+
+  <!-- Hierarchy control -->
+  <property name="global_allow">True</property>
+  <!-- Schema, class and security -->
+  <property name="add_permission">tagung.plone.de.AddTimeBox</property>
+  <property name="klass">tagung.plone.de.content.time_box.TimeBox</property>
+  <property name="model_file" />
+  <property name="model_source" />
+  <property name="schema">tagung.plone.de.content.time_box.ITimeBox</property>
+
+  <!-- Enabled behaviors -->
+  <property name="behaviors"
+            purge="false"
+  >
+    <!-- Details about all standard behaviors following can be read at
+         https://docs.plone.org/external/plone.app.dexterity/docs/reference/standard-behaviours.html
+    -->
+    <element value="plone.basic" />
+    <element value="plone.namefromtitle" />
+    <element value="plone.allowdiscussion" />
+    <element value="plone.excludefromnavigation" />
+    <element value="plone.shortname" />
+    <element value="plone.ownership" />
+    <element value="plone.publication" />
+    <element value="plone.categorization" />
+    <element value="plone.locking" />
+    <!--<element value="plone.leadimage"/>-->
+    <!--<element value="plone.relateditems"/>-->
+    <!--<element value="plone.richtext"/>-->
+    <!--<element value="plone.tableofcontents"/>-->
+    <!--<element value="plone.versioning" />-->
+    <!--<element value="plone.translatable" />-->
+  </property>
+
+  <!-- View information -->
+  <property name="add_view_expr">string:${folder_url}/++add++Time Box</property>
+  <property name="default_view">view</property>
+  <property name="default_view_fallback">False</property>
+  <property name="immediate_view">view</property>
+  <property name="view_methods">
+    <element value="view" />
+  </property>
+
+  <!-- Method aliases -->
+  <alias from="(Default)"
+         to="(dynamic view)"
+  />
+  <alias from="edit"
+         to="@@edit"
+  />
+  <alias from="sharing"
+         to="@@sharing"
+  />
+  <alias from="view"
+         to="(selected layout)"
+  />
+
+  <!-- Actions -->
+  <action action_id="view"
+          category="object"
+          condition_expr=""
+          icon_expr="string:toolbar-action/view"
+          title="View"
+          url_expr="string:${object_url}"
+          visible="True"
+          i18n:attributes="title"
+          i18n:domain="plone"
+  >
+    <permission value="View" />
+  </action>
+  <action action_id="edit"
+          category="object"
+          condition_expr="not:object/@@plone_lock_info/is_locked_for_current_user|python:True"
+          icon_expr="string:toolbar-action/edit"
+          title="Edit"
+          url_expr="string:${object_url}/edit"
+          visible="True"
+          i18n:attributes="title"
+          i18n:domain="plone"
+  >
+    <permission value="Modify portal content" />
+  </action>
+
+</object>
