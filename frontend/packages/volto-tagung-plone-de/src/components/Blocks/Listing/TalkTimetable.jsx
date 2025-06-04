@@ -1,6 +1,7 @@
 import DefaultSummary from '@kitconcept/volto-light-theme/components/Summary/DefaultSummary';
 import ConditionalLink from '@plone/volto/components/manage/ConditionalLink/ConditionalLink';
 import Component from '@plone/volto/components/theme/Component/Component';
+import FormattedDate from '@plone/volto/components/theme/FormattedDate/FormattedDate';
 import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers/Url/Url';
 import config from '@plone/volto/registry';
 import PropTypes from 'prop-types';
@@ -9,6 +10,10 @@ import React from 'react';
 const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
   let link = null;
   let href = linkHref?.[0]?.['@id'] || '';
+  const toDate = (d) => (typeof d === 'string' ? new Date(d) : d);
+  const timeFormatter = new Intl.DateTimeFormat('de-DE', {
+    timeStyle: 'short',
+  });
 
   if (isInternalURL(href)) {
     link = (
@@ -34,15 +39,37 @@ const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                 name: 'Summary',
                 dependencies: [item['@type']],
               }).component || DefaultSummary;
+            const audience =
+              item.audience &&
+              item.audience.map((item) => <li key={item}>{item}</li>);
+            const talkType =
+              item.type_of_talk &&
+              item.type_of_talk.replace(/\s*\([^)]*\)$/, '');
 
             return CustomItemBodyTemplate ? (
               <CustomItemBodyTemplate item={item} />
             ) : (
               <div className="card-container">
-                <div className="item">
-                  <div className="content">
-                    <Summary item={item} HeadingTag="h2" />
-                  </div>
+                <>
+                  {item.start ? (
+                    <div className="time">
+                      {timeFormatter.format(new Date(toDate(item.start)))}
+                    </div>
+                  ) : null}
+                </>
+                <div className="content">
+                  {/* <Summary item={item} HeadingTag="h2" /> */}
+                  <h2 className="title">{item.title ? item.title : item.id}</h2>
+                  <>
+                    <div className="speaker-info">
+                      <span className="talk-type">{talkType} </span>
+                      <span className="speaker">{item.speaker}</span>
+                    </div>
+                  </>
+                  {audience ? <ul className="audiences">{audience}</ul> : null}
+                </div>
+                <div className="room">
+                  {item.room ? <div className="room">{item.room}</div> : null}
                 </div>
               </div>
             );

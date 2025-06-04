@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'fonts';
 @import 'components/footer';
 @import 'components/talkview';
 @import 'components/sponsors';
@@ -208,7 +209,10 @@ table.slate-table th p {
   }
 }
 
-.block.listing.talk-timetable {
+#page-document .blocks-group-wrapper > .block.listing.talk-timetable {
+  max-width: var(--default-container-width);
+  margin-right: auto;
+  margin-left: auto;
   .items {
     display: grid;
     gap: 0.5rem;
@@ -216,6 +220,38 @@ table.slate-table th p {
 }
 
 .timetable-item {
-  padding: 0.5rem;
+  padding: 0;
   background-color: var(--theme-high-contrast-color);
+  .card-container {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #fff;
+    font-family: 'PT Sans';
+    gap: 0.5rem;
+    h2 {
+      margin: 0;
+      font-family: 'PT Sans';
+      font-size: 0.8rem;
+    }
+    > * {
+      padding: 0.5rem;
+      background-color: var(--theme-high-contrast-color);
+    }
+    .time {
+      width: 5rem;
+      text-align: center;
+    }
+    .content {
+      flex-grow: 1;
+    }
+    .room {
+      width: 8rem;
+      // text-align: center;
+    }
+    .speaker-info {
+      font-size: 0.8rem;
+      .talk-type {
+      }
+    }
+  }
 }

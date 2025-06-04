@@ -13,10 +13,7 @@ def dummy(obj):
 def talk_timetable(obj):
     """Calculate and return the value for the indexer"""
     info = ""
-    import pdb
-
-    pdb.set_trace()  # NOQA: E702
-    info += obj.start
+    info += str(int(obj.start.timestamp()))
     if hasattr(obj, "room"):
         info += obj.room
     return info

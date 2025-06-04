@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    >
+
+  <gs:registerProfile
+      name="1007"
+      title="load ctalog settings to enable talk_timetable index"
+      description="Configuration for version 1007"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+      directory="1007"
+      />
+
+  <gs:upgradeSteps
+      profile="tagung.plone.de:default"
+      source="1006"
+      destination="1007"
+      >
+
+    <gs:upgradeStep
+        title="load ctalog settings to enable talk_timetable index"
+        description=""
+        handler=".v1007.upgrade"
+        />
+
+    <gs:upgradeDepends
+        title="load ctalog settings to enable talk_timetable index (GS profile)"
+        description=""
+        import_profile="tagung.plone.de.upgrades:1007"
+        />
+
+  </gs:upgradeSteps>
+
+</configure>
