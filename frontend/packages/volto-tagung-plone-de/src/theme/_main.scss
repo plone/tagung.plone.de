@@ -207,3 +207,15 @@ table.slate-table th p {
     }
   }
 }
+
+.block.listing.talk-timetable {
+  .items {
+    display: grid;
+    gap: 0.5rem;
+  }
+}
+
+.timetable-item {
+  padding: 0.5rem;
+  background-color: var(--theme-high-contrast-color);
+}
