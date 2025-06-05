@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.4 (unreleased)
+## 1.1.4 (2025-06-05)
 
 - Use github.ref_name in the tag deploy GHA because MrTango doesn't update the main version.txt when pushing releases deployment then keeps using the same version on the container cluster and we cannot roll back any borked release.  [fredvd]
 - Add Time Box CT for use in talk timetable together with Talk CT [MrTango]
