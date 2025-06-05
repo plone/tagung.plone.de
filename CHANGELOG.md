@@ -1,5 +1,11 @@
 # Changes
 
+## 1.1.5 (unreleased)
+
+
+- Nothing changed yet.
+
+
 ## 1.1.4 (2025-06-05)
 
 - Use github.ref_name in the tag deploy GHA because MrTango doesn't update the main version.txt when pushing releases deployment then keeps using the same version on the container cluster and we cannot roll back any borked release.  [fredvd]
