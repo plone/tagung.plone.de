@@ -1,5 +1,11 @@
 # Changes
 
+## 1.1.6 (unreleased)
+
+
+- Nothing changed yet.
+
+
 ## 1.1.5 (2025-06-05)
 
 
