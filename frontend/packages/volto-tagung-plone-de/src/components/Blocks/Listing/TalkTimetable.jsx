@@ -1,6 +1,7 @@
 import ConditionalLink from '@plone/volto/components/manage/ConditionalLink/ConditionalLink';
 import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers/Url/Url';
 import config from '@plone/volto/registry';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 
 const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
@@ -60,13 +61,26 @@ const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                   {audience ? <ul className="audiences">{audience}</ul> : null}
                 </div>
                 <div className="room">
-                  {item.room ? <div className="room">{item.room}</div> : null}
+                  {item.room ? <>{item.room}</> : null}
                 </div>
               </div>
             );
           };
           return (
-            <div className="timetable-item" key={item['@id']}>
+            <div
+              className={cx(
+                'timetable-item',
+                item['@type'].replaceAll(' ', '-').toLowerCase(),
+                item.type_of_talk &&
+                  item.type_of_talk.replace(/\s*\([^)]*\)$/, '').toLowerCase(),
+                'time-' +
+                  timeFormatter
+                    .format(new Date(toDate(item.start)))
+                    .toLowerCase()
+                    .replaceAll(':', '-'),
+              )}
+              key={item['@id']}
+            >
               <ConditionalLink item={item} condition={!isEditMode}>
                 <ItemBodyTemplate item={item} />
               </ConditionalLink>
