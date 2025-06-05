@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    >
+
+  <gs:registerProfile
+      name="1008"
+      title="load registry to update type_of_talk query string"
+      description="Configuration for version 1008"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+      directory="1008"
+      />
+
+  <gs:upgradeSteps
+      profile="tagung.plone.de:default"
+      source="1007"
+      destination="1008"
+      >
+
+    <gs:upgradeStep
+        title="load registry to update type_of_talk query string"
+        description=""
+        handler=".v1008.upgrade"
+        />
+
+    <gs:upgradeDepends
+        title="load registry to update type_of_talk query string (GS profile)"
+        description=""
+        import_profile="tagung.plone.de.upgrades:1008"
+        />
+
+  </gs:upgradeSteps>
+
+</configure>
