@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.5 (unreleased)
+## 1.1.5 (2025-06-05)
 
 
 - fix type of talk query field [MrTango]
