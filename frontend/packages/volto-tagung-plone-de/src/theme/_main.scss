@@ -254,11 +254,6 @@ table.slate-table th p {
   padding: 0;
   background-color: var(--theme-high-contrast-color);
 
-  &.talk.keynote,
-  &.time-box {
-    grid-column-start: span 2;
-  }
-
   &.time-09-00:not(:has(+ .time-09-00)),
   &.time-09-30:not(:has(+ .time-09-30)),
   &.time-10-00:not(:has(+ .time-10-00)),
@@ -279,6 +274,14 @@ table.slate-table th p {
   &.time-17-30:not(:has(+ .time-17-30)) {
     & + * {
       grid-column-start: 1;
+    }
+  }
+
+  &.talk.keynote,
+  &.time-box {
+    grid-column-start: span 2;
+    .room {
+      display: none;
     }
   }
 

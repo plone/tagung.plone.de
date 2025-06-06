@@ -40,6 +40,7 @@ const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
             const talkType =
               item.type_of_talk &&
               item.type_of_talk.replace(/\s*\([^)]*\)$/, '');
+            const description = item.description && item.description;
 
             return CustomItemBodyTemplate ? (
               <CustomItemBodyTemplate item={item} />
@@ -53,8 +54,10 @@ const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                   ) : null}
                 </>
                 <div className="content">
-                  {/* <Summary item={item} HeadingTag="h2" /> */}
                   <h2 className="title">{item.title ? item.title : item.id}</h2>
+                  {description ? (
+                    <div className="description">{description}</div>
+                  ) : null}
                   <>
                     <div className="speaker-info">
                       <span className="talk-type">{talkType} </span>
