@@ -40,10 +40,6 @@ const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
             const talkType =
               item.type_of_talk &&
               item.type_of_talk.replace(/\s*\([^)]*\)$/, '');
-            console.log(`item.start: ${item.start}`);
-            console.log(
-              `item.start formated: ${timeFormatter.format(new Date(toDate(item.start)))}`,
-            );
 
             return CustomItemBodyTemplate ? (
               <CustomItemBodyTemplate item={item} />
