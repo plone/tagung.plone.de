@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.7 (unreleased)
+## 1.1.7 (2025-06-06)
 
 
 - Add description to time table when CT Time Box [MrTango]
