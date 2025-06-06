@@ -3,7 +3,7 @@
 ## 1.1.8 (unreleased)
 
 
-- Nothing changed yet.
+- Improve CSS Grid to allow talks spanning over two rows and columns [MrTango]
 
 
 ## 1.1.7 (2025-06-06)
