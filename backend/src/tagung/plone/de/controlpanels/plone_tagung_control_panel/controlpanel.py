@@ -20,13 +20,13 @@ class IPloneTagungControlPanel(Interface):
     type_of_talk = schema.List(
         title=_("Available types for talks"),
         default=[
-            "Keynote",
-            "Podiumsdiskussion",
-            "Lightning Talk",
             "Kurzvortrag (25 min)",
+            "Vortrag (50 min)",
             "Open Space (Biete Impulse)",
             "Open Space (Suche Impulse)",
-            "Rahmenprogramm",
+            "Lightning Talk",
+            "Keynote",
+            "Podiumsdiskussion",
         ],
         missing_value=None,
         required=False,

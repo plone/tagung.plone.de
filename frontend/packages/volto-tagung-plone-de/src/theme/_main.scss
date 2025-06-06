@@ -203,7 +203,7 @@ table.slate-table th p {
   li {
     padding: 0.2rem 0;
     color: var(--accent-color);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 
     &::before {
       content: '#';
@@ -214,6 +214,7 @@ table.slate-table th p {
 #page-document .blocks-group-wrapper > .block.listing.grid {
   .audiences {
     margin: 0.2rem 0;
+    font-family: 'PT Sans Narrow';
 
     li {
       padding: 0.1rem 0;
@@ -223,9 +224,10 @@ table.slate-table th p {
 }
 
 #page-document .blocks-group-wrapper > .block.listing.talk-timetable {
-  max-width: var(--default-container-width);
+  max-width: 98%;
   margin-right: auto;
   margin-left: auto;
+  font-family: 'PT Sans Narrow';
 
   .items {
     display: grid;
@@ -257,24 +259,24 @@ table.slate-table th p {
     grid-column-start: span 2;
   }
 
-  &.time-09-00:has(+ .time-09-00),
-  &.time-09-30:has(+ .time-09-30),
-  &.time-10-00:has(+ .time-10-00),
-  &.time-10-30:has(+ .time-10-30),
-  &.time-11-00:has(+ .time-11-00),
-  &.time-11-30:has(+ .time-11-30),
-  &.time-12-00:has(+ .time-12-00),
-  &.time-12-30:has(+ .time-12-30),
-  &.time-13-00:has(+ .time-13-00),
-  &.time-13-30:has(+ .time-13-30),
-  &.time-14-00:has(+ .time-14-00),
-  &.time-14-30:has(+ .time-14-30),
-  &.time-15-00:has(+ .time-15-00),
-  &.time-15-30:has(+ .time-15-30),
-  &.time-16-00:has(+ .time-16-00),
-  &.time-16-30:has(+ .time-16-30),
-  &.time-17-00:has(+ .time-17-00),
-  &.time-17-30:has(+ .time-17-30) {
+  &.time-09-00:not(:has(+ .time-09-00)),
+  &.time-09-30:not(:has(+ .time-09-30)),
+  &.time-10-00:not(:has(+ .time-10-00)),
+  &.time-10-30:not(:has(+ .time-10-30)),
+  &.time-11-00:not(:has(+ .time-11-00)),
+  &.time-11-30:not(:has(+ .time-11-30)),
+  &.time-12-00:not(:has(+ .time-12-00)),
+  &.time-12-30:not(:has(+ .time-12-30)),
+  &.time-13-00:not(:has(+ .time-13-00)),
+  &.time-13-30:not(:has(+ .time-13-30)),
+  &.time-14-00:not(:has(+ .time-14-00)),
+  &.time-14-30:not(:has(+ .time-14-30)),
+  &.time-15-00:not(:has(+ .time-15-00)),
+  &.time-15-30:not(:has(+ .time-15-30)),
+  &.time-16-00:not(:has(+ .time-16-00)),
+  &.time-16-30:not(:has(+ .time-16-30)),
+  &.time-17-00:not(:has(+ .time-17-00)),
+  &.time-17-30:not(:has(+ .time-17-30)) {
     & + * {
       grid-column-start: 1;
     }
@@ -284,13 +286,13 @@ table.slate-table th p {
     display: flex;
     justify-content: flex-start;
     background-color: #fff;
-    font-family: 'PT Sans';
+    font-family: 'PT Sans Narrow';
     gap: 0.5rem;
 
     h2 {
       margin: 0;
-      font-family: 'PT Sans';
-      font-size: 0.8rem;
+      font-family: 'PT Sans Narrow';
+      font-size: 1rem;
       line-height: 1rem;
     }
 
@@ -301,6 +303,7 @@ table.slate-table th p {
 
     .time {
       width: 5rem;
+      flex-shrink: 0;
       text-align: center;
     }
 
@@ -321,11 +324,12 @@ table.slate-table th p {
 
     .room {
       width: 6rem;
+      flex-shrink: 0;
       text-align: center;
     }
 
     .speaker-info {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
 
       .talk-type {
       }
