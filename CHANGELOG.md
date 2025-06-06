@@ -3,7 +3,9 @@
 ## 1.1.6 (unreleased)
 
 
-- Nothing changed yet.
+- Fix Talk Timetable layout [MrTango]
+- Fix Talk Timetable time zones [MrTango]
+- Update fonts to PT Sans Narrow  [MrTango]
 
 
 ## 1.1.5 (2025-06-05)
