@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.8 (unreleased)
+## 1.1.8 (2025-06-06)
 
 
 - Improve CSS Grid to allow talks spanning over two rows and columns [MrTango]
