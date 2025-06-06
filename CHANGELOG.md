@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.6 (unreleased)
+## 1.1.6 (2025-06-06)
 
 
 - Fix Talk Timetable layout [MrTango]
