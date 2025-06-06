@@ -231,55 +231,73 @@ table.slate-table th p {
 
   .items {
     display: grid;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
     gap: 0.5rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 120px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // vertical grid:
-@media (orientation: portrait) and (max-width: 400px) {
+@media (orientation: portrait) and (max-width: 800px) {
   #page-document .blocks-group-wrapper > .block.listing.talk-timetable {
     // max-width: var(--default-container-width);
     // margin-right: auto;
     // margin-left: auto;
-    .items {
-      display: grid;
-      gap: 0.5rem;
-      grid-template-columns: repeat(1, 1fr);
-    }
+    // .items {
+    //   display: grid;
+    //   gap: 0.5rem;
+    //   grid-template-columns: repeat(1, 1fr);
+    // }
   }
 }
 
 .timetable-item {
   padding: 0;
   background-color: var(--theme-high-contrast-color);
+  --talk-item-base-height: 5rem;
 
-  &.time-09-00:not(:has(+ .time-09-00)),
-  &.time-09-30:not(:has(+ .time-09-30)),
-  &.time-10-00:not(:has(+ .time-10-00)),
-  &.time-10-30:not(:has(+ .time-10-30)),
-  &.time-11-00:not(:has(+ .time-11-00)),
-  &.time-11-30:not(:has(+ .time-11-30)),
-  &.time-12-00:not(:has(+ .time-12-00)),
-  &.time-12-30:not(:has(+ .time-12-30)),
-  &.time-13-00:not(:has(+ .time-13-00)),
-  &.time-13-30:not(:has(+ .time-13-30)),
-  &.time-14-00:not(:has(+ .time-14-00)),
-  &.time-14-30:not(:has(+ .time-14-30)),
-  &.time-15-00:not(:has(+ .time-15-00)),
-  &.time-15-30:not(:has(+ .time-15-30)),
-  &.time-16-00:not(:has(+ .time-16-00)),
-  &.time-16-30:not(:has(+ .time-16-30)),
-  &.time-17-00:not(:has(+ .time-17-00)),
-  &.time-17-30:not(:has(+ .time-17-30)) {
-    & + * {
-      grid-column-start: 1;
-    }
+  /* Items that span two columns */
+  &.keynote,
+  &.podiumsdiskusion,
+  &.time-box {
+    grid-column: span 2;
   }
+
+  /* Items that span two rows */
+  &.vortrag,
+  &.keynote,
+  &.podiumsdiskusion {
+    grid-row: span 2;
+  }
+
+  // &.time-09-00:not(:has(+ .time-09-00)),
+  // &.time-09-30:not(:has(+ .time-09-30)),
+  // &.time-10-00:not(:has(+ .time-10-00)),
+  // &.time-10-30:not(:has(+ .time-10-30)),
+  // &.time-11-00:not(:has(+ .time-11-00)),
+  // &.time-11-30:not(:has(+ .time-11-30)),
+  // &.time-12-00:not(:has(+ .time-12-00)),
+  // &.time-12-30:not(:has(+ .time-12-30)),
+  // &.time-13-00:not(:has(+ .time-13-00)),
+  // &.time-13-30:not(:has(+ .time-13-30)),
+  // &.time-14-00:not(:has(+ .time-14-00)),
+  // &.time-14-30:not(:has(+ .time-14-30)),
+  // &.time-15-00:not(:has(+ .time-15-00)),
+  // &.time-15-30:not(:has(+ .time-15-30)),
+  // &.time-16-00:not(:has(+ .time-16-00)),
+  // &.time-16-30:not(:has(+ .time-16-30)),
+  // &.time-17-00:not(:has(+ .time-17-00)),
+  // &.time-17-30:not(:has(+ .time-17-30)) {
+  //   &+* {
+  //     grid-column-start: 1;
+  //   }
+  // }
 
   &.talk.keynote,
   &.time-box {
-    grid-column-start: span 2;
     .room {
       display: none;
     }
@@ -287,6 +305,8 @@ table.slate-table th p {
 
   .card-container {
     display: flex;
+    height: 100%;
+    align-items: stretch;
     justify-content: flex-start;
     background-color: #fff;
     font-family: 'PT Sans Narrow';
