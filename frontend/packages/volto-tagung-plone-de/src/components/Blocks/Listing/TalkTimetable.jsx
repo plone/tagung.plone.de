@@ -42,7 +42,7 @@ const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
               item.type_of_talk.replace(/\s*\([^)]*\)$/, '');
             const description =
               item.description &&
-              item['@type'] == 'Time Box' &&
+              item['@type'] === 'Time Box' &&
               item.description;
 
             return CustomItemBodyTemplate ? (
