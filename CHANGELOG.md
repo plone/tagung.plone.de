@@ -3,7 +3,8 @@
 ## 1.1.7 (unreleased)
 
 
-- Nothing changed yet.
+- Add description to time table when CT Time Box [MrTango]
+- Fix CSS [MrTango]
 
 
 ## 1.1.6 (2025-06-06)
