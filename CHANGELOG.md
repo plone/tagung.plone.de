@@ -3,7 +3,7 @@
 ## 1.1.10 (unreleased)
 
 
-- Nothing changed yet.
+- Optimize grid row height [MrTango]
 
 
 ## 1.1.9 (2025-06-07)
