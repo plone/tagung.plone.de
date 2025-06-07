@@ -203,6 +203,7 @@ table.slate-table th p {
   li {
     padding: 0.2rem 0;
     color: var(--accent-color);
+    font-family: 'PT Sans Narrow';
     font-size: 0.8rem;
 
     &::before {
@@ -235,7 +236,7 @@ table.slate-table th p {
     padding: 20px;
     margin: 0 auto;
     gap: 0.5rem;
-    grid-auto-rows: 120px;
+    grid-auto-rows: 60px;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -257,7 +258,7 @@ table.slate-table th p {
 .timetable-item {
   padding: 0;
   background-color: var(--theme-high-contrast-color);
-  --talk-item-base-height: 5rem;
+  // --talk-item-base-height: 5rem;
 
   /* Items that span two columns */
   &.keynote,
@@ -266,14 +267,21 @@ table.slate-table th p {
     grid-column: span 2;
   }
 
-  /* Items that span two rows */
+  /* Items that span 1 rows */
+  &.time-box {
+    grid-row: span 1;
+  }
+  /* Items that span 2 rows */
+  &.kurzvortrag {
+    grid-row: span 2;
+  }
+  /* Items that span 3 rows */
   &.vortrag,
   &.keynote,
   &.podiumsdiskusion {
-    grid-row: span 2;
+    grid-row: span 3;
   }
 
-  &.talk.keynote,
   &.time-box {
     .room {
       display: none;
@@ -337,27 +345,27 @@ table.slate-table th p {
   }
 }
 
-.timetable-item:not(.time-box) {
-  &.time-09-00:not(:has(+ .time-09-00)),
-  &.time-09-30:not(:has(+ .time-09-30)),
-  &.time-10-00:not(:has(+ .time-10-00)),
-  &.time-10-30:not(:has(+ .time-10-30)),
-  &.time-11-00:not(:has(+ .time-11-00)),
-  &.time-11-30:not(:has(+ .time-11-30)),
-  &.time-12-00:not(:has(+ .time-12-00)),
-  &.time-12-30:not(:has(+ .time-12-30)),
-  &.time-13-00:not(:has(+ .time-13-00)),
-  &.time-13-30:not(:has(+ .time-13-30)),
-  &.time-14-00:not(:has(+ .time-14-00)),
-  &.time-14-30:not(:has(+ .time-14-30)),
-  &.time-15-00:not(:has(+ .time-15-00)),
-  &.time-15-30:not(:has(+ .time-15-30)),
-  &.time-16-00:not(:has(+ .time-16-00)),
-  &.time-16-30:not(:has(+ .time-16-30)),
-  &.time-17-00:not(:has(+ .time-17-00)),
-  &.time-17-30:not(:has(+ .time-17-30)) {
-    & + * {
-      grid-column-start: 1;
-    }
-  }
-}
+// .timetable-item:not(.time-box) {
+//   &.time-09-00:not(:has(+ .time-09-00)),
+//   &.time-09-30:not(:has(+ .time-09-30)),
+//   &.time-10-00:not(:has(+ .time-10-00)),
+//   &.time-10-30:not(:has(+ .time-10-30)),
+//   &.time-11-00:not(:has(+ .time-11-00)),
+//   &.time-11-30:not(:has(+ .time-11-30)),
+//   &.time-12-00:not(:has(+ .time-12-00)),
+//   &.time-12-30:not(:has(+ .time-12-30)),
+//   &.time-13-00:not(:has(+ .time-13-00)),
+//   &.time-13-30:not(:has(+ .time-13-30)),
+//   &.time-14-00:not(:has(+ .time-14-00)),
+//   &.time-14-30:not(:has(+ .time-14-30)),
+//   &.time-15-00:not(:has(+ .time-15-00)),
+//   &.time-15-30:not(:has(+ .time-15-30)),
+//   &.time-16-00:not(:has(+ .time-16-00)),
+//   &.time-16-30:not(:has(+ .time-16-30)),
+//   &.time-17-00:not(:has(+ .time-17-00)),
+//   &.time-17-30:not(:has(+ .time-17-30)) {
+//     & + * {
+//       grid-column-start: 1;
+//     }
+//   }
+// }
