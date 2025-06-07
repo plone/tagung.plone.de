@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.12 (unreleased)
+## 1.1.12 (2025-06-07)
 
 
 - fix open space class and css [MrTango]
