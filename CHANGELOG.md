@@ -3,7 +3,7 @@
 ## 1.1.12 (unreleased)
 
 
-- Nothing changed yet.
+- fix open space class and css [MrTango]
 
 
 ## 1.1.11 (2025-06-07)
