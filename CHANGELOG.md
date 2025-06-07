@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.13 (unreleased)
+## 1.1.13 (2025-06-08)
 
 
 - optimize css [MrTango]
