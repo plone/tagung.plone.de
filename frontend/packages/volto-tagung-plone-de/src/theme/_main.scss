@@ -233,7 +233,7 @@ table.slate-table th p {
   .items {
     display: grid;
     max-width: 1200px;
-    padding: 20px;
+    padding: 5px;
     margin: 0 auto;
     gap: 0.5rem;
     grid-auto-rows: 60px;
@@ -242,19 +242,6 @@ table.slate-table th p {
 }
 
 // vertical grid:
-@media (orientation: portrait) and (max-width: 800px) {
-  #page-document .blocks-group-wrapper > .block.listing.talk-timetable {
-    // max-width: var(--default-container-width);
-    // margin-right: auto;
-    // margin-left: auto;
-    // .items {
-    //   display: grid;
-    //   gap: 0.5rem;
-    //   grid-template-columns: repeat(1, 1fr);
-    // }
-  }
-}
-
 .timetable-item {
   padding: 0;
   background-color: var(--theme-high-contrast-color);
@@ -263,7 +250,6 @@ table.slate-table th p {
   /* Items that span two columns */
   &.keynote,
   &.podiumsdiskusion,
-  &.open-space,
   &.time-box {
     grid-column: span 2;
   }
@@ -279,6 +265,7 @@ table.slate-table th p {
   /* Items that span 3 rows */
   &.vortrag,
   &.keynote,
+  &.open-space,
   &.podiumsdiskussion {
     grid-row: span 3;
   }
@@ -311,7 +298,7 @@ table.slate-table th p {
     }
 
     .time {
-      width: 5rem;
+      width: 3.4rem;
       flex-shrink: 0;
       text-align: center;
     }
@@ -332,7 +319,7 @@ table.slate-table th p {
     }
 
     .room {
-      width: 6rem;
+      width: 5rem;
       flex-shrink: 0;
       text-align: center;
     }
@@ -342,6 +329,22 @@ table.slate-table th p {
 
       .talk-type {
       }
+    }
+  }
+}
+
+@media (orientation: portrait) and (max-width: 900px) {
+  #page-document .blocks-group-wrapper > .block.listing.talk-timetable {
+    // max-width: var(--default-container-width);
+    // margin-right: auto;
+    // margin-left: auto;
+    // .items {
+    //   display: grid;
+    //   gap: 0.5rem;
+    //   grid-template-columns: repeat(1, 1fr);
+    // }
+    .timetable-item {
+      grid-column: span 2;
     }
   }
 }

@@ -3,7 +3,7 @@
 ## 1.1.13 (unreleased)
 
 
-- Nothing changed yet.
+- optimize css [MrTango]
 
 
 ## 1.1.12 (2025-06-07)
