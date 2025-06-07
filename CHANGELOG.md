@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.11 (unreleased)
+## 1.1.11 (2025-06-07)
 
 
 - fix podiumsdiskussion height [MrTango]
