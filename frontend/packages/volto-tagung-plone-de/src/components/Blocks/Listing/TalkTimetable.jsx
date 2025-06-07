@@ -80,6 +80,7 @@ const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
               className={cx(
                 'timetable-item',
                 item['@type'].replaceAll(' ', '-').toLowerCase(),
+                item['room'] && item['room'].replaceAll(' ', '-').toLowerCase(),
                 item.type_of_talk &&
                   item.type_of_talk.replace(/\s*\([^)]*\)$/, '').toLowerCase(),
                 'time-' +

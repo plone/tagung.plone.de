@@ -3,7 +3,7 @@
 ## 1.1.9 (unreleased)
 
 
-- Nothing changed yet.
+- Add room class to time table items and optimize grid [MrTango]
 
 
 ## 1.1.8 (2025-06-06)
