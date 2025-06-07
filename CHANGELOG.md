@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.10 (unreleased)
+## 1.1.10 (2025-06-07)
 
 
 - Optimize grid row height [MrTango]
