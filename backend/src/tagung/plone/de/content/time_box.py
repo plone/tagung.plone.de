@@ -34,6 +34,13 @@ class ITimeBox(model.Schema, ITimeBoxBase):
         readonly=False,
     )
 
+    directives.write_permission(room="cmf.ReviewPortalContent")
+    room = schema.Choice(
+        title=_("Room"),
+        vocabulary="tagung.talk.room",
+        required=False,
+    )
+
     directives.widget(
         "start",
         default_timezone=default_timezone,

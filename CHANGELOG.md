@@ -3,7 +3,7 @@
 ## 1.1.16 (unreleased)
 
 
-- Nothing changed yet.
+- Add room to time box [MrTango]
 
 
 ## 1.1.15 (2025-06-08)
