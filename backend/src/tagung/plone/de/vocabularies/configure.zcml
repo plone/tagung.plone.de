@@ -11,7 +11,7 @@
       />
 
   <utility
-      name="tagung.talk.type_of_time_box"
+      name="tagung.time_box.type_of_time_box"
       component=".time_box.TimeBoxTypeVocabulary"
       />
 

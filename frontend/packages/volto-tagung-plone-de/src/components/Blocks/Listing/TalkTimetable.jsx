@@ -86,6 +86,8 @@ const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                     .replace(/\s*\([^)]*\)$/, '')
                     .toLowerCase()
                     .replaceAll(' ', '-'),
+                item.type_of_time_box &&
+                  item.type_of_time_box.toLowerCase().replaceAll(' ', '-'),
                 'time-' +
                   timeFormatter
                     .format(new Date(toDate(item.start)))

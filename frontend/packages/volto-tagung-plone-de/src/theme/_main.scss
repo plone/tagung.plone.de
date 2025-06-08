@@ -256,6 +256,41 @@ table.slate-table th p {
   &.time-box {
     grid-row: span 1;
   }
+
+  /* Time box types: */
+  &.time-box.fullwidth-1-row {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  &.time-box.fullwidth-2-row {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  &.time-box.fullwidth-3-row {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+  &.time-box.fullwidth-4-row {
+    grid-column: span 2;
+    grid-row: span 4;
+  }
+  &.time-box.normal-1-row {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  &.time-box.normal-2-row {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+  &.time-box.normal-1-row {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+  &.time-box.normal-1-row {
+    grid-column: span 1;
+    grid-row: span 4;
+  }
+
   /* Items that span 2 rows */
   &.open-space-short,
   &.kurzvortrag {

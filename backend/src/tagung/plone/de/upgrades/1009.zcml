@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    >
+
+  <gs:registerProfile
+      name="1009"
+      title="load control panel setting to allow setting Time Box Types"
+      description="Configuration for version 1009"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+      directory="1009"
+      />
+
+  <gs:upgradeSteps
+      profile="tagung.plone.de:default"
+      source="1008"
+      destination="1009"
+      >
+
+    <gs:upgradeStep
+        title="load control panel setting to allow setting Time Box Types"
+        description=""
+        handler=".v1009.upgrade"
+        />
+
+    <gs:upgradeDepends
+        title="load control panel setting to allow setting Time Box Types (GS profile)"
+        description=""
+        import_profile="tagung.plone.de.upgrades:1009"
+        />
+
+  </gs:upgradeSteps>
+
+</configure>

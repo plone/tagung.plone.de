@@ -20,6 +20,20 @@ class ITimeBoxBase(Interface):
 class ITimeBox(model.Schema, ITimeBoxBase):
     """Marker interface and Dexterity Python Schema for TimeBox"""
 
+    type_of_time_box = schema.Choice(
+        title=_(
+            "Time Box Type",
+        ),
+        # description=_(
+        #     u'',
+        # ),
+        vocabulary="tagung.time_box.type_of_time_box",
+        default=None,
+        # defaultFactory=get_default_timebox_type,
+        required=False,
+        readonly=False,
+    )
+
     directives.widget(
         "start",
         default_timezone=default_timezone,

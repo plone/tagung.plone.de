@@ -33,6 +33,7 @@
 
   <column value="audience" />
   <column value="type_of_talk" />
+  <column value="type_of_time_box" />
   <column value="speaker" />
   <column value="room" />
   <column value="featured" />
