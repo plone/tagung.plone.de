@@ -3,7 +3,7 @@
 ## 1.1.19 (unreleased)
 
 
-- Nothing changed yet.
+- Use time box type also for Talk, to set row/col spans [MrTango]
 
 
 ## 1.1.18 (2025-06-08)
