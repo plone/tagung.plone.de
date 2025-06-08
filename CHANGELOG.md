@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.14 (unreleased)
+## 1.1.14 (2025-06-08)
 
 
 - Add Type of Time Box field to allow time boxes to have 1-4 rows and 1-2 columns spanned [MrTango]
