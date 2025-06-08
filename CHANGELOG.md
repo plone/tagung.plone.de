@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.16 (unreleased)
+## 1.1.16 (2025-06-08)
 
 
 - Add room to time box [MrTango]
