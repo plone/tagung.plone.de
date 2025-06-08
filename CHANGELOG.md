@@ -3,7 +3,7 @@
 ## 1.1.17 (unreleased)
 
 
-- Nothing changed yet.
+- Dont't hide room on Time Box if set.
 
 
 ## 1.1.16 (2025-06-08)

@@ -318,6 +318,12 @@ table.slate-table th p {
       display: none;
     }
   }
+  &.time-box.raum-113,
+  &.time-box.auditorium-011 {
+    .room {
+      display: block;
+    }
+  }
 
   .card-container {
     display: flex;
