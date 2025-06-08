@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup"
+    >
+
+  <gs:registerProfile
+      name="1010"
+      title="load catalog settings to enable type_of_time_box meta column"
+      description="Configuration for version 1010"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+      directory="1010"
+      />
+
+  <gs:upgradeSteps
+      profile="tagung.plone.de:default"
+      source="1009"
+      destination="1010"
+      >
+
+    <gs:upgradeStep
+        title="load catalog settings to enable type_of_time_box meta column"
+        description=""
+        handler=".v1010.upgrade"
+        />
+
+    <gs:upgradeDepends
+        title="load catalog settings to enable type_of_time_box meta column (GS profile)"
+        description=""
+        import_profile="tagung.plone.de.upgrades:1010"
+        />
+
+  </gs:upgradeSteps>
+
+</configure>

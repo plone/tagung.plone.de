@@ -258,19 +258,19 @@ table.slate-table th p {
   }
 
   /* Time box types: */
-  &.time-box.fullwidth-1-row {
+  &.time-box.full-width-1-row {
     grid-column: span 2;
     grid-row: span 1;
   }
-  &.time-box.fullwidth-2-row {
+  &.time-box.full-width-2-row {
     grid-column: span 2;
     grid-row: span 2;
   }
-  &.time-box.fullwidth-3-row {
+  &.time-box.full-width-3-row {
     grid-column: span 2;
     grid-row: span 3;
   }
-  &.time-box.fullwidth-4-row {
+  &.time-box.full-width-4-row {
     grid-column: span 2;
     grid-row: span 4;
   }
@@ -282,11 +282,11 @@ table.slate-table th p {
     grid-column: span 1;
     grid-row: span 2;
   }
-  &.time-box.normal-1-row {
+  &.time-box.normal-3-row {
     grid-column: span 1;
     grid-row: span 3;
   }
-  &.time-box.normal-1-row {
+  &.time-box.normal-4-row {
     grid-column: span 1;
     grid-row: span 4;
   }
