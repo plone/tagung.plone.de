@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.15 (unreleased)
+## 1.1.15 (2025-06-08)
 
 
 - Fix tiem zone in Talk Detail view [MrTango]
