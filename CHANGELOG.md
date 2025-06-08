@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.18 (unreleased)
+## 1.1.18 (2025-06-08)
 
 
 - Remove link for Time Boxes [MrTango]
