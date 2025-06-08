@@ -96,7 +96,10 @@ const TalkTimetableTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
               )}
               key={item['@id']}
             >
-              <ConditionalLink item={item} condition={!isEditMode}>
+              <ConditionalLink
+                item={item}
+                condition={!isEditMode && item['@type'] === 'Talk'}
+              >
                 <ItemBodyTemplate item={item} />
               </ConditionalLink>
             </div>
