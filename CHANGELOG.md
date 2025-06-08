@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.19 (unreleased)
+## 1.1.19 (2025-06-08)
 
 
 - Use time box type also for Talk, to set row/col spans [MrTango]
