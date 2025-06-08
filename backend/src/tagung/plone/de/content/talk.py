@@ -29,6 +29,19 @@ class ITalk(model.Schema, ITimeBoxBase):
         # max_length=3000,
     )
 
+    type_of_time_box = schema.Choice(
+        title=_(
+            "Time Box Type",
+        ),
+        description=_(
+            "Defines row and column span.",
+        ),
+        vocabulary="tagung.time_box.type_of_time_box",
+        default=None,
+        required=False,
+        readonly=False,
+    )
+
     details = RichText(
         title=_("Details"),
         description=_(

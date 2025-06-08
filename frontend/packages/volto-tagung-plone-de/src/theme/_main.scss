@@ -258,34 +258,42 @@ table.slate-table th p {
   }
 
   /* Time box types: */
+  &.talk.full-width-1-row,
   &.time-box.full-width-1-row {
     grid-column: span 2;
     grid-row: span 1;
   }
+  &.talk.full-width-2-row,
   &.time-box.full-width-2-row {
     grid-column: span 2;
     grid-row: span 2;
   }
+  &.talk.full-width-3-row,
   &.time-box.full-width-3-row {
     grid-column: span 2;
     grid-row: span 3;
   }
+  &.talk.full-width-4-row,
   &.time-box.full-width-4-row {
     grid-column: span 2;
     grid-row: span 4;
   }
+  &.talk.normal-1-row,
   &.time-box.normal-1-row {
     grid-column: span 1;
     grid-row: span 1;
   }
+  &.talk.normal-2-row,
   &.time-box.normal-2-row {
     grid-column: span 1;
     grid-row: span 2;
   }
+  &.talk.normal-3-row,
   &.time-box.normal-3-row {
     grid-column: span 1;
     grid-row: span 3;
   }
+  &.talk.normal-4-row,
   &.time-box.normal-4-row {
     grid-column: span 1;
     grid-row: span 4;
