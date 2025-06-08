@@ -33,6 +33,23 @@ class IPloneTagungControlPanel(Interface):
         value_type=schema.TextLine(),
     )
 
+    type_of_time_box = schema.List(
+        title=_("Available types for time boxes"),
+        default=[
+            "Full width 1 row",
+            "Full width 2 row",
+            "Full width 3 row",
+            "Full width 4 row",
+            "Normal 1 row",
+            "Normal 2 row",
+            "Normal 3 row",
+            "Normal 4 row",
+        ],
+        missing_value=None,
+        required=False,
+        value_type=schema.TextLine(),
+    )
+
     room = schema.List(
         title=_("Available Rooms for the conference"),
         default=["101", "201", "Auditorium"],

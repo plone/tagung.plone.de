@@ -11,6 +11,11 @@
       />
 
   <utility
+      name="tagung.talk.type_of_time_box"
+      component=".time_box.TimeBoxTypeVocabulary"
+      />
+
+  <utility
       name="tagung.talk.audience"
       component=".talk.AudienceVocabulary"
       />

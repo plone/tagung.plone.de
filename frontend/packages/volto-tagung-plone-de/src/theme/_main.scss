@@ -248,8 +248,6 @@ table.slate-table th p {
   // --talk-item-base-height: 5rem;
 
   /* Items that span two columns */
-  &.keynote,
-  &.podiumsdiskusion,
   &.time-box {
     grid-column: span 2;
   }
@@ -259,17 +257,27 @@ table.slate-table th p {
     grid-row: span 1;
   }
   /* Items that span 2 rows */
+  &.open-space-short,
   &.kurzvortrag {
     grid-row: span 2;
   }
   /* Items that span 3 rows */
   &.vortrag,
   &.keynote,
-  &.open-space,
   &.podiumsdiskussion {
     grid-row: span 3;
   }
+  /* Items that span 4 rows */
+  &.open-space {
+    grid-row: span 4;
+  }
 
+  &.open-space-short,
+  &.open-space {
+    .speaker-info {
+      display: none;
+    }
+  }
   &.time-box {
     .room {
       display: none;
