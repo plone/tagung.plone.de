@@ -3,7 +3,7 @@
 ## 1.1.15 (unreleased)
 
 
-- Nothing changed yet.
+- Fix tiem zone in Talk Detail view [MrTango]
 
 
 ## 1.1.14 (2025-06-08)

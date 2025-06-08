@@ -6,8 +6,10 @@ import { flattenToAppURL } from '@plone/volto/helpers/Url/Url';
 
 export default function TalkView(props) {
   const { content } = props;
+  const toDate = (d) =>
+    typeof d === 'string' ? new Date(d.split('+')[0] + 'Z') : d;
   const start = content.start ? (
-    <FormattedDate key="day" includeTime date={content.start} />
+    <FormattedDate key="day" includeTime date={toDate(content.start)} />
   ) : null;
   // const headline = [start, content.head_title, content.type_of_talk]
   //   .filter((x) => x)
