@@ -1,6 +1,6 @@
 # Changes
 
-## 1.1.20 (unreleased)
+## 1.1.20 (2025-06-09)
 
 
 - Optimize CSS (Armin/Maik)
