@@ -232,12 +232,27 @@ table.slate-table th p {
 
   .items {
     display: grid;
-    max-width: 1200px;
+    max-width: 98vw;
     padding: 5px;
     margin: 0 auto;
     gap: 0.5rem;
     grid-auto-rows: 60px;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .speaker-info,
+  .audiences,
+  .description {
+    line-height: inherit;
+  }
+
+  .talk-type,
+  .speaker {
+    font-style: italic;
+  }
+
+  .talk-type {
+    font-weight: 700;
   }
 }
 
@@ -263,36 +278,43 @@ table.slate-table th p {
     grid-column: span 2;
     grid-row: span 1;
   }
+
   &.talk.full-width-2-row,
   &.time-box.full-width-2-row {
     grid-column: span 2;
     grid-row: span 2;
   }
+
   &.talk.full-width-3-row,
   &.time-box.full-width-3-row {
     grid-column: span 2;
     grid-row: span 3;
   }
+
   &.talk.full-width-4-row,
   &.time-box.full-width-4-row {
     grid-column: span 2;
     grid-row: span 4;
   }
+
   &.talk.normal-1-row,
   &.time-box.normal-1-row {
     grid-column: span 1;
     grid-row: span 1;
   }
+
   &.talk.normal-2-row,
   &.time-box.normal-2-row {
     grid-column: span 1;
     grid-row: span 2;
   }
+
   &.talk.normal-3-row,
   &.time-box.normal-3-row {
     grid-column: span 1;
     grid-row: span 3;
   }
+
   &.talk.normal-4-row,
   &.time-box.normal-4-row {
     grid-column: span 1;
@@ -304,12 +326,14 @@ table.slate-table th p {
   &.kurzvortrag {
     grid-row: span 2;
   }
+
   /* Items that span 3 rows */
   &.vortrag,
   &.keynote,
   &.podiumsdiskussion {
     grid-row: span 3;
   }
+
   /* Items that span 4 rows */
   &.open-space {
     grid-row: span 4;
@@ -321,11 +345,13 @@ table.slate-table th p {
       display: none;
     }
   }
+
   &.time-box {
     .room {
       display: none;
     }
   }
+
   &.time-box.raum-113,
   &.time-box.auditorium-011 {
     .room {
@@ -365,7 +391,7 @@ table.slate-table th p {
     }
 
     .audiences {
-      margin: 0.5rem 0;
+      margin: 0;
       line-height: 1rem;
 
       li {
@@ -383,9 +409,6 @@ table.slate-table th p {
 
     .speaker-info {
       font-size: 0.9rem;
-
-      .talk-type {
-      }
     }
   }
 }
