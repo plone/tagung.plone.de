@@ -45,7 +45,7 @@ const Sponsors = () => {
 
   let location = useLocation().pathname;
   if (location === '/') {
-    location = '/2025';
+    location = '/2026';
   } else {
     location = '/' + location.split('/')[1];
   }
